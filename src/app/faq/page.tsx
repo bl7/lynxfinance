@@ -1,65 +1,162 @@
-import { Metadata } from "next";
+"use client";
+
 import { PageHero } from "@/components/PageHero";
+import { MessageCircle, Plus, X, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import Link from "next/link";
 
 const faqs = [
   {
-    q: "What types of clients does LYNX Finance Consulting typically work with?",
-    a: "We partner with small and mid-sized businesses, nonprofits, and international groups that value structured finance and clear reporting but do not yet have a large in-house finance team.",
+    q: "What types of businesses do you work with?",
+    a: "We work with a diverse range of businesses, from early-stage startups to mature enterprises and nonprofits. This includes e-commerce platforms, real estate developers, IT firms, health and wellness companies, education providers, and financial service firms. We tailor our services to fit your size, complexity, and industry regulations.",
   },
   {
-    q: "How does onboarding with LYNX work?",
-    a: "Onboarding generally includes a discovery session, systems and document review, a clean-up or catch-up phase if needed, and then a move into a defined monthly or quarterly cadence for deliverables.",
+    q: "Do you offer services globally?",
+    a: "Yes, LYNX Finance Consulting provides services globally. With teams in the United States and Nepal, we operate across time zones to deliver seamless support for international clients. Our dual-hemisphere model ensures extended coverage and faster turnaround times.",
   },
   {
-    q: "Which accounting systems do you support?",
-    a: "We most commonly work with cloud-based general ledgers such as QuickBooks Online and Xero, along with common payroll and expense tools. During scoping, we confirm whether your current stack is a fit or if changes are recommended.",
+    q: "Can you help migrate from Excel to a cloud system?",
+    a: "Absolutely. We specialize in helping businesses transition from Excel-based accounting to modern cloud-based systems like QuickBooks Online and Xero. Our team handles data migration, system setup, training, and ensures a smooth transition with minimal disruption to your operations.",
   },
   {
-    q: "Do you replace our existing bookkeeper or work alongside them?",
-    a: "It depends on your needs. In some cases, we fully own the accounting process; in others, we provide oversight, review, and higher-level support while your internal team handles daily transactions.",
-  },
-  {
-    q: "How do you price your services?",
-    a: "Most engagements are structured on a fixed monthly retainer based on scope and complexity. Project-based work is scoped separately with a clear estimate before we begin.",
+    q: "Do you offer catch-up bookkeeping?",
+    a: "Yes, we provide catch-up bookkeeping services to help businesses get their financial records up to date. Whether you're months or years behind, our team can organize your transactions, reconcile accounts, and prepare accurate financial statements to get you current and compliant.",
   },
 ];
 
-export const metadata: Metadata = {
-  title: "FAQ | LYNX Finance Consulting",
-  description:
-    "Answers to common questions about working with LYNX Finance Consulting, onboarding, pricing, and systems.",
+const sectionFade = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7 },
+  },
+};
+
+const cardFade = {
+  hidden: { opacity: 0, y: 24 },
+  show: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: i * 0.1 },
+  }),
 };
 
 export default function FaqPage() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
   return (
     <div className="pb-16">
       <PageHero
-        eyebrow="FAQ"
-        title="Answers to common questions about working with LYNX."
-        subtitle="If you don’t see your question here, our team is happy to walk through details specific to your organization and industry."
+        eyebrow="FREQUENTLY ASKED QUESTIONS"
+        title={
+          <>
+            Frequently Asked{" "}
+            <span className="bg-linear-to-r from-amber-200 via-amber-400 to-sky-300 bg-clip-text text-transparent">
+              Questions
+            </span>
+          </>
+        }
+        subtitle="Find answers to common questions about our services, processes, and how we can help your business."
       />
-      <div className="mx-auto max-w-4xl px-4 pt-10 lg:px-6">
-        <div className="space-y-3">
-          {faqs.map((item) => (
-            <details
-              key={item.q}
-              className="group rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3 text-sm text-slate-200"
-            >
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-left font-medium text-slate-50">
-                <span>{item.q}</span>
-                <span className="text-xs text-slate-400 group-open:hidden">
-                  +
-                </span>
-                <span className="hidden text-xs text-slate-400 group-open:inline">
-                  &minus;
-                </span>
-              </summary>
-              <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                {item.a}
+      <div className="mx-auto max-w-6xl px-4 pt-10 lg:px-6">
+        <motion.div
+          className="grid gap-8 lg:grid-cols-[1fr,400px]"
+          variants={sectionFade}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {/* Left Column - FAQs */}
+          <div className="space-y-3">
+            {faqs.map((item, i) => {
+              const isOpen = openIndex === i;
+              return (
+                <motion.div
+                  key={item.q}
+                  variants={cardFade}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.25 }}
+                  custom={i}
+                >
+                  <div
+                    className={`glass-panel group cursor-pointer rounded-xl border border-slate-800/80 bg-slate-950/85 p-5 transition-all duration-300 ${
+                      isOpen
+                        ? "border-amber-300/40 bg-slate-950/95"
+                        : "hover:border-slate-700"
+                    }`}
+                    onClick={() => setOpenIndex(isOpen ? null : i)}
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <h3 className="flex-1 text-sm font-semibold text-slate-50">
+                        {item.q}
+                      </h3>
+                      <button
+                        className="mt-0.5 shrink-0 text-slate-400 transition-colors hover:text-amber-300"
+                        aria-label={isOpen ? "Collapse" : "Expand"}
+                      >
+                        {isOpen ? (
+                          <X className="h-5 w-5" />
+                        ) : (
+                          <Plus className="h-5 w-5" />
+                        )}
+                      </button>
+                    </div>
+                    {isOpen && (
+                      <motion.p
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="mt-4 text-sm leading-relaxed text-slate-300"
+                      >
+                        {item.a}
+                      </motion.p>
+                    )}
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Right Column - Contact Sidebar */}
+          <motion.div
+            className="lg:sticky lg:top-24"
+            variants={cardFade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            custom={faqs.length}
+          >
+            <div className="glass-panel rounded-2xl border border-amber-300/20 bg-slate-950/90 p-6 text-center">
+              <div className="mb-4 flex justify-center">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-amber-300/20 border border-amber-300/30">
+                  <MessageCircle className="h-8 w-8 text-amber-300" />
+                </div>
+              </div>
+              <h3 className="mb-3 text-lg font-semibold text-slate-50">
+                Can&apos;t find answer to your question?
+              </h3>
+              <p className="mb-6 text-sm leading-relaxed text-slate-300">
+                Still have questions that aren&apos;t covered here? We&apos;re
+                here to help. Whether you need a custom quote, have
+                industry-specific concerns, or simply want to talk through your
+                business goals, our experts are just a message away. Reach out
+                anytime and let&apos;s have a conversation that moves your
+                finances forward.
               </p>
-            </details>
-          ))}
-        </div>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-[0_0_22px_rgba(245,197,110,0.65)] transition hover:brightness-110"
+              >
+                <span>Contact Us</span>
+                <ChevronRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

@@ -1,64 +1,165 @@
-import { Metadata } from "next";
-import { Building2, HeartHandshake, Globe2 } from "lucide-react";
-import { PageHero } from "@/components/PageHero";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Industries Served | LYNX Finance Consulting",
-  description:
-    "Learn how LYNX Finance Consulting supports small businesses, nonprofits, and international corporations.",
-};
+import {
+  Briefcase,
+  ShoppingCart,
+  Wallet,
+  Home,
+  Heart,
+  Plane,
+  GraduationCap,
+  Zap,
+  Check,
+} from "lucide-react";
+import { PageHero } from "@/components/PageHero";
+import { motion } from "framer-motion";
 
 const industries = [
   {
-    icon: Building2,
-    name: "Small & Growing Businesses",
-    body: "Owner-led and founder-led companies rely on LYNX for structure around bookkeeping, cash flow visibility, and lender-ready reporting without the overhead of a full finance department.",
+    icon: Briefcase,
+    name: "Professional Services",
+    items: [
+      "Consulting Agencies",
+      "Legal Firms",
+      "Marketing & Creative Agencies",
+      "IT & Software Companies",
+      "Freelancers & Independent Contractors",
+    ],
   },
   {
-    icon: HeartHandshake,
-    name: "Nonprofits & Mission-Driven Organizations",
-    body: "We understand board governance, restricted funds, and grant reporting. Our teams help nonprofits demonstrate stewardship to donors while staying audit-ready.",
+    icon: ShoppingCart,
+    name: "Retail & E-commerce",
+    items: [
+      "Online Stores",
+      "Wholesale Distributors",
+      "Cross-border E-commerce Sellers",
+    ],
   },
   {
-    icon: Globe2,
-    name: "International & Multi-Entity Groups",
-    body: "For organizations operating across borders, we coordinate accounting, consolidation, and tax support across entities and jurisdictions so leadership sees a single, coherent picture.",
+    icon: Wallet,
+    name: "Financial Services",
+    items: [
+      "Digital Wallets / PSPs / PSOs",
+      "Remittance Companies",
+      "Investment & Wealth Management Firms",
+    ],
+  },
+  {
+    icon: Home,
+    name: "Construction & Real Estate",
+    items: ["Real Estate Developers", "Contractors & Builders"],
+  },
+  {
+    icon: Heart,
+    name: "Health & Wellness",
+    items: [
+      "Clinics & Diagnostic Labs",
+      "Pharmacies",
+      "Fitness Centers & Gyms",
+    ],
+  },
+  {
+    icon: Plane,
+    name: "Media, Tourism & Entertainment",
+    items: [
+      "Travel Agencies & Tour Operators",
+      "Hotels",
+      "Homestays, and Hospitality Chains",
+    ],
+  },
+  {
+    icon: GraduationCap,
+    name: "Education & Training",
+    items: [
+      "Educational Institutions",
+      "Training Centers",
+      "Professional Development Organizations",
+    ],
+  },
+  {
+    icon: Zap,
+    name: "Energy & Infrastructure",
+    items: [
+      "Energy Companies",
+      "Infrastructure Development",
+      "Utilities & Power Generation",
+    ],
   },
 ];
+
+const sectionFade = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7 },
+  },
+};
+
+const cardFade = {
+  hidden: { opacity: 0, y: 24 },
+  show: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: i * 0.1 },
+  }),
+};
 
 export default function IndustriesPage() {
   return (
     <div className="pb-16">
       <PageHero
         eyebrow="Industries served"
-        title="Built for organizations that outgrow basic bookkeeping."
+        title="Industries Served"
         subtitle={
           <>
-            Whether you&apos;re a small business, a mission-driven nonprofit, or
-            an international group with multiple entities, LYNX Finance
-            Consulting tailors its approach to the realities of your operating
-            model and stakeholders.
+            LYNX Finance Consulting provides tailored financial and accounting
+            solutions across a wide range of industries. From professional services
+            to retail, healthcare to hospitality, we deliver expertise that
+            matches your sector&apos;s unique needs.
           </>
         }
       />
-      <div className="mx-auto max-w-5xl px-4 pt-10 lg:px-6">
-        <div className="grid gap-5 md:grid-cols-3">
-          {industries.map((item) => {
-            const Icon = item.icon;
+      <div className="mx-auto max-w-6xl px-4 pt-10 lg:px-6">
+        <motion.div
+          className="grid gap-6 md:grid-cols-3"
+          variants={sectionFade}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {industries.map((industry, i) => {
+            const Icon = industry.icon;
             return (
-              <div
-                key={item.name}
-                className="glass-panel rounded-2xl p-4 transition-transform duration-200 hover:-translate-y-1 hover:border-slate-700"
+              <motion.div
+                key={industry.name}
+                className="glass-panel rounded-2xl border border-amber-300/20 bg-slate-950/85 p-5 transition-transform duration-300 hover:-translate-y-1 hover:border-amber-300/40"
+                variants={cardFade}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.25 }}
+                custom={i}
               >
-                <Icon className="h-5 w-5 text-amber-300" />
-                <h2 className="mt-3 text-sm font-semibold text-slate-50">
-                  {item.name}
-                </h2>
-                <p className="mt-2 text-xs text-slate-300">{item.body}</p>
-              </div>
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900">
+                    <Icon className="h-5 w-5 text-amber-300" />
+                  </div>
+                  <h2 className="text-base font-semibold text-slate-50">
+                    {industry.name}
+                  </h2>
+                </div>
+                <ul className="space-y-2">
+                  {industry.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-slate-300">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
