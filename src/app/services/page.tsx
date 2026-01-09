@@ -1,12 +1,31 @@
-import { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { FileText, Receipt, LineChart } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
+import { motion } from "framer-motion";
 
-export const metadata: Metadata = {
-  title: "Services | LYNX Finance Consulting",
-  description:
-    "Explore Accounting & Bookkeeping, Tax Compliance, and Virtual CFO services designed for modern global businesses.",
+const fadeUp = {
+  hidden: { opacity: 0, y: 32 },
+  show: { opacity: 1, y: 0 },
+};
+
+const sectionFade = {
+  hidden: { opacity: 0, y: 24 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+};
+
+const cardFade = {
+  hidden: { opacity: 0, y: 20 },
+  show: (i: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, delay: i * 0.08 },
+  }),
 };
 
 const services = [
@@ -67,21 +86,30 @@ export default function ServicesPage() {
         }
       />
       <div className="mx-auto max-w-5xl px-4 pt-10 lg:px-6">
-        <div className="grid gap-5 md:grid-cols-3">
-          {services.map((service) => {
+        <motion.div
+          className="grid gap-5 md:grid-cols-3"
+          variants={sectionFade}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {services.map((service, i) => {
             const Icon = service.icon;
             return (
-              <div
+              <motion.div
                 key={service.slug}
-                className="glass-panel flex h-full flex-col rounded-2xl p-4 transition-transform duration-200 hover:-translate-y-1 hover:border-slate-700"
+                className="glass-panel flex h-full flex-col rounded-2xl p-4 transition-transform duration-300 hover:-translate-y-1 hover:border-amber-300/30"
+                variants={cardFade}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.25 }}
+                custom={i}
               >
                 <Icon className="h-5 w-5 text-amber-300" />
                 <h2 className="mt-3 text-sm font-semibold text-slate-50">
                   {service.name}
                 </h2>
-                <p className="mt-2 text-xs text-slate-400">
-                  {service.summary}
-                </p>
+                <p className="mt-2 text-xs text-slate-400">{service.summary}</p>
                 <ul className="mt-3 space-y-1.5 text-xs text-slate-300">
                   {service.bullets.map((item) => (
                     <li key={item}>• {item}</li>
@@ -89,17 +117,15 @@ export default function ServicesPage() {
                 </ul>
                 <Link
                   href={`/services/${service.slug}`}
-                  className="mt-4 text-xs font-semibold text-amber-200 hover:text-amber-100"
+                  className="mt-4 text-xs font-semibold text-amber-200 transition-colors hover:text-amber-100"
                 >
                   View {service.name} details →
                 </Link>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
 }
-
-

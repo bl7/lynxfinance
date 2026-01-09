@@ -14,6 +14,11 @@ import Image from "next/image";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
+  show: { opacity: 1, y: 0 },
+};
+
+const sectionFade = {
+  hidden: { opacity: 0, y: 24 },
   show: {
     opacity: 1,
     y: 0,
@@ -21,21 +26,12 @@ const fadeUp = {
   },
 };
 
-const sectionFade = {
-  hidden: { opacity: 0, y: 40 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7 },
-  },
-};
-
 const cardFade = {
-  hidden: { opacity: 0, y: 24 },
-  show: (i: number) => ({
+  hidden: { opacity: 0, y: 20 },
+  show: (i: number = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: i * 0.1 },
+    transition: { duration: 0.4, delay: i * 0.08 },
   }),
 };
 
@@ -47,7 +43,7 @@ export default function AboutPage() {
       location: "Based in Texas",
       description:
         "Dilip is a seasoned leader focused on client acquisition, relationship management, and market expansion. With over two decades in strategic sales and partnership building, he is key to expanding LYNX Finance Consulting's client base and building lasting relationships. His deep understanding of client needs, combined with a consultative approach, ensures customized service solutions.",
-      image: "/team/dilip-gyawali.jpg", // Placeholder path
+      image: null,
       experienceBadge: null,
     },
     {
@@ -57,7 +53,7 @@ export default function AboutPage() {
       location: "Based in Virginia",
       description:
         "Sagar is an experienced tax strategist and compliance expert in U.S. and international tax systems. As a Chartered Accountant and Enrolled Agent, he navigates complex tax codes and structures transactions for optimal tax efficiency. His expertise includes tax planning, forensic accounting, and regulatory compliance, helping clients minimize liabilities and manage audits.",
-      image: "/team/sagar-kandel.jpg", // Placeholder path
+      image: null,
       experienceBadge: "10+ Experience",
     },
     {
@@ -66,7 +62,7 @@ export default function AboutPage() {
       location: "Based in Virginia",
       description:
         "Sandhya is an accomplished audit professional specializing in internal controls, governance, and financial integrity. With a decade of experience in statutory and internal audits, she rigorously evaluates financial systems and ensures regulatory compliance. Her work enhances transparency and accountability by identifying control weaknesses and recommending process improvements.",
-      image: "/team/sandhya-gc.jpg", // Placeholder path
+      image: null,
       experienceBadge: null,
     },
   ];
@@ -121,7 +117,7 @@ export default function AboutPage() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.div
-            className="glass-panel rounded-2xl p-5 transition-transform hover:-translate-y-1"
+            className="glass-panel rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
             variants={cardFade}
             initial="hidden"
             whileInView="show"
@@ -147,7 +143,7 @@ export default function AboutPage() {
           </motion.div>
 
           <motion.div
-            className="glass-panel rounded-2xl p-5 transition-transform hover:-translate-y-1"
+            className="glass-panel rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
             variants={cardFade}
             initial="hidden"
             whileInView="show"
@@ -181,7 +177,7 @@ export default function AboutPage() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.div
-            className="glass-panel rounded-2xl p-4 transition-transform hover:-translate-y-1"
+            className="glass-panel rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
             variants={cardFade}
             initial="hidden"
             whileInView="show"
@@ -199,7 +195,7 @@ export default function AboutPage() {
             </p>
           </motion.div>
           <motion.div
-            className="glass-panel rounded-2xl p-4 transition-transform hover:-translate-y-1"
+            className="glass-panel rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
             variants={cardFade}
             initial="hidden"
             whileInView="show"
@@ -217,7 +213,7 @@ export default function AboutPage() {
             </p>
           </motion.div>
           <motion.div
-            className="glass-panel rounded-2xl p-4 transition-transform hover:-translate-y-1"
+            className="glass-panel rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
             variants={cardFade}
             initial="hidden"
             whileInView="show"
@@ -363,44 +359,43 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
             {teamMembers.map((member, i) => (
               <motion.div
                 key={member.name}
-                className="glass-panel group relative flex flex-col rounded-2xl border border-slate-800/80 bg-slate-950/85 p-6 transition-transform hover:-translate-y-1"
+                className="group relative flex flex-col rounded-3xl border border-slate-800/50 bg-slate-950/90 p-6 transition-all duration-300 hover:-translate-y-2 hover:border-amber-300/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(251,191,36,0.1)]"
                 variants={cardFade}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.25 }}
                 custom={i}
               >
-                <div className="relative mb-4 aspect-[3/4] w-full overflow-hidden rounded-xl bg-slate-900">
-                  {member.image ? (
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                    />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center bg-slate-800/50">
-                      <Users className="h-12 w-12 text-slate-600" />
-                    </div>
-                  )}
+                <div className="relative mb-5 aspect-[3/4] w-full overflow-hidden rounded-2xl bg-slate-900 ring-1 ring-slate-800/50">
+                  <Image
+                    src={member.image || "/person.png"}
+                    alt={member.name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   {member.experienceBadge && (
-                    <div className="absolute bottom-3 right-3 rounded-full bg-amber-300/20 border border-amber-300/40 px-3 py-1 text-xs font-semibold text-amber-300 backdrop-blur-sm">
+                    <div className="absolute bottom-4 right-4 rounded-full bg-amber-300/25 border border-amber-300/50 px-3.5 py-1.5 text-xs font-semibold text-amber-200 backdrop-blur-md shadow-lg shadow-amber-300/20">
                       {member.experienceBadge}
                     </div>
                   )}
                 </div>
-                <h3 className="text-lg font-semibold text-slate-50">
-                  {member.name}
-                </h3>
-                <p className="mt-1 text-sm font-medium text-amber-300">
-                  {member.title}
-                </p>
-                <p className="mt-1 text-xs text-slate-400">{member.location}</p>
-                <p className="mt-4 text-sm leading-relaxed text-slate-300">
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-slate-50 transition-colors duration-300 group-hover:text-white">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm font-medium text-amber-300/90">
+                    {member.title}
+                  </p>
+                  <p className="text-xs font-medium text-slate-400">
+                    {member.location}
+                  </p>
+                </div>
+                <p className="mt-5 text-sm leading-relaxed text-slate-300/90 line-clamp-4">
                   {member.description}
                 </p>
               </motion.div>

@@ -1,10 +1,24 @@
-import { Metadata } from "next";
-import { PageHero } from "@/components/PageHero";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Contact | LYNX Finance Consulting",
-  description:
-    "Get in touch with LYNX Finance Consulting to discuss accounting, tax, or Virtual CFO support.",
+import { PageHero } from "@/components/PageHero";
+import { motion } from "framer-motion";
+
+const sectionFade = {
+  hidden: { opacity: 0, y: 24 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+};
+
+const cardFade = {
+  hidden: { opacity: 0, y: 20 },
+  show: (i: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, delay: i * 0.08 },
+  }),
 };
 
 export default function ContactPage() {
@@ -16,7 +30,14 @@ export default function ContactPage() {
         subtitle="Share a few details about your organization and the type of support you are looking for, and we’ll follow up with available times for an initial conversation."
       />
       <div className="mx-auto grid max-w-5xl gap-10 px-4 pt-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:px-6">
-        <form className="space-y-4 rounded-2xl border border-slate-800 bg-slate-950/70 p-5 text-sm text-slate-100 shadow-[0_18px_40px_rgba(15,23,42,0.9)]">
+        <motion.form
+          className="space-y-4 rounded-2xl border border-slate-800 bg-slate-950/70 p-5 text-sm text-slate-100 shadow-[0_18px_40px_rgba(15,23,42,0.9)] transition-all duration-300 hover:border-amber-300/30"
+          variants={cardFade}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          custom={0}
+        >
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
               <label className="block text-xs font-medium text-slate-300">
@@ -84,10 +105,23 @@ export default function ContactPage() {
           >
             Submit inquiry
           </button>
-        </form>
+        </motion.form>
 
-        <div className="space-y-5 text-xs text-slate-300">
-          <div className="rounded-2xl border border-slate-800 bg-slate-950/70 p-4">
+        <motion.div
+          className="space-y-5 text-xs text-slate-300"
+          variants={sectionFade}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <motion.div
+            className="rounded-2xl border border-slate-800 bg-slate-950/70 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
+            variants={cardFade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            custom={1}
+          >
             <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-200">
               United States
             </h2>
@@ -97,8 +131,15 @@ export default function ContactPage() {
               New York, NY 10005, USA
             </p>
             <p className="mt-2 text-slate-400">Phone: +1 (000) 000-0000</p>
-          </div>
-          <div className="rounded-2xl border border-slate-800 bg-slate-950/70 p-4">
+          </motion.div>
+          <motion.div
+            className="rounded-2xl border border-slate-800 bg-slate-950/70 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
+            variants={cardFade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            custom={2}
+          >
             <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-200">
               Nepal
             </h2>
@@ -108,11 +149,9 @@ export default function ContactPage() {
               Kathmandu, Bagmati, Nepal
             </p>
             <p className="mt-2 text-slate-400">Phone: +977 9845078650</p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
 }
-
-

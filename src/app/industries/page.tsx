@@ -88,20 +88,20 @@ const industries = [
 ];
 
 const sectionFade = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 24 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7 },
+    transition: { duration: 0.6 },
   },
 };
 
 const cardFade = {
-  hidden: { opacity: 0, y: 24 },
-  show: (i: number) => ({
+  hidden: { opacity: 0, y: 20 },
+  show: (i: number = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: i * 0.1 },
+    transition: { duration: 0.4, delay: i * 0.08 },
   }),
 };
 
@@ -114,9 +114,9 @@ export default function IndustriesPage() {
         subtitle={
           <>
             LYNX Finance Consulting provides tailored financial and accounting
-            solutions across a wide range of industries. From professional services
-            to retail, healthcare to hospitality, we deliver expertise that
-            matches your sector&apos;s unique needs.
+            solutions across a wide range of industries. From professional
+            services to retail, healthcare to hospitality, we deliver expertise
+            that matches your sector&apos;s unique needs.
           </>
         }
       />
@@ -150,7 +150,10 @@ export default function IndustriesPage() {
                 </div>
                 <ul className="space-y-2">
                   {industry.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-slate-300">
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-sm text-slate-300"
+                    >
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
                       <span>{item}</span>
                     </li>
@@ -164,5 +167,3 @@ export default function IndustriesPage() {
     </div>
   );
 }
-
-

@@ -14,6 +14,7 @@ import {
   Briefcase,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -42,9 +43,22 @@ export default function Home() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative h-[85vh] overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/heroVideo.mp4" type="video/mp4" />
+        </video>
+        {/* Dark overlay for subtlety */}
+        <div className="absolute inset-0 bg-slate-950/80" />
+        {/* Gradient overlays for text visibility */}
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(248,250,252,0.12),_transparent_60%),radial-gradient(circle_at_bottom,_rgba(15,23,42,0.95),_transparent_65%)]" />
-        <div className="relative mx-auto max-w-5xl px-4 pb-20 pt-10 lg:px-6 lg:pb-24 lg:pt-16">
+        <div className="relative mx-auto flex h-[85vh] max-w-5xl items-center px-4 py-20 lg:px-6 lg:py-24">
           <motion.div
             className="relative z-10 max-w-3xl"
             initial="hidden"
@@ -182,25 +196,33 @@ export default function Home() {
 
             <div className="flex-[0.9]">
               <div className="glass-panel relative mx-auto max-w-md overflow-hidden rounded-3xl">
-                <div className="relative h-56 w-full overflow-hidden rounded-3xl bg-slate-900/80 sm:h-64">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(248,250,252,0.14),_transparent_60%),radial-gradient(circle_at_bottom,_rgba(8,47,73,0.85),_transparent_60%)]" />
-                  <div className="relative flex h-full items-end justify-between px-6 pb-5">
-                    <div className="max-w-xs text-xs text-slate-200 sm:text-sm">
+                <div className="relative h-72 w-full overflow-hidden rounded-3xl sm:h-80">
+                  <Image
+                    src="/graph.jpg"
+                    alt="Finance dashboard"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-slate-950/40" />
+                  <div className="relative z-10 flex h-full flex-col justify-between p-6">
+                    <div className="max-w-[12rem] text-xs text-white sm:text-sm">
                       <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-200">
-                        Your finance command center
+                        YOUR FINANCE COMMAND CENTER
                       </p>
-                      <p className="mt-2 text-[11px] leading-relaxed text-slate-300 sm:text-xs">
+                      <p className="mt-2 text-[11px] leading-relaxed text-white sm:text-xs">
                         Consolidated dashboards, close status, and key KPIs in
                         one place, reviewed with you on a regular cadence.
                       </p>
                     </div>
-                    <div className="rounded-2xl bg-slate-950/80 px-5 py-3 text-right text-[11px] text-slate-100 shadow-lg shadow-slate-900/80">
-                      <p className="text-base font-semibold text-amber-300">
-                        60+ years
-                      </p>
-                      <p className="text-xs text-slate-300 sm:text-[13px]">
-                        of collective excecellen
-                      </p>
+                    <div className="mt-4 flex justify-end">
+                      <div className="rounded-2xl bg-slate-950/90 px-5 py-3 text-right text-[11px] text-slate-100 shadow-lg shadow-slate-900/80">
+                        <p className="text-base font-semibold text-amber-300">
+                          60+ years
+                        </p>
+                        <p className="text-xs text-slate-300 sm:text-[13px]">
+                          of collective excellence
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>

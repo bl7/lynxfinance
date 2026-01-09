@@ -1,11 +1,16 @@
-import { Metadata } from "next";
+"use client";
+
 import { Receipt, CheckCircle2 } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
+import { motion } from "framer-motion";
 
-export const metadata: Metadata = {
-  title: "Tax Compliance Services | LYNX Finance Consulting",
-  description:
-    "Coordinated support for US Federal, State, and multi-jurisdictional tax compliance with practical planning.",
+const cardFade = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4 },
+  },
 };
 
 export default function TaxCompliancePage() {
@@ -32,7 +37,13 @@ export default function TaxCompliancePage() {
         }
       />
       <div className="mx-auto max-w-4xl px-4 pt-10 lg:px-6">
-        <div className="glass-panel rounded-2xl p-5 transition-transform duration-200 hover:-translate-y-1 hover:border-slate-700">
+        <motion.div
+          className="glass-panel rounded-2xl p-5 transition-transform duration-300 hover:-translate-y-1 hover:border-amber-300/30"
+          variants={cardFade}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+        >
           <div className="flex items-start gap-3">
             <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-2xl bg-slate-900">
               <Receipt className="h-4 w-4 text-amber-300" />
@@ -46,19 +57,24 @@ export default function TaxCompliancePage() {
                 registrations and filings to planning and audit responses.
               </p>
               <ul className="mt-3 grid gap-2 text-xs text-slate-200 sm:grid-cols-2">
-                {items.map((item) => (
-                  <li key={item} className="flex items-start gap-2">
+                {items.map((item, i) => (
+                  <motion.li
+                    key={item}
+                    className="flex items-start gap-2"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: i * 0.05 }}
+                  >
                     <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 text-emerald-300" />
                     <span>{item}</span>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
 }
-
-
