@@ -38,7 +38,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="relative transition-colors hover:text-white"
+              className="group relative transition-colors hover:text-white"
             >
               {item.label}
               <span className="absolute inset-x-0 -bottom-1 h-px origin-left scale-x-0 bg-linear-to-r from-amber-300 via-sky-400 to-emerald-400 transition-transform duration-200 group-hover:scale-x-100" />

@@ -33,7 +33,7 @@ export default function VirtualCFOPage() {
         }
       />
       <div className="mx-auto max-w-4xl px-4 pt-10 lg:px-6">
-        <div className="glass-panel rounded-2xl p-5">
+        <div className="glass-panel rounded-2xl p-5 transition-transform duration-200 hover:-translate-y-1 hover:border-slate-700">
           <div className="flex items-start gap-3">
             <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-2xl bg-slate-900">
               <LineChart className="h-4 w-4 text-emerald-300" />

@@ -46,7 +46,10 @@ export default function IndustriesPage() {
           {industries.map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.name} className="glass-panel rounded-2xl p-4">
+              <div
+                key={item.name}
+                className="glass-panel rounded-2xl p-4 transition-transform duration-200 hover:-translate-y-1 hover:border-slate-700"
+              >
                 <Icon className="h-5 w-5 text-amber-300" />
                 <h2 className="mt-3 text-sm font-semibold text-slate-50">
                   {item.name}

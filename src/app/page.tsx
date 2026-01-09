@@ -9,6 +9,9 @@ import {
   LineChart,
   Building2,
   BadgeCheck,
+  FileText,
+  Receipt,
+  Briefcase,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -103,34 +106,6 @@ export default function Home() {
                 <LineChart className="h-4 w-4 text-sky-300" />
                 <span>Explore our service tiers</span>
               </Link>
-            </motion.div>
-
-            <motion.div
-              variants={fadeUp}
-              className="mt-8 grid max-w-lg grid-cols-2 gap-4 text-xs text-slate-300 sm:text-[13px]"
-            >
-              <div className="flex items-center gap-2 rounded-xl bg-slate-900/70 px-3 py-2.5">
-                <ShieldCheck className="h-4 w-4 text-emerald-300" />
-                <div>
-                  <p className="font-semibold text-slate-100">
-                    SOC-ready controls
-                  </p>
-                  <p className="text-[11px] text-slate-400">
-                    Enterprise-grade governance & risk frameworks.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 rounded-xl bg-slate-900/70 px-3 py-2.5">
-                <Users className="h-4 w-4 text-sky-300" />
-                <div>
-                  <p className="font-semibold text-slate-100">
-                    Dual-hemisphere pods
-                  </p>
-                  <p className="text-[11px] text-slate-400">
-                    US client leads with Nepal delivery excellence.
-                  </p>
-                </div>
-              </div>
             </motion.div>
           </motion.div>
         </div>
@@ -247,40 +222,42 @@ export default function Home() {
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-300/80">
-                Financial support
-              </p>
-              <h2 className="mt-2 text-balance text-xl font-semibold text-slate-50 sm:text-2xl">
-                One partner for your accounting, tax, and strategic finance
-                needs.
-              </h2>
-            </div>
-            <p className="max-w-md text-xs text-slate-300 sm:text-sm">
-              We support fast-growing businesses and global organizations with
-              offerings that span daily bookkeeping to board-level strategy.
-              Each engagement is calibrated to your current stage while keeping
-              future complexity in view.
+          <div className="text-center text-slate-50">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-amber-300/80">
+              Our services
+            </p>
+            <h2 className="mt-2 text-balance text-2xl font-semibold sm:text-[1.9rem]">
+              Comprehensive{" "}
+              <span className="bg-linear-to-r from-amber-200 via-amber-400 to-sky-300 bg-clip-text text-transparent">
+                financial support
+              </span>
+            </h2>
+            <p className="mx-auto mt-3 max-w-3xl text-xs leading-relaxed text-slate-300 sm:text-sm">
+              From daily transactions to executive reporting, LYNX Finance
+              Consulting provides an integrated set of services that keep you
+              compliant, informed, and ready for your next move.
             </p>
           </div>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
             <motion.div
-              className="glass-panel relative flex flex-col rounded-2xl p-5"
+              className="glass-panel relative flex h-full flex-col rounded-3xl border border-slate-800/80 bg-slate-950/85 p-6 transition-transform duration-200 hover:-translate-y-1 hover:border-sky-400/70"
               variants={cardFade}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.25 }}
               custom={0}
             >
+              <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-sky-300">
+                <FileText className="h-4 w-4" />
+              </div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-sky-300">
                 Accounting & Bookkeeping
               </p>
-              <p className="mt-2 text-sm font-semibold text-slate-50">
+              <p className="mt-3 text-sm font-semibold text-slate-50">
                 Always-on, audit-ready financial backbone.
               </p>
-              <ul className="mt-3 space-y-1.5 text-xs text-slate-300">
+              <ul className="mt-4 space-y-2 text-xs text-slate-300">
                 <li>• Monthly close and reconciliations</li>
                 <li>• Ledger maintenance and clean-up</li>
                 <li>• AR / AP workflows and vendor management</li>
@@ -295,23 +272,26 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              className="glass-panel relative flex flex-col rounded-2xl border border-amber-300/50 bg-gradient-to-b from-amber-300/10 via-slate-900/80 to-slate-950/90 p-5"
+              className="glass-panel relative flex h-full flex-col rounded-3xl border border-amber-300/70 bg-slate-950/90 p-6 transition-transform duration-200 hover:-translate-y-1.5 hover:border-amber-200"
               variants={cardFade}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.25 }}
               custom={1}
             >
+              <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-amber-200">
+                <Receipt className="h-4 w-4" />
+              </div>
               <p className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-200">
                 Tax Compliance
                 <span className="rounded-full bg-amber-300/15 px-2 py-0.5 text-[10px] text-amber-200">
                   High demand
                 </span>
               </p>
-              <p className="mt-2 text-sm font-semibold text-slate-50">
+              <p className="mt-3 text-sm font-semibold text-slate-50">
                 Proactive, multi-jurisdictional tax planning.
               </p>
-              <ul className="mt-3 space-y-1.5 text-xs text-slate-200">
+              <ul className="mt-4 space-y-2 text-xs text-slate-200">
                 <li>• US Federal & State returns</li>
                 <li>• International and cross-border considerations</li>
                 <li>• Nexus analysis and entity structuring</li>
@@ -326,20 +306,23 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              className="glass-panel relative flex flex-col rounded-2xl p-5"
+              className="glass-panel relative flex h-full flex-col rounded-3xl border border-slate-800/80 bg-slate-950/85 p-6 transition-transform duration-200 hover:-translate-y-1 hover:border-emerald-300/70"
               variants={cardFade}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.25 }}
               custom={2}
             >
+              <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-emerald-300">
+                <Briefcase className="h-4 w-4" />
+              </div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-emerald-300">
                 Virtual CFO
               </p>
-              <p className="mt-2 text-sm font-semibold text-slate-50">
+              <p className="mt-3 text-sm font-semibold text-slate-50">
                 Strategic finance without the full-time overhead.
               </p>
-              <ul className="mt-3 space-y-1.5 text-xs text-slate-300">
+              <ul className="mt-4 space-y-2 text-xs text-slate-300">
                 <li>• Cash flow forecasting and scenario modeling</li>
                 <li>• Board and investor reporting packs</li>
                 <li>• KPI frameworks and dashboarding</li>
@@ -403,7 +386,7 @@ export default function Home() {
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             <motion.div
-              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200"
+              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200 transition-transform duration-200 hover:-translate-y-1"
               variants={cardFade}
               initial="hidden"
               whileInView="show"
@@ -421,7 +404,7 @@ export default function Home() {
               </p>
             </motion.div>
             <motion.div
-              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200"
+              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200 transition-transform duration-200 hover:-translate-y-1"
               variants={cardFade}
               initial="hidden"
               whileInView="show"
@@ -439,7 +422,7 @@ export default function Home() {
               </p>
             </motion.div>
             <motion.div
-              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200"
+              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200 transition-transform duration-200 hover:-translate-y-1"
               variants={cardFade}
               initial="hidden"
               whileInView="show"
@@ -457,7 +440,7 @@ export default function Home() {
               </p>
             </motion.div>
             <motion.div
-              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200"
+              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200 transition-transform duration-200 hover:-translate-y-1"
               variants={cardFade}
               initial="hidden"
               whileInView="show"
@@ -474,7 +457,7 @@ export default function Home() {
               </p>
             </motion.div>
             <motion.div
-              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200"
+              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200 transition-transform duration-200 hover:-translate-y-1"
               variants={cardFade}
               initial="hidden"
               whileInView="show"
@@ -491,7 +474,7 @@ export default function Home() {
               </p>
             </motion.div>
             <motion.div
-              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200"
+              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200 transition-transform duration-200 hover:-translate-y-1"
               variants={cardFade}
               initial="hidden"
               whileInView="show"
