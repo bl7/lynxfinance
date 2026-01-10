@@ -65,7 +65,7 @@ export default function ContactPage() {
               </label>
               <input
                 className="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-xs text-slate-100 outline-none ring-0 focus:border-amber-300 focus:ring-1 focus:ring-amber-300/60"
-                placeholder="+977 9845078650"
+                placeholder="+1 (817) 966-0481"
               />
             </div>
             <div>
@@ -123,14 +123,12 @@ export default function ContactPage() {
             custom={1}
           >
             <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-200">
-              United States
+              USA Branch
             </h2>
-            <p className="mt-2 text-slate-400">
-              123 Financial District, Suite 1800
-              <br />
-              New York, NY 10005, USA
-            </p>
-            <p className="mt-2 text-slate-400">Phone: +1 (000) 000-0000</p>
+            <p className="mt-2 text-slate-400">Texas, USA</p>
+            <p className="mt-2 text-slate-400">Phone: +1 (817) 966-0481</p>
+            <p className="mt-3 text-slate-400">Virginia, USA</p>
+            <p className="mt-2 text-slate-400">Phone: +1 (757) 338-3452</p>
           </motion.div>
           <motion.div
             className="rounded-2xl border border-slate-800 bg-slate-950/70 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
@@ -141,14 +139,10 @@ export default function ContactPage() {
             custom={2}
           >
             <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-200">
-              Nepal
+              Nepal Branch
             </h2>
-            <p className="mt-2 text-slate-400">
-              Level 6, Business Tower
-              <br />
-              Kathmandu, Bagmati, Nepal
-            </p>
-            <p className="mt-2 text-slate-400">Phone: +977 9845078650</p>
+            <p className="mt-2 text-slate-400">Kathmandu, Nepal</p>
+            <p className="mt-2 text-slate-400">Phone: +977-9861888856</p>
           </motion.div>
         </motion.div>
       </div>

@@ -76,7 +76,7 @@ const services = [
       "Executive-level financial leadership without the full-time cost of a CFO.",
     bullets: [
       "Cash flow forecasting and runway analysis",
-      "KPI design, dashboards, and performance reviews",
+      "KPI design, reporting, and performance reviews",
       "Board and investor-ready reporting packs",
       "Capital planning and scenario modeling",
     ],
@@ -103,7 +103,7 @@ const services = [
     bullets: [
       "Registered Agent services in all US states",
       "Secure digitization of official correspondence",
-      "Easy tracking and record-keeping via dashboard",
+      "Easy tracking and record-keeping",
       "Legal, tax, and state correspondence management",
     ],
   },

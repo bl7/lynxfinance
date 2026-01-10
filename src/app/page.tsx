@@ -4,14 +4,21 @@ import { motion } from "framer-motion";
 import {
   ShieldCheck,
   Users,
-  BarChart3,
   Globe2,
-  LineChart,
   Building2,
-  BadgeCheck,
+  FileCheck,
+  CreditCard,
+  Banknote,
+  CheckCircle2,
+  ArrowRight,
+  TrendingUp,
+  Clock,
+  Shield,
   FileText,
-  Receipt,
   Briefcase,
+  Store,
+  Zap,
+  Receipt,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -42,9 +49,8 @@ const cardFade = {
 export default function Home() {
   return (
     <div className="relative">
-      {/* Hero Section */}
-      <section className="relative h-[85vh] overflow-hidden">
-        {/* Background Video */}
+      {/* 1. Hero Section */}
+      <section className="relative min-h-[85vh] overflow-hidden">
         <video
           autoPlay
           loop
@@ -54,667 +60,727 @@ export default function Home() {
         >
           <source src="/heroVideo.mp4" type="video/mp4" />
         </video>
-        {/* Dark overlay for subtlety */}
         <div className="absolute inset-0 bg-slate-950/80" />
-        {/* Gradient overlays for text visibility */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(248,250,252,0.12),_transparent_60%),radial-gradient(circle_at_bottom,_rgba(15,23,42,0.95),_transparent_65%)]" />
-        <div className="relative mx-auto flex h-[85vh] max-w-5xl items-center px-4 py-20 lg:px-6 lg:py-24">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(248,250,252,0.12),transparent_60%),radial-gradient(circle_at_bottom,rgba(15,23,42,0.95),transparent_65%)]" />
+
+        <div className="relative mx-auto flex min-h-[85vh] max-w-6xl items-center px-4 py-20 lg:px-6 lg:py-24">
           <motion.div
-            className="relative z-10 max-w-3xl"
+            className="relative z-10 w-full max-w-4xl"
             initial="hidden"
             animate="show"
             transition={{ staggerChildren: 0.07 }}
           >
-            <motion.p
-              variants={fadeUp}
-              className="inline-flex items-center gap-2 rounded-full border border-amber-300/30 bg-slate-900/60 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.22em] text-amber-200 shadow-[0_0_24px_rgba(251,191,36,0.35)]"
-            >
-              <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_14px_rgba(52,211,153,0.9)]" />
-              Strategic Partner for Global Finance Teams
-            </motion.p>
-
             <motion.h1
               variants={fadeUp}
-              className="mt-5 text-balance text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl lg:text-5xl"
+              className="text-balance text-4xl font-semibold tracking-tight text-slate-50 sm:text-5xl lg:text-6xl"
             >
-              Climb higher with{" "}
-              <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-sky-300 bg-clip-text text-transparent">
-                LYNX Finance Consulting
+              Form your US company and stay compliant,{" "}
+              <span className="bg-linear-to-r from-amber-200 via-amber-400 to-sky-300 bg-clip-text text-transparent">
+                end-to-end
               </span>
-              <br />
-              Strategic financial solutions for
-              <br />
-              your next stage.
             </motion.h1>
 
             <motion.p
               variants={fadeUp}
-              className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base"
+              className="mt-6 max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg"
             >
-              In today&apos;s rapidly changing financial environment, clarity
-              and strategy are everything. LYNX Finance Consulting delivers
-              tailored financial and accounting solutions that help businesses
-              and nonprofits achieve{" "}
-              <span className="font-semibold text-slate-100">
-                clarity, compliance, and sustainable growth
-              </span>
-              . We are not just your service provider&mdash;we are your
-              strategic partner for long-term financial success.
+              We handle formation, Registered Agent, EIN, BOI, annual filings,
+              plus bookkeeping and US tax reporting—all in one streamlined
+              process.
             </motion.p>
 
             <motion.div
               variants={fadeUp}
-              className="mt-6 flex flex-wrap items-center gap-4"
+              className="mt-8 flex flex-wrap items-center gap-4"
             >
               <Link
-                href="/services"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-[0_0_30px_rgba(245,197,110,0.7)] transition hover:brightness-110"
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 px-7 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-[0_0_30px_rgba(245,197,110,0.7)] transition hover:brightness-110"
               >
-                <BadgeCheck className="h-3.5 w-3.5" />
-                <span>Our Services</span>
+                Start US Company
               </Link>
               <Link
-                href="#services"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-600/70 bg-slate-900/70 px-5 py-2 text-xs font-medium text-slate-100 transition hover:border-amber-300/70 hover:bg-slate-900"
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full border border-slate-600/70 bg-slate-900/70 px-6 py-3 text-sm font-medium text-slate-100 transition hover:border-amber-300/70 hover:bg-slate-900"
               >
-                <LineChart className="h-4 w-4 text-sky-300" />
-                <span>Explore our service tiers</span>
+                Book a free assessment
               </Link>
+            </motion.div>
+
+            {/* Trust chips */}
+            <motion.div
+              variants={fadeUp}
+              className="mt-10 flex flex-wrap items-center gap-4"
+            >
+              <div className="flex items-center gap-2 rounded-full border border-slate-700/50 bg-slate-900/60 px-4 py-2">
+                <ShieldCheck className="h-4 w-4 text-sky-400" />
+                <span className="text-xs text-slate-300">
+                  Secure document digitization
+                </span>
+              </div>
+              <div className="flex items-center gap-2 rounded-full border border-slate-700/50 bg-slate-900/60 px-4 py-2">
+                <FileCheck className="h-4 w-4 text-amber-400" />
+                <span className="text-xs text-slate-300">
+                  Compliance + tax support
+                </span>
+              </div>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Why LYNX / partner section */}
-      <section className="border-y border-slate-800/70 bg-slate-950/95 py-20">
-        <motion.div
-          className="mx-auto max-w-6xl px-4 lg:px-8"
-          variants={sectionFade}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <div className="text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-amber-300/85 sm:text-sm">
-              Why LYNX?
-            </p>
+      {/* 2. Social Proof Bar */}
+      <section className="border-y border-slate-800/70 bg-slate-950/95 py-6">
+        <div className="mx-auto max-w-6xl px-4 lg:px-6">
+          <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-slate-400 sm:gap-12">
+            <span className="text-slate-300">
+              Multi-entity accounting support
+            </span>
+            <span className="hidden sm:inline">•</span>
+            <span className="text-slate-300">5472 + 1120 support</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="text-slate-300">
+              Cross-border compliance experience
+            </span>
           </div>
-
-          <div className="mt-10 flex flex-col gap-12 lg:flex-row lg:items-start">
-            <div className="flex-[1.1] space-y-5">
-              <h2 className="text-balance text-2xl font-semibold text-slate-50 sm:text-[1.85rem] lg:text-[2.1rem]">
-                Your partner for long-term financial success.
-              </h2>
-              <p className="max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-[15px]">
-                We do more than provide services—we operate as your finance
-                partner. With decades of combined experience in US and
-                international markets, we deliver tailored solutions for
-                sustainable growth.
-              </p>
-              <div className="mt-7 space-y-5 text-sm text-slate-300">
-                <div className="flex gap-3">
-                  <ShieldCheck className="mt-1 h-5 w-5 text-amber-300" />
-                  <div>
-                    <p className="text-base font-semibold text-slate-50">
-                      Deep industry knowledge
-                    </p>
-                    <p className="text-xs leading-relaxed text-slate-400 sm:text-sm">
-                      Backgrounds across US GAAP, IFRS, and complex
-                      multi-jurisdiction structures, shaped in both public
-                      accounting and in-house roles.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-3">
-                  <Users className="mt-1 h-5 w-5 text-emerald-300" />
-                  <div>
-                    <p className="text-base font-semibold text-slate-50">
-                      Client-first approach
-                    </p>
-                    <p className="text-xs leading-relaxed text-slate-400 sm:text-sm">
-                      Dedicated pods that feel like an extension of your team,
-                      with a clear point of contact who understands your board,
-                      donors, and investors.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-3">
-                  <BarChart3 className="mt-1 h-5 w-5 text-sky-300" />
-                  <div>
-                    <p className="text-base font-semibold text-slate-50">
-                      Scalable solutions
-                    </p>
-                    <p className="text-xs leading-relaxed text-slate-400 sm:text-sm">
-                      From start-up bookkeeping to multi-entity advisory, we
-                      right-size processes, controls, and reporting as your
-                      organization grows.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex-[0.9]">
-              <div className="glass-panel relative mx-auto max-w-md overflow-hidden rounded-3xl">
-                <div className="relative h-72 w-full overflow-hidden rounded-3xl sm:h-80">
-                  <Image
-                    src="/graph.jpg"
-                    alt="Finance dashboard"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-slate-950/40" />
-                  <div className="relative z-10 flex h-full flex-col justify-end p-6">
-                    <div className="flex justify-end">
-                      <div className="rounded-2xl bg-slate-950/90 px-5 py-3 text-right text-[11px] text-slate-100 shadow-lg shadow-slate-900/80">
-                        <p className="text-base font-semibold text-amber-300">
-                          60+ years
-                        </p>
-                        <p className="text-xs text-slate-300 sm:text-[13px]">
-                          of collective excellence
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        </div>
       </section>
 
-      {/* Financial support / services summary */}
-      <section
-        id="services"
-        className="bg-[radial-gradient(circle_at_top,_rgba(15,23,42,0.9),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(8,47,73,0.85),_transparent_55%)] py-14"
-      >
-        <motion.div
-          className="mx-auto max-w-6xl px-4 lg:px-6"
-          variants={sectionFade}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <div className="text-center text-slate-50">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-amber-300/80">
-              Our services
-            </p>
-            <h2 className="mt-2 text-balance text-2xl font-semibold sm:text-[1.9rem]">
+      {/* 3. Problem + Promise */}
+      <section className="bg-slate-950/95 py-20">
+        <div className="mx-auto max-w-6xl px-4 lg:px-6">
+          <motion.div
+            className="grid gap-12 lg:grid-cols-2 lg:items-center"
+            variants={sectionFade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <div>
+              <h2 className="text-balance text-3xl font-semibold text-slate-50 sm:text-4xl">
+                US compliance is not optional, it&apos;s easy to get wrong
+              </h2>
+            </div>
+            <div className="space-y-4 text-base leading-relaxed text-slate-300">
+              <p>
+                Penalties for missed filings can add up fast. Banking delays
+                from incomplete documentation slow down operations. State
+                requirements vary, and deadlines are easy to miss without a
+                system.
+              </p>
+              <p>
+                Lynx simplifies it: we handle formation, ongoing compliance,
+                annual filings, and tax reporting through streamlined processes,
+                so you can focus on building your business instead of navigating
+                regulations.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 4. How It Works - 5-Step Stepper */}
+      <section className="border-y border-slate-800/70 bg-slate-950/95 py-20">
+        <div className="mx-auto max-w-6xl px-4 lg:px-6">
+          <motion.div
+            variants={sectionFade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
+              How it works
+            </h2>
+          </motion.div>
+
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+            {[
+              {
+                icon: Building2,
+                step: "1",
+                title: "Choose entity + state",
+                description:
+                  "We help you select the right structure and jurisdiction for your business needs.",
+              },
+              {
+                icon: FileCheck,
+                step: "2",
+                title: "Form the company",
+                description:
+                  "We handle all paperwork and filings to establish your US entity.",
+              },
+              {
+                icon: CreditCard,
+                step: "3",
+                title: "Get EIN (and ITIN if needed)",
+                description:
+                  "We manage the EIN application process and assist with ITIN when required.",
+              },
+              {
+                icon: Banknote,
+                step: "4",
+                title: "Banking support",
+                description:
+                  "We help you establish compliant banking relationships for your business.",
+              },
+              {
+                icon: FileText,
+                step: "5",
+                title: "Compliance + bookkeeping + tax",
+                description:
+                  "Ongoing support for annual filings, bookkeeping, and US tax reporting.",
+              },
+            ].map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={item.step}
+                  variants={cardFade}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.25 }}
+                  custom={i}
+                  className="relative"
+                >
+                  <div className="glass-panel flex h-full flex-col rounded-2xl border border-slate-800/80 bg-slate-950/85 p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30">
+                    <div className="mb-4 flex justify-center">
+                      <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-slate-900 border border-amber-300/30">
+                        <Icon className="h-6 w-6 text-amber-300" />
+                        <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-amber-300 text-xs font-bold text-slate-950">
+                          {item.step}
+                        </span>
+                      </div>
+                    </div>
+                    <h3 className="text-base font-semibold text-slate-50">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                      {item.description}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 4a. Comprehensive Financial Support */}
+      <section className="border-y border-slate-800/70 bg-slate-950/95 py-20">
+        <div className="mx-auto max-w-6xl px-4 lg:px-6">
+          <motion.div
+            variants={sectionFade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
               Comprehensive{" "}
               <span className="bg-linear-to-r from-amber-200 via-amber-400 to-sky-300 bg-clip-text text-transparent">
-                financial support
+                Financial Support
               </span>
             </h2>
-            <p className="mx-auto mt-3 max-w-3xl text-xs leading-relaxed text-slate-300 sm:text-sm">
-              From daily transactions to executive reporting, LYNX Finance
-              Consulting provides an integrated set of services that keep you
-              compliant, informed, and ready for your next move.
+            <p className="mx-auto mt-4 max-w-3xl text-base text-slate-300">
+              Beyond company formation, we provide end-to-end financial services
+              to keep your business compliant, informed, and ready for growth.
             </p>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <motion.div
-              className="glass-panel relative flex h-full flex-col rounded-3xl border border-slate-800/80 bg-slate-950/85 p-6 transition-transform duration-200 hover:-translate-y-1 hover:border-sky-400/70"
-              variants={cardFade}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
-              custom={0}
-            >
-              <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-sky-300">
-                <FileText className="h-4 w-4" />
-              </div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-sky-300">
-                Accounting & Bookkeeping
-              </p>
-              <p className="mt-3 text-sm font-semibold text-slate-50">
-                Always-on, audit-ready financial backbone.
-              </p>
-              <ul className="mt-4 space-y-2 text-xs text-slate-300">
-                <li>• Monthly close and reconciliations</li>
-                <li>• Ledger maintenance and clean-up</li>
-                <li>• AR / AP workflows and vendor management</li>
-                <li>• Management reporting packs</li>
-              </ul>
-              <Link
-                href="/services/accounting-bookkeeping"
-                className="mt-4 text-xs font-semibold text-sky-300 hover:text-sky-200"
-              >
-                Learn more about Accounting →
-              </Link>
-            </motion.div>
-
-            <motion.div
-              className="glass-panel relative flex h-full flex-col rounded-3xl border border-amber-300/70 bg-slate-950/90 p-6 transition-transform duration-200 hover:-translate-y-1.5 hover:border-amber-200"
-              variants={cardFade}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
-              custom={1}
-            >
-              <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-amber-200">
-                <Receipt className="h-4 w-4" />
-              </div>
-              <p className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-200">
-                Tax Compliance
-                <span className="rounded-full bg-amber-300/15 px-2 py-0.5 text-[10px] text-amber-200">
-                  High demand
-                </span>
-              </p>
-              <p className="mt-3 text-sm font-semibold text-slate-50">
-                Proactive, multi-jurisdictional tax planning.
-              </p>
-              <ul className="mt-4 space-y-2 text-xs text-slate-200">
-                <li>• US Federal & State returns</li>
-                <li>• International and cross-border considerations</li>
-                <li>• Nexus analysis and entity structuring</li>
-                <li>• Quarterly estimates & planning cadence</li>
-              </ul>
-              <Link
-                href="/services/tax-compliance"
-                className="mt-4 text-xs font-semibold text-amber-200 hover:text-amber-100"
-              >
-                Learn more about Tax →
-              </Link>
-            </motion.div>
-
-            <motion.div
-              className="glass-panel relative flex h-full flex-col rounded-3xl border border-slate-800/80 bg-slate-950/85 p-6 transition-transform duration-200 hover:-translate-y-1 hover:border-emerald-300/70"
-              variants={cardFade}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
-              custom={2}
-            >
-              <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-emerald-300">
-                <Briefcase className="h-4 w-4" />
-              </div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-emerald-300">
-                Virtual CFO
-              </p>
-              <p className="mt-3 text-sm font-semibold text-slate-50">
-                Strategic finance without the full-time overhead.
-              </p>
-              <ul className="mt-4 space-y-2 text-xs text-slate-300">
-                <li>• Cash flow forecasting and scenario modeling</li>
-                <li>• Board and investor reporting packs</li>
-                <li>• KPI frameworks and dashboarding</li>
-                <li>• Strategic capital allocation guidance</li>
-              </ul>
-              <Link
-                href="/services/virtual-cfo"
-                className="mt-4 text-xs font-semibold text-emerald-300 hover:text-emerald-200"
-              >
-                Learn more about Virtual CFO →
-              </Link>
-            </motion.div>
-          </div>
-          <div className="mt-8 flex justify-center">
-            <Link
-              href="/services"
-              className="inline-flex items-center justify-center rounded-full border border-amber-300/60 bg-slate-950/60 px-6 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-200 hover:border-amber-200 hover:text-amber-100"
-            >
-              Explore all services
-            </Link>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* U.S. Startups Platform Section */}
-      <section className="border-y border-slate-800/70 bg-slate-950/95 py-20">
-        <motion.div
-          className="mx-auto max-w-5xl px-4 text-center lg:px-6"
-          variants={sectionFade}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ staggerChildren: 0.1 }}
-        >
-          <motion.h2
-            variants={fadeUp}
-            className="text-balance text-3xl font-semibold text-slate-50 sm:text-4xl lg:text-5xl"
-          >
-            Launch & Manage Your{" "}
-            <span className="bg-linear-to-r from-sky-300 via-sky-400 to-amber-300 bg-clip-text text-transparent">
-              U.S. Startups
-            </span>
-            <br />
-            All in One Platform
-          </motion.h2>
-          <motion.p
-            variants={fadeUp}
-            className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base"
-          >
-            Form your company, get bookkeeping handled, and stay tax-compliant —
-            everything done for you in one secure dashboard.
-          </motion.p>
-          <motion.div
-            variants={fadeUp}
-            className="mt-8 flex flex-wrap items-center justify-center gap-4"
-          >
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full border border-amber-300/60 bg-slate-950/60 px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-amber-200 transition-all duration-300 hover:border-amber-300 hover:bg-slate-950/80 hover:text-amber-100"
-            >
-              Onboard Existing Company
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-[0_0_24px_rgba(245,197,110,0.6)] transition-all duration-300 hover:brightness-110"
-            >
-              Start my Business
-            </Link>
           </motion.div>
-        </motion.div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: "Financial Management & Accounting",
+                icon: FileText,
+                description:
+                  "We provide complete financial stewardship, from daily transactions to executive reporting:",
+                bullets: [
+                  "Outsourced bookkeeping and full-cycle accounting",
+                  "Journal entries, ledger maintenance, bank reconciliations",
+                  "Month-end and year-end closing",
+                  "Management reporting packs",
+                ],
+                link: "/services/accounting-bookkeeping",
+                color: "sky",
+              },
+              {
+                title: "Tax Compliance & Planning",
+                icon: Receipt,
+                description:
+                  "We ensure you stay compliant while optimizing your tax position:",
+                bullets: [
+                  "Federal and state tax return preparation (business & individual)",
+                  "Year-round tax planning to reduce effective tax rates",
+                  "Multi-jurisdictional tax strategy and treaty analysis",
+                  "Quarterly estimates & planning cadence",
+                ],
+                link: "/services/tax-compliance",
+                color: "amber",
+              },
+              {
+                title: "Strategic Advisory & Virtual CFO",
+                icon: Briefcase,
+                description:
+                  "Our experienced consultants provide forward-looking financial leadership:",
+                bullets: [
+                  "Virtual CFO services for growing companies",
+                  "Cash flow forecasting and budgeting",
+                  "KPI design and performance tracking",
+                  "Board and investor-ready reporting packs",
+                ],
+                link: "/services/virtual-cfo",
+                color: "emerald",
+              },
+            ].map((service, i) => {
+              const Icon = service.icon;
+              const colorClasses = {
+                sky: "text-sky-300",
+                amber: "text-amber-300",
+                emerald: "text-emerald-300",
+              };
+              return (
+                <motion.div
+                  key={service.title}
+                  variants={cardFade}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.25 }}
+                  custom={i}
+                  className="glass-panel flex h-full flex-col rounded-3xl border border-slate-800/80 bg-slate-950/85 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
+                >
+                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900">
+                    <Icon
+                      className={`h-6 w-6 ${
+                        colorClasses[service.color as keyof typeof colorClasses]
+                      }`}
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-slate-50">
+                    {service.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                    {service.description}
+                  </p>
+                  <ul className="mt-5 flex-1 space-y-2.5">
+                    {service.bullets.map((bullet) => (
+                      <li
+                        key={bullet}
+                        className="flex items-start gap-2.5 text-sm text-slate-300"
+                      >
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href={service.link}
+                    className="mt-6 text-sm font-semibold text-amber-200 transition-colors hover:text-amber-100"
+                  >
+                    Learn More →
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
       </section>
 
-      {/* How we work section */}
+      {/* 5. Packages - 3 Cards */}
+      <section className="bg-slate-950/95 py-20">
+        <div className="mx-auto max-w-6xl px-4 lg:px-6">
+          <motion.div
+            variants={sectionFade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
+              Choose your package
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base text-slate-300">
+              Start with formation, add compliance support, or get full
+              accounting and tax services—all available individually or bundled.
+            </p>
+          </motion.div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: "Start a US Company",
+                icon: Building2,
+                bullets: [
+                  "Formation (LLC/C-Corp)",
+                  "Registered Agent",
+                  "EIN",
+                  "BOI filing",
+                  "Document management",
+                ],
+                cta: "Start US Company",
+                ctaHref: "/contact",
+                highlight: false,
+              },
+              {
+                title: "Stay Compliant",
+                icon: ShieldCheck,
+                bullets: [
+                  "Annual state filings",
+                  "Registered Agent renewal",
+                  "Deadline reminders",
+                  "Document vault",
+                ],
+                cta: "Talk to compliance",
+                ctaHref: "/contact",
+                highlight: true,
+              },
+              {
+                title: "Accounting and Tax",
+                icon: FileText,
+                bullets: [
+                  "Bookkeeping",
+                  "Federal/state filings",
+                  "5472/1120/1065/1040-NR",
+                  "Advisory option",
+                ],
+                cta: "Get accounting support",
+                ctaHref: "/contact",
+                highlight: false,
+              },
+            ].map((pkg, i) => {
+              const Icon = pkg.icon;
+              return (
+                <motion.div
+                  key={pkg.title}
+                  variants={cardFade}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.25 }}
+                  custom={i}
+                  className={`glass-panel flex h-full flex-col rounded-3xl border p-6 transition-all duration-300 hover:-translate-y-1 ${
+                    pkg.highlight
+                      ? "border-amber-300/50 bg-slate-950/90"
+                      : "border-slate-800/80 bg-slate-950/85"
+                  }`}
+                >
+                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900">
+                    <Icon
+                      className={`h-6 w-6 ${
+                        pkg.highlight ? "text-amber-300" : "text-sky-300"
+                      }`}
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-slate-50">
+                    {pkg.title}
+                  </h3>
+                  <ul className="mt-5 flex-1 space-y-2.5">
+                    {pkg.bullets.map((bullet) => (
+                      <li
+                        key={bullet}
+                        className="flex items-start gap-2.5 text-sm text-slate-300"
+                      >
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href={pkg.ctaHref}
+                    className={`mt-6 inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.18em] transition-all ${
+                      pkg.highlight
+                        ? "bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 text-slate-950 shadow-[0_0_24px_rgba(245,197,110,0.6)] hover:brightness-110"
+                        : "border border-slate-600/70 bg-slate-900/70 text-slate-100 hover:border-amber-300/70 hover:bg-slate-900"
+                    }`}
+                  >
+                    {pkg.cta}
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Who It's For - Persona Cards */}
+      <section className="bg-slate-950/95 py-20">
+        <div className="mx-auto max-w-6xl px-4 lg:px-6">
+          <motion.div
+            variants={sectionFade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
+              Who it&apos;s for
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base text-slate-300">
+              Whether you&apos;re a solo founder or scaling a team, we help you
+              form and maintain your US entity with confidence.
+            </p>
+          </motion.div>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                icon: Globe2,
+                title: "Non-US founders",
+                description:
+                  "Launch your US business without navigating complex regulations alone.",
+              },
+              {
+                icon: Briefcase,
+                title: "Agencies forming companies for clients",
+                description:
+                  "White-label support for agencies helping clients expand to the US.",
+              },
+              {
+                icon: Store,
+                title: "E-commerce and SaaS teams",
+                description:
+                  "Expand to the US market with compliant entity setup and ongoing support.",
+              },
+              {
+                icon: Users,
+                title: "Remote teams needing clean compliance",
+                description:
+                  "Keep your distributed team compliant across jurisdictions.",
+              },
+            ].map((persona, i) => {
+              const Icon = persona.icon;
+              return (
+                <motion.div
+                  key={persona.title}
+                  variants={cardFade}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.25 }}
+                  custom={i}
+                  className="glass-panel rounded-2xl border border-slate-800/80 bg-slate-950/85 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
+                >
+                  <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900">
+                    <Icon className="h-5 w-5 text-amber-300" />
+                  </div>
+                  <h3 className="text-base font-semibold text-slate-50">
+                    {persona.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                    {persona.description}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Why Lynx */}
       <section className="border-y border-slate-800/70 bg-slate-950/95 py-20">
-        <motion.div
-          className="mx-auto max-w-6xl px-4 lg:px-6"
-          variants={sectionFade}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <motion.div
-              variants={cardFade}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
-              custom={0}
-            >
-              <p className="inline-flex items-center rounded-full border border-amber-300/30 bg-slate-900/60 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.22em] text-amber-200">
-                How we work?
-              </p>
-              <h2 className="mt-5 text-balance text-3xl font-semibold text-slate-50 sm:text-4xl lg:text-5xl">
-                Here&apos;s how LYNX can help you launch your business{" "}
-                <span className="bg-linear-to-r from-sky-300 via-sky-400 to-amber-300 bg-clip-text text-transparent">
-                  swiftly!
-                </span>
+        <div className="mx-auto max-w-6xl px-4 lg:px-6">
+          <motion.div
+            className="grid gap-12 lg:grid-cols-2"
+            variants={sectionFade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <div>
+              <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
+                Why Lynx
               </h2>
-              <p className="mt-5 text-sm leading-relaxed text-slate-300 sm:text-base">
-                Eliminate the paperwork headache and elevate your business
-                dreams with LYNX. Our expert team handles everything—from
-                company formation to ongoing compliance—so you can focus your
-                energy on driving success and growth.
+              <p className="mt-4 text-base leading-relaxed text-slate-300">
+                We combine formation expertise with ongoing compliance and tax
+                support, so you don&apos;t have to juggle multiple vendors or
+                worry about missed deadlines.
               </p>
-              <Link
-                href="/contact"
-                className="mt-6 inline-flex items-center justify-center rounded-full bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-[0_0_24px_rgba(245,197,110,0.6)] transition-all duration-300 hover:brightness-110"
-              >
-                Start my business
-              </Link>
-            </motion.div>
-
-            <motion.div
-              className="relative"
-              variants={cardFade}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
-              custom={1}
-            >
-              <div className="glass-panel relative overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-900/90 p-6 shadow-2xl">
-                {/* Dashboard mockup */}
-                <div className="rounded-2xl bg-slate-950/80 p-4">
-                  {/* Dashboard header */}
-                  <div className="mb-4 flex items-center justify-between border-b border-slate-800/80 pb-3">
-                    <div className="flex items-center gap-3">
-                      <div className="h-8 w-8 rounded-lg bg-linear-to-br from-amber-300/20 to-sky-300/20 border border-amber-300/30" />
-                      <div>
-                        <p className="text-xs font-semibold text-slate-50">
-                          Company Name LLC
-                        </p>
-                        <p className="text-[10px] text-slate-400">Details</p>
-                      </div>
+              <ul className="mt-8 space-y-4">
+                {[
+                  {
+                    icon: ShieldCheck,
+                    text: "Clear checklists and automated reminders keep you ahead of deadlines",
+                  },
+                  {
+                    icon: FileText,
+                    text: "Secure document digitization and storage for all compliance paperwork",
+                  },
+                  {
+                    icon: Clock,
+                    text: "Extended time zone coverage with US and Nepal teams",
+                  },
+                  {
+                    icon: TrendingUp,
+                    text: "Integrated approach to formation, compliance, and accounting needs",
+                  },
+                ].map((item, i) => {
+                  const Icon = item.icon;
+                  return (
+                    <motion.li
+                      key={i}
+                      variants={cardFade}
+                      initial="hidden"
+                      whileInView="show"
+                      viewport={{ once: true, amount: 0.25 }}
+                      custom={i}
+                      className="flex gap-3"
+                    >
+                      <Icon className="mt-0.5 h-5 w-5 shrink-0 text-amber-300" />
+                      <span className="text-base text-slate-300">
+                        {item.text}
+                      </span>
+                    </motion.li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="relative">
+              {/* Team preview placeholder - can be replaced with actual team component */}
+              <div className="glass-panel rounded-3xl border border-slate-800/80 bg-slate-950/85 p-8">
+                <div className="mb-6 text-center">
+                  <h3 className="text-xl font-semibold text-slate-50">
+                    Experienced team
+                  </h3>
+                  <p className="mt-2 text-sm text-slate-400">
+                    60+ years of combined experience across US tax, compliance,
+                    and accounting
+                  </p>
+                </div>
+                <div className="flex justify-center gap-4">
+                  {[1, 2, 3].map((i) => (
+                    <div
+                      key={i}
+                      className="relative h-16 w-16 overflow-hidden rounded-full border-2 border-amber-300/30 bg-slate-900"
+                    >
+                      <Image
+                        src="/person.png"
+                        alt="Team member"
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                    <div className="h-6 w-6 rounded border border-slate-700 bg-slate-900" />
-                  </div>
-
-                  {/* Dashboard sidebar mockup */}
-                  <div className="grid gap-3 sm:grid-cols-[200px_1fr]">
-                    <div className="hidden space-y-1 sm:block">
-                      {[
-                        "Get Started",
-                        "Details",
-                        "Documents",
-                        "Filings",
-                        "Banking",
-                        "Mail",
-                      ].map((item, i) => (
-                        <div
-                          key={item}
-                          className={`rounded-lg px-3 py-2 text-xs transition-colors ${
-                            i === 1
-                              ? "bg-amber-300/10 text-amber-300 border border-amber-300/20"
-                              : "text-slate-400 hover:bg-slate-800/50"
-                          }`}
-                        >
-                          {item}
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Dashboard content area */}
-                    <div className="space-y-4">
-                      <div className="rounded-lg border border-slate-800/80 bg-slate-900/50 p-4">
-                        <p className="mb-2 text-xs font-semibold text-slate-200">
-                          General Information
-                        </p>
-                        <div className="space-y-2 text-[10px] text-slate-400">
-                          <div className="flex justify-between">
-                            <span>Company Name:</span>
-                            <span className="text-slate-300">Belle Phonix</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span>State:</span>
-                            <span className="text-slate-300">Wyoming</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span>EIN:</span>
-                            <span className="text-slate-300">N/A</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Feature callouts */}
-                      <div className="grid grid-cols-2 gap-2">
-                        <div className="rounded-lg border border-sky-300/20 bg-sky-300/5 p-2 text-center">
-                          <p className="text-[9px] font-semibold text-sky-300">
-                            New Company
-                          </p>
-                          <p className="text-[8px] text-slate-400">in 60sec</p>
-                        </div>
-                        <div className="rounded-lg border border-amber-300/20 bg-amber-300/5 p-2 text-center">
-                          <p className="text-[9px] font-semibold text-amber-300">
-                            Manage
-                          </p>
-                          <p className="text-[8px] text-slate-400">Payments</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
-            </motion.div>
-          </div>
-        </motion.div>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
-      {/* Dual-hemisphere expertise */}
-      <section className="bg-slate-950/95 py-12">
-        <motion.div
-          className="mx-auto max-w-6xl px-4 text-slate-50 lg:px-6"
-          variants={sectionFade}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-300/80">
-              Dual-hemisphere expertise
-            </p>
-            <h2 className="mt-2 text-balance text-xl font-semibold sm:text-2xl">
-              US and Nepal teams working in concert for your finance function.
+      {/* 8a. Dual-hemisphere expertise */}
+      <section className="border-y border-slate-800/70 bg-slate-950/95 py-20">
+        <div className="mx-auto max-w-4xl px-4 text-center lg:px-6">
+          <motion.div
+            variants={sectionFade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
+              US and Nepal teams working in concert for your finance function
             </h2>
-            <p className="mt-3 text-xs text-slate-300 sm:text-sm">
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-slate-300">
               Teams in the United States and Kathmandu, Nepal deliver extended
               hours of support for US and international clients. You gain the
               proximity and context of a local strategic partner, paired with
-              the efficiency and depth of a specialized offshore team.
+              the efficiency and depth of a specialized offshore team that
+              strengthens your finance operations around the clock.
             </p>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="bg-slate-900/90 py-12">
+      {/* 9. Testimonials / Outcomes */}
+      <section className="bg-slate-950/95 py-20">
         <div className="mx-auto max-w-6xl px-4 lg:px-6">
-          <div className="text-center text-slate-50">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-300/80">
-              Client stories
-            </p>
-            <h2 className="mt-2 text-balance text-xl font-semibold sm:text-2xl">
-              Check our testimonials.
+          <motion.div
+            variants={sectionFade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
+              Typical outcomes
             </h2>
-          </div>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            <motion.div
-              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200 transition-transform duration-200 hover:-translate-y-1"
-              variants={cardFade}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
-              custom={0}
-            >
-              <p className="text-amber-300">★★★★★</p>
-              <p className="mt-2 text-slate-200">
-                “LYNX came in when we were outgrowing basic bookkeeping. They
-                rebuilt our close process, cleaned up prior years, and gave us
-                board-ready reporting every month.”
-              </p>
-              <p className="mt-3 font-semibold text-slate-100">
-                Founder, SaaS company
-              </p>
-            </motion.div>
-            <motion.div
-              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200 transition-transform duration-200 hover:-translate-y-1"
-              variants={cardFade}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
-              custom={1}
-            >
-              <p className="text-amber-300">★★★★★</p>
-              <p className="mt-2 text-slate-200">
-                “Our nonprofit needed stronger controls and clearer grant
-                reporting. LYNX gave us structure without slowing our programs
-                down.”
-              </p>
-              <p className="mt-3 font-semibold text-slate-100">
-                Executive Director, Nonprofit
-              </p>
-            </motion.div>
-            <motion.div
-              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200 transition-transform duration-200 hover:-translate-y-1"
-              variants={cardFade}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
-              custom={2}
-            >
-              <p className="text-amber-300">★★★★★</p>
-              <p className="mt-2 text-slate-200">
-                “The Virtual CFO team at LYNX helped us understand our runway,
-                pricing, and expansion options in a way that made board
-                conversations far more productive.”
-              </p>
-              <p className="mt-3 font-semibold text-slate-100">
-                CEO, International services firm
-              </p>
-            </motion.div>
-            <motion.div
-              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200 transition-transform duration-200 hover:-translate-y-1"
-              variants={cardFade}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
-              custom={3}
-            >
-              <p className="text-amber-300">★★★★★</p>
-              <p className="mt-2 text-slate-200">
-                “Having LYNX manage our monthly close freed me to focus on
-                growth instead of chasing numbers and reconciliations.”
-              </p>
-              <p className="mt-3 font-semibold text-slate-100">
-                Owner, Professional services firm
-              </p>
-            </motion.div>
-            <motion.div
-              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200 transition-transform duration-200 hover:-translate-y-1"
-              variants={cardFade}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
-              custom={4}
-            >
-              <p className="text-amber-300">★★★★★</p>
-              <p className="mt-2 text-slate-200">
-                “Their tax team anticipated issues we hadn’t even considered and
-                helped us expand into new states with confidence.”
-              </p>
-              <p className="mt-3 font-semibold text-slate-100">
-                Co-founder, Multi-state retailer
-              </p>
-            </motion.div>
-            <motion.div
-              className="glass-panel flex h-full flex-col rounded-2xl p-4 text-xs text-slate-200 transition-transform duration-200 hover:-translate-y-1"
-              variants={cardFade}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
-              custom={5}
-            >
-              <p className="text-amber-300">★★★★★</p>
-              <p className="mt-2 text-slate-200">
-                “LYNX feels like an internal finance team that happens to be
-                remote. Responsive, detail-oriented, and easy to work with.”
-              </p>
-              <p className="mt-3 font-semibold text-slate-100">
-                Managing Director, International NGO
-              </p>
-            </motion.div>
+            <p className="mx-auto mt-4 max-w-2xl text-base text-slate-300">
+              What clients achieve when they work with Lynx for US company
+              formation and compliance.
+            </p>
+          </motion.div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: "Faster time to market",
+                description:
+                  "Complete formation and EIN within days, not weeks. Get your business operational quickly.",
+              },
+              {
+                title: "Zero missed deadlines",
+                description:
+                  "Automated reminders and expert oversight ensure all filings are submitted on time.",
+              },
+              {
+                title: "Clean financial records",
+                description:
+                  "Ongoing bookkeeping and tax compliance keep your records audit-ready year-round.",
+              },
+            ].map((outcome, i) => (
+              <motion.div
+                key={outcome.title}
+                variants={cardFade}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.25 }}
+                custom={i}
+                className="glass-panel rounded-2xl border border-slate-800/80 bg-slate-950/85 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
+              >
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900">
+                  <Zap className="h-5 w-5 text-amber-300" />
+                </div>
+                <h3 className="text-lg font-semibold text-slate-50">
+                  {outcome.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                  {outcome.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Bottom CTA band */}
-      <section className="bg-slate-950 py-10">
-        <motion.div
-          className="mx-auto max-w-5xl px-4 lg:px-6"
-          variants={sectionFade}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <div className="glass-panel rounded-3xl px-6 py-7 text-center text-slate-50">
-            <h2 className="text-balance text-lg font-semibold sm:text-xl">
-              Let LYNX Finance Consulting be the partner behind your growth.
+      {/* 10. Final CTA Band */}
+      <section className="border-y border-slate-800/70 bg-slate-950 py-20">
+        <div className="mx-auto max-w-4xl px-4 text-center lg:px-6">
+          <motion.div
+            variants={sectionFade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
+              Ready to form your US company?
             </h2>
-            <p className="mt-3 text-xs text-slate-300 sm:text-sm">
-              We provide more than numbers—we offer clarity, confidence, and a
-              team that scales with you.
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-300">
+              Not sure what you need? Book a free assessment and we&apos;ll
+              recommend the right setup for your business.
             </p>
-            <Link
-              href="/contact"
-              className="mt-5 inline-flex items-center justify-center rounded-full bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 px-6 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-[0_0_22px_rgba(245,197,110,0.65)]"
-            >
-              Contact us to get a financial assessment
-            </Link>
-          </div>
-        </motion.div>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 px-7 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-[0_0_30px_rgba(245,197,110,0.7)] transition hover:brightness-110"
+              >
+                Start US Company
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full border border-slate-600/70 bg-slate-900/70 px-6 py-3 text-sm font-medium text-slate-100 transition hover:border-amber-300/70 hover:bg-slate-900"
+              >
+                Book a free assessment
+              </Link>
+            </div>
+          </motion.div>
+        </div>
       </section>
     </div>
   );

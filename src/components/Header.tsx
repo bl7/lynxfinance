@@ -47,10 +47,13 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <button className="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/70 px-4 py-1.5 text-xs font-medium text-slate-100 shadow-sm hover:border-slate-500/80 hover:bg-slate-900">
+          <a
+            href="tel:+18179660481"
+            className="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/70 px-4 py-1.5 text-xs font-medium text-slate-100 shadow-sm hover:border-slate-500/80 hover:bg-slate-900"
+          >
             <PhoneCall className="h-3.5 w-3.5 text-emerald-300" />
-            <span>+977 9845078650</span>
-          </button>
+            <span>+1 (817) 966-0481</span>
+          </a>
         </div>
 
         <button
