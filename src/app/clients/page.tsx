@@ -2,7 +2,7 @@
 
 import { PageHero } from "@/components/PageHero";
 import { motion } from "framer-motion";
-import { Building2, Globe2, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import Link from "next/link";
 
 const sectionFade = {
@@ -99,8 +99,8 @@ export default function ClientsPage() {
             className="mb-12"
           >
             <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900">
-                <Building2 className="h-6 w-6 text-amber-300" />
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 text-2xl">
+                🇺🇸
               </div>
               <div>
                 <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
@@ -165,8 +165,8 @@ export default function ClientsPage() {
             className="mb-12"
           >
             <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900">
-                <Globe2 className="h-6 w-6 text-emerald-300" />
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 text-2xl">
+                🇳🇵
               </div>
               <div>
                 <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
