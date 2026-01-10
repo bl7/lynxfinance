@@ -9,19 +9,43 @@ import Link from "next/link";
 const faqs = [
   {
     q: "What types of businesses do you work with?",
-    a: "We work with a diverse range of businesses, from early-stage startups to mature enterprises and nonprofits. This includes e-commerce platforms, real estate developers, IT firms, health and wellness companies, education providers, and financial service firms. We tailor our services to fit your size, complexity, and industry regulations.",
+    a: "We work with a diverse range of businesses—from early-stage startups to mature enterprises, as well as nonprofit organizations. Our clients include e-commerce platforms, real estate developers, IT firms, health and wellness companies, education providers, financial service firms, and more. We understand that each business is unique, and we tailor our services to fit their size, complexity, and industry regulations.",
   },
   {
     q: "Do you offer services globally?",
-    a: "Yes, LYNX Finance Consulting provides services globally. With teams in the United States and Nepal, we operate across time zones to deliver seamless support for international clients. Our dual-hemisphere model ensures extended coverage and faster turnaround times.",
+    a: "Yes. LYNX Finance Consulting is equipped to support clients across the globe, with a primary focus on businesses operating in or dealing with the U.S., UK, Australia, and Nepal. Our team structure allows us to provide continuous service coverage across time zones, and we specialize in managing cross-border tax compliance, financial consolidation, and international regulatory frameworks.",
   },
   {
     q: "Can you help migrate from Excel to a cloud system?",
-    a: "Absolutely. We specialize in helping businesses transition from Excel-based accounting to modern cloud-based systems like QuickBooks Online and Xero. Our team handles data migration, system setup, training, and ensures a smooth transition with minimal disruption to your operations.",
+    a: "Absolutely. Transitioning from manual or spreadsheet-based accounting to a cloud-based platform like QuickBooks Online, Xero, or Zoho Books is one of our most requested services. We guide you through every step—from selecting the right software, to setting up your chart of accounts, migrating data, configuring user roles, and providing training to your internal team.",
   },
   {
     q: "Do you offer catch-up bookkeeping?",
-    a: "Yes, we provide catch-up bookkeeping services to help businesses get their financial records up to date. Whether you're months or years behind, our team can organize your transactions, reconcile accounts, and prepare accurate financial statements to get you current and compliant.",
+    a: "Yes. Many clients come to us with backlogged or incomplete books. We specialize in cleaning up outdated records, reconciling transactions, correcting categorization errors, and preparing financials that meet audit or investor standards. Whether you're months or years behind, we can help bring your financials current and compliant.",
+  },
+  {
+    q: "Can you help with IRS issues or tax notices?",
+    a: "Definitely. Our U.S.-based tax consultants are experienced in IRS communications, audits, penalty negotiations, and installment agreements. We take over communication with tax authorities, analyze your exposure, and formulate a response plan to resolve issues quickly and favorably. Whether it's a CP2000 notice, audit request, or late filing concern, we're here to advocate for you.",
+  },
+  {
+    q: "Do you assist with individual tax planning?",
+    a: "Yes. We provide personalized tax planning services for individuals, especially freelancers, remote workers, consultants, and high-net-worth individuals. Our advisors help you reduce liabilities through smart use of deductions, credits, income deferral strategies, retirement contributions, and charitable giving—all aligned with your long-term financial goals.",
+  },
+  {
+    q: "How do you price your services?",
+    a: "We offer flexible pricing models depending on the type of service and engagement level. This includes fixed monthly retainers for ongoing services (like bookkeeping or CFO support), hourly billing for advisory or consulting, and flat rates for one-time projects such as tax filings or audit preparation. We provide a clear, customized quote after your initial consultation.",
+  },
+  {
+    q: "Do I need to commit long term?",
+    a: "No long-term contract is required. However, for services like outsourced accounting or virtual CFO, we recommend a minimum engagement of 3–6 months to ensure measurable results. For ad-hoc projects, such as financial modeling or tax return filing, we work on a project basis with defined timelines and deliverables.",
+  },
+  {
+    q: "Can you work with fully remote businesses?",
+    a: "Yes. In fact, a majority of our clients operate remotely. Our workflows are fully cloud-enabled, meaning we can collaborate securely and efficiently regardless of your location. We use encrypted file-sharing platforms, video conferencing, and cloud accounting software to ensure seamless delivery and data protection.",
+  },
+  {
+    q: "Do you offer support during off hours?",
+    a: "Yes. With teams in the U.S. and Nepal, we cover a wide range of time zones to provide extended service availability. This setup allows us to respond faster and continue work on your financials overnight if needed, particularly useful for urgent tax deadlines or time-sensitive reconciliations.",
   },
 ];
 

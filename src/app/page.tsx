@@ -204,17 +204,8 @@ export default function Home() {
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-slate-950/40" />
-                  <div className="relative z-10 flex h-full flex-col justify-between p-6">
-                    <div className="max-w-[12rem] text-xs text-white sm:text-sm">
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-200">
-                        YOUR FINANCE COMMAND CENTER
-                      </p>
-                      <p className="mt-2 text-[11px] leading-relaxed text-white sm:text-xs">
-                        Consolidated dashboards, close status, and key KPIs in
-                        one place, reviewed with you on a regular cadence.
-                      </p>
-                    </div>
-                    <div className="mt-4 flex justify-end">
+                  <div className="relative z-10 flex h-full flex-col justify-end p-6">
+                    <div className="flex justify-end">
                       <div className="rounded-2xl bg-slate-950/90 px-5 py-3 text-right text-[11px] text-slate-100 shadow-lg shadow-slate-900/80">
                         <p className="text-base font-semibold text-amber-300">
                           60+ years
@@ -365,6 +356,189 @@ export default function Home() {
             >
               Explore all services
             </Link>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* U.S. Startups Platform Section */}
+      <section className="border-y border-slate-800/70 bg-slate-950/95 py-20">
+        <motion.div
+          className="mx-auto max-w-5xl px-4 text-center lg:px-6"
+          variants={sectionFade}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ staggerChildren: 0.1 }}
+        >
+          <motion.h2
+            variants={fadeUp}
+            className="text-balance text-3xl font-semibold text-slate-50 sm:text-4xl lg:text-5xl"
+          >
+            Launch & Manage Your{" "}
+            <span className="bg-linear-to-r from-sky-300 via-sky-400 to-amber-300 bg-clip-text text-transparent">
+              U.S. Startups
+            </span>
+            <br />
+            All in One Platform
+          </motion.h2>
+          <motion.p
+            variants={fadeUp}
+            className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base"
+          >
+            Form your company, get bookkeeping handled, and stay tax-compliant —
+            everything done for you in one secure dashboard.
+          </motion.p>
+          <motion.div
+            variants={fadeUp}
+            className="mt-8 flex flex-wrap items-center justify-center gap-4"
+          >
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full border border-amber-300/60 bg-slate-950/60 px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-amber-200 transition-all duration-300 hover:border-amber-300 hover:bg-slate-950/80 hover:text-amber-100"
+            >
+              Onboard Existing Company
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-[0_0_24px_rgba(245,197,110,0.6)] transition-all duration-300 hover:brightness-110"
+            >
+              Start my Business
+            </Link>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* How we work section */}
+      <section className="border-y border-slate-800/70 bg-slate-950/95 py-20">
+        <motion.div
+          className="mx-auto max-w-6xl px-4 lg:px-6"
+          variants={sectionFade}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <motion.div
+              variants={cardFade}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.25 }}
+              custom={0}
+            >
+              <p className="inline-flex items-center rounded-full border border-amber-300/30 bg-slate-900/60 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.22em] text-amber-200">
+                How we work?
+              </p>
+              <h2 className="mt-5 text-balance text-3xl font-semibold text-slate-50 sm:text-4xl lg:text-5xl">
+                Here&apos;s how LYNX can help you launch your business{" "}
+                <span className="bg-linear-to-r from-sky-300 via-sky-400 to-amber-300 bg-clip-text text-transparent">
+                  swiftly!
+                </span>
+              </h2>
+              <p className="mt-5 text-sm leading-relaxed text-slate-300 sm:text-base">
+                Eliminate the paperwork headache and elevate your business
+                dreams with LYNX. Our expert team handles everything—from
+                company formation to ongoing compliance—so you can focus your
+                energy on driving success and growth.
+              </p>
+              <Link
+                href="/contact"
+                className="mt-6 inline-flex items-center justify-center rounded-full bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-[0_0_24px_rgba(245,197,110,0.6)] transition-all duration-300 hover:brightness-110"
+              >
+                Start my business
+              </Link>
+            </motion.div>
+
+            <motion.div
+              className="relative"
+              variants={cardFade}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.25 }}
+              custom={1}
+            >
+              <div className="glass-panel relative overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-900/90 p-6 shadow-2xl">
+                {/* Dashboard mockup */}
+                <div className="rounded-2xl bg-slate-950/80 p-4">
+                  {/* Dashboard header */}
+                  <div className="mb-4 flex items-center justify-between border-b border-slate-800/80 pb-3">
+                    <div className="flex items-center gap-3">
+                      <div className="h-8 w-8 rounded-lg bg-linear-to-br from-amber-300/20 to-sky-300/20 border border-amber-300/30" />
+                      <div>
+                        <p className="text-xs font-semibold text-slate-50">
+                          Company Name LLC
+                        </p>
+                        <p className="text-[10px] text-slate-400">Details</p>
+                      </div>
+                    </div>
+                    <div className="h-6 w-6 rounded border border-slate-700 bg-slate-900" />
+                  </div>
+
+                  {/* Dashboard sidebar mockup */}
+                  <div className="grid gap-3 sm:grid-cols-[200px_1fr]">
+                    <div className="hidden space-y-1 sm:block">
+                      {[
+                        "Get Started",
+                        "Details",
+                        "Documents",
+                        "Filings",
+                        "Banking",
+                        "Mail",
+                      ].map((item, i) => (
+                        <div
+                          key={item}
+                          className={`rounded-lg px-3 py-2 text-xs transition-colors ${
+                            i === 1
+                              ? "bg-amber-300/10 text-amber-300 border border-amber-300/20"
+                              : "text-slate-400 hover:bg-slate-800/50"
+                          }`}
+                        >
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Dashboard content area */}
+                    <div className="space-y-4">
+                      <div className="rounded-lg border border-slate-800/80 bg-slate-900/50 p-4">
+                        <p className="mb-2 text-xs font-semibold text-slate-200">
+                          General Information
+                        </p>
+                        <div className="space-y-2 text-[10px] text-slate-400">
+                          <div className="flex justify-between">
+                            <span>Company Name:</span>
+                            <span className="text-slate-300">Belle Phonix</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>State:</span>
+                            <span className="text-slate-300">Wyoming</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>EIN:</span>
+                            <span className="text-slate-300">N/A</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Feature callouts */}
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="rounded-lg border border-sky-300/20 bg-sky-300/5 p-2 text-center">
+                          <p className="text-[9px] font-semibold text-sky-300">
+                            New Company
+                          </p>
+                          <p className="text-[8px] text-slate-400">in 60sec</p>
+                        </div>
+                        <div className="rounded-lg border border-amber-300/20 bg-amber-300/5 p-2 text-center">
+                          <p className="text-[9px] font-semibold text-amber-300">
+                            Manage
+                          </p>
+                          <p className="text-[8px] text-slate-400">Payments</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       </section>
