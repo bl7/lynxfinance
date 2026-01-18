@@ -368,7 +368,7 @@ export const addOnServices: AddOnService[] = [
   {
     service: "ITIN Application",
     description: "Filing support for Individual Taxpayer Identification Numbers for non-U.S. owners.",
-    fee: "$399",
+    fee: "399",
     recommendedPlan: "Elevate / Propel",
   },
   {
