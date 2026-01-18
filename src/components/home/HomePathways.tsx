@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FileText, Receipt, Building2, CheckCircle2 } from "lucide-react";
+import { FileText, Receipt, Briefcase, ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const sectionFade = {
@@ -18,7 +19,7 @@ const cardFade = {
   show: (i: number = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, delay: i * 0.08 },
+    transition: { duration: 0.4, delay: i * 0.1 },
   }),
 };
 
@@ -27,63 +28,70 @@ export function HomePathways() {
     {
       title: "Accounting and Bookkeeping",
       icon: FileText,
-      bullets: [
-        "Monthly bookkeeping",
-        "Management reports",
-        "Clean close process",
-      ],
-      cta: "Get bookkeeping support",
+      description:
+        "We handle the day-to-day details of your business finances, from accurate bookkeeping to organizing your records for tax preparation and strategic planning. Our goal is to provide clear, reliable financial insights so you can focus on running and growing your business with confidence.",
+      cta: "Learn More",
       href: "/services/accounting-bookkeeping",
-      color: "sky",
     },
     {
       title: "Tax and Compliance",
       icon: Receipt,
-      bullets: [
-        "Federal and state filings",
-        "Ongoing compliance support",
-        "Deadline tracking",
-      ],
-      cta: "Talk to a specialist",
+      description:
+        "We make tax preparation simple, combining precise filings with strategic planning to maximize savings and ensure full compliance. Our experienced team works to minimize liabilities while providing clarity and peace of mind, so you can focus on growing your wealth.",
+      cta: "Learn More",
       href: "/services/tax-compliance",
-      color: "amber",
     },
     {
       title: "US Company Setup (optional)",
-      icon: Building2,
-      bullets: [
-        "LLC or C-Corp formation",
-        "EIN, BOI, Registered Agent",
-        "Banking support guidance",
-      ],
-      cta: "Explore US setup",
+      icon: Briefcase,
+      description:
+        "Start your US business without leaving your location. We guide you through the right entity and state, complete the formation workflow, and support essentials like Registered Agent and EIN. Everything stays trackable, documented, and compliance ready from day one.",
+      cta: "Learn More",
       href: "/services/us-company-formation",
-      color: "emerald",
     },
   ];
 
-  const colorClasses = {
-    sky: "text-sky-300",
-    amber: "text-amber-300",
-    emerald: "text-emerald-300",
-  };
-
   return (
-    <section className="border-y border-slate-800/70 bg-slate-950/95 py-20">
-      <div className="mx-auto max-w-6xl px-4 lg:px-6">
+    <section className="relative overflow-hidden bg-slate-950 py-20 sm:py-24">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/servicesbg.jpg"
+          alt="Services background"
+          fill
+          className="object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-slate-950/80" />
+      </div>
+
+      <div className="relative mx-auto max-w-6xl px-4 lg:px-6">
+        {/* Header Section */}
         <motion.div
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="text-center"
+          className="mb-16 max-w-3xl"
         >
-          <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
+          <div className="mb-4 flex items-center gap-2">
+            <div className="h-3 w-3 bg-blue-400" />
+            <span className="text-sm font-medium text-white/80">
+              How we can help
+            </span>
+          </div>
+          <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
             Choose what you need
           </h2>
+          <p className="mt-4 text-base leading-relaxed text-white/90 sm:text-lg">
+            We uncover opportunities that others miss, from optimizing entity
+            structures to unlocking hidden deductions. Our proactive strategies
+            help startups, growing companies, and global teams maximize savings,
+            protect income, and build lasting wealth.
+          </p>
         </motion.div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        {/* Cards Grid */}
+        <div className="grid gap-6 md:grid-cols-3">
           {pathways.map((pathway, i) => {
             const Icon = pathway.icon;
             return (
@@ -94,34 +102,32 @@ export function HomePathways() {
                 whileInView="show"
                 viewport={{ once: true, amount: 0.25 }}
                 custom={i}
-                className="glass-panel flex h-full flex-col rounded-3xl border border-slate-800/80 bg-slate-950/85 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
+                className="group rounded-2xl bg-white p-8 shadow-xl transition-transform duration-300 hover:-translate-y-1"
               >
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900">
-                  <Icon
-                    className={`h-6 w-6 ${
-                      colorClasses[pathway.color as keyof typeof colorClasses]
-                    }`}
-                  />
+                {/* Icon */}
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50">
+                  <Icon className="h-6 w-6 text-[#002147]" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-50">
+
+                {/* Title */}
+                <h3 className="mb-4 text-xl font-bold text-[#002147] sm:text-2xl">
                   {pathway.title}
                 </h3>
-                <ul className="mt-5 flex-1 space-y-2.5">
-                  {pathway.bullets.map((bullet) => (
-                    <li
-                      key={bullet}
-                      className="flex items-start gap-2.5 text-sm text-slate-300"
-                    >
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
+
+                {/* Description */}
+                <p className="mb-6 text-base leading-relaxed text-slate-600">
+                  {pathway.description}
+                </p>
+
+                {/* CTA Button */}
                 <Link
                   href={pathway.href}
-                  className="mt-6 inline-flex items-center justify-center rounded-full border border-slate-600/70 bg-slate-900/70 px-5 py-2.5 text-sm font-medium text-slate-100 transition hover:border-amber-300/70 hover:bg-slate-900"
+                  className="inline-flex items-center gap-2 rounded-lg bg-[#002147] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#003366]"
                 >
                   {pathway.cta}
+                  <div className="flex h-6 w-6 items-center justify-center rounded-full border border-white/30 bg-white/20">
+                    <ArrowRight className="h-3 w-3 text-white" />
+                  </div>
                 </Link>
               </motion.div>
             );

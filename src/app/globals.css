@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-slate-950 text-slate-100;
+    @apply bg-white text-slate-900;
     font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont,
       "SF Pro Text", sans-serif;
   }
@@ -44,7 +44,7 @@
   }
 
   .glass-panel {
-    @apply border border-white/10 bg-slate-900/70 shadow-[0_18px_45px_rgba(15,23,42,0.9)] backdrop-blur-xl;
+    @apply border border-slate-200 bg-white shadow-lg;
   }
 }
 

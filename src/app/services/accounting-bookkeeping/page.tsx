@@ -55,19 +55,19 @@ export default function AccountingBookkeepingPage() {
           viewport={{ once: true, amount: 0.25 }}
         >
           <div className="flex items-start gap-3">
-            <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-2xl bg-slate-900">
-              <FileText className="h-4 w-4 text-amber-300" />
+            <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-2xl bg-[#FFC72C]/10">
+              <FileText className="h-4 w-4 text-[#FFC72C]" />
             </div>
             <div>
-              <h2 className="text-sm font-semibold text-slate-50">
+              <h2 className="text-sm font-semibold text-[#002147]">
                 What&apos;s included
               </h2>
-              <p className="mt-1 text-xs text-slate-400">
+              <p className="mt-1 text-xs text-slate-600">
                 A dedicated pod manages your books on a defined cadence with
                 documented processes so that you always know the status of your
                 close.
               </p>
-              <ul className="mt-3 grid gap-2 text-xs text-slate-200 sm:grid-cols-2">
+              <ul className="mt-3 grid gap-2 text-xs text-slate-700 sm:grid-cols-2">
                 {items.map((item, i) => (
                   <motion.li
                     key={item}
@@ -77,7 +77,7 @@ export default function AccountingBookkeepingPage() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: i * 0.05 }}
                   >
-                    <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 text-emerald-300" />
+                    <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 text-[#FFC72C]" />
                     <span>{item}</span>
                   </motion.li>
                 ))}

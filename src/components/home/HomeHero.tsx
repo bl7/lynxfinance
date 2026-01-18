@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const fadeUp = {
@@ -9,9 +9,14 @@ const fadeUp = {
   show: { opacity: 1, y: 0 },
 };
 
+const fadeIn = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
+
 export function HomeHero() {
   return (
-    <section className="relative min-h-[85vh] overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden">
       <video
         autoPlay
         loop
@@ -21,80 +26,63 @@ export function HomeHero() {
       >
         <source src="/heroVideo.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-slate-950/80" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(248,250,252,0.12),transparent_60%),radial-gradient(circle_at_bottom,rgba(15,23,42,0.95),transparent_65%)]" />
+      <div className="absolute inset-0 bg-slate-950/75" />
 
-      <div className="relative mx-auto flex min-h-[85vh] max-w-6xl items-center px-4 py-20 lg:px-6 lg:py-24">
+      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-4 pt-20 lg:px-6 lg:pt-24">
+        {/* Recognised By Section - Top Left */}
         <motion.div
-          className="relative z-10 w-full max-w-4xl"
+          className="relative z-10 mb-auto pt-[10vh]"
           initial="hidden"
           animate="show"
-          transition={{ staggerChildren: 0.07 }}
-        >
-          <motion.h1
-            variants={fadeUp}
-            className="text-balance text-4xl font-semibold tracking-tight text-slate-50 sm:text-5xl lg:text-6xl"
-          >
-            Finance, tax, and compliance support for{" "}
-            <span className="bg-linear-to-r from-amber-200 via-amber-400 to-sky-300 bg-clip-text text-transparent">
-              modern businesses
-            </span>
-          </motion.h1>
+          transition={{ staggerChildren: 0.1 }}
+        ></motion.div>
 
-          <motion.p
-            variants={fadeUp}
-            className="mt-6 max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg"
-          >
-            Clean bookkeeping, confident filings, and clear reporting, plus US
-            company setup when you need it.
-          </motion.p>
-
+        {/* Main Content - Left Middle */}
+        <div className="relative z-10 flex items-center flex-1">
           <motion.div
-            variants={fadeUp}
-            className="mt-8 flex flex-wrap items-center gap-4"
+            className="flex max-w-2xl flex-col gap-6"
+            initial="hidden"
+            animate="show"
+            transition={{ staggerChildren: 0.07 }}
           >
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 px-7 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-[0_0_30px_rgba(245,197,110,0.7)] transition hover:brightness-110"
+            {/* Headline */}
+            <motion.h1
+              variants={fadeUp}
+              className="text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
             >
-              Book a free assessment
-            </Link>
-            <Link
-              href="/services"
-              className="inline-flex items-center justify-center rounded-full border border-slate-600/70 bg-slate-900/70 px-6 py-3 text-sm font-medium text-slate-100 transition hover:border-amber-300/70 hover:bg-slate-900"
-            >
-              Explore services
-            </Link>
-          </motion.div>
+              Finance, tax, and compliance support for modern businesses
+            </motion.h1>
 
-          {/* Service chips */}
-          <motion.div
-            variants={fadeUp}
-            className="mt-8 flex flex-wrap items-center gap-3"
-          >
-            {[
-              "Bookkeeping",
-              "Tax filings",
-              "Compliance support",
-              "Advisory",
-              "US company setup",
-            ].map((chip) => (
-              <div
-                key={chip}
-                className="flex items-center gap-2 rounded-full border border-slate-700/50 bg-slate-900/60 px-3 py-1.5"
+            {/* Supporting Paragraph */}
+            <motion.p
+              variants={fadeUp}
+              className="max-w-xl text-base leading-relaxed text-white/90 sm:text-lg lg:text-xl"
+            >
+              We help startups, growing companies, and global teams simplify
+              accounting, tax, and compliance — so you can scale with
+              confidence.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              variants={fadeUp}
+              className="flex flex-wrap items-center gap-4 pt-2"
+            >
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded bg-[#FFC72C] px-6 py-3 text-sm font-semibold uppercase tracking-wide text-[#002147] transition hover:bg-[#FFD54F]"
               >
-                <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
-                <span className="text-xs text-slate-300">{chip}</span>
-              </div>
-            ))}
+                Book a free assessment
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center rounded border border-white/30 bg-transparent px-6 py-3 text-sm font-medium text-white transition hover:border-white/50 hover:bg-white/10"
+              >
+                Explore services
+              </Link>
+            </motion.div>
           </motion.div>
-
-          {/* Trust line */}
-          <motion.p variants={fadeUp} className="mt-6 text-sm text-slate-400">
-            Secure document handling, cross-border support, US and Nepal
-            delivery team
-          </motion.p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

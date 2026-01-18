@@ -72,7 +72,7 @@ export function HomePackages() {
   ];
 
   return (
-    <section className="border-y border-slate-800/70 bg-slate-950/95 py-20">
+    <section className="border-y border-slate-200 bg-slate-50 py-20">
       <div className="mx-auto max-w-6xl px-4 lg:px-6">
         <motion.div
           variants={sectionFade}
@@ -81,10 +81,10 @@ export function HomePackages() {
           viewport={{ once: true, amount: 0.2 }}
           className="text-center"
         >
-          <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
+          <h2 className="text-3xl font-semibold text-[#002147] sm:text-4xl">
             Engagements
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-300">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">
             Flexible engagement models to match your business needs and stage.
           </p>
         </motion.div>
@@ -100,42 +100,36 @@ export function HomePackages() {
                 whileInView="show"
                 viewport={{ once: true, amount: 0.25 }}
                 custom={i}
-                className={`glass-panel flex h-full flex-col rounded-3xl border p-6 transition-all duration-300 hover:-translate-y-1 ${
-                  pkg.highlight
-                    ? "border-amber-300/50 bg-slate-950/90"
-                    : "border-slate-800/80 bg-slate-950/85"
+                className={`glass-panel flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#FFC72C]/30 hover:shadow-xl ${
+                  pkg.highlight ? "border-[#FFC72C]/50" : ""
                 }`}
               >
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900">
-                  <Icon
-                    className={`h-6 w-6 ${
-                      pkg.highlight ? "text-amber-300" : "text-sky-300"
-                    }`}
-                  />
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50">
+                  <Icon className="h-6 w-6 text-[#002147]" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-50">
+                <h3 className="text-xl font-semibold text-[#002147]">
                   {pkg.title}
                 </h3>
-                <p className="mt-2 text-sm text-amber-300/80">
+                <p className="mt-2 text-sm text-[#FFC72C]">
                   Best for: {pkg.bestFor}
                 </p>
                 <ul className="mt-5 flex-1 space-y-2.5">
                   {pkg.outcomes.map((outcome) => (
                     <li
                       key={outcome}
-                      className="flex items-start gap-2.5 text-sm text-slate-300"
+                      className="flex items-start gap-2.5 text-sm text-slate-600"
                     >
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#FFC72C]" />
                       <span>{outcome}</span>
                     </li>
                   ))}
                 </ul>
                 <Link
                   href={pkg.href}
-                  className={`mt-6 inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.18em] transition-all ${
+                  className={`mt-6 inline-flex items-center justify-center rounded px-6 py-2.5 text-sm font-semibold uppercase tracking-wide transition-all ${
                     pkg.highlight
-                      ? "bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 text-slate-950 shadow-[0_0_24px_rgba(245,197,110,0.6)] hover:brightness-110"
-                      : "border border-slate-600/70 bg-slate-900/70 text-slate-100 hover:border-amber-300/70 hover:bg-slate-900"
+                      ? "bg-[#FFC72C] text-[#002147] hover:bg-[#FFD54F]"
+                      : "border border-[#002147] bg-transparent text-[#002147] hover:bg-[#002147] hover:text-white"
                   }`}
                 >
                   {pkg.cta}
@@ -154,17 +148,17 @@ export function HomePackages() {
           custom={3}
           className="mt-8"
         >
-          <div className="glass-panel rounded-2xl border border-slate-800/80 bg-slate-950/85 p-6">
+          <div className="glass-panel rounded-2xl border border-slate-200 bg-white p-6">
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
               <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900">
-                  <Building2 className="h-6 w-6 text-emerald-300" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50">
+                  <Building2 className="h-6 w-6 text-[#002147]" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-slate-50">
+                  <h3 className="text-lg font-semibold text-[#002147]">
                     US Company Setup
                   </h3>
-                  <p className="mt-1 text-sm text-slate-400">
+                  <p className="mt-1 text-sm text-slate-600">
                     One-time formation or add-on service. LLC/C-Corp formation,
                     EIN, BOI, Registered Agent, and ongoing compliance.
                   </p>
@@ -172,7 +166,7 @@ export function HomePackages() {
               </div>
               <Link
                 href="/services/us-company-formation"
-                className="shrink-0 rounded-full border border-slate-600/70 bg-slate-900/70 px-5 py-2.5 text-sm font-medium text-slate-100 transition hover:border-amber-300/70 hover:bg-slate-900"
+                className="shrink-0 rounded border border-[#002147] bg-transparent px-5 py-2.5 text-sm font-medium text-[#002147] transition hover:bg-[#002147] hover:text-white"
               >
                 Explore US setup
               </Link>

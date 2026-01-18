@@ -106,19 +106,19 @@ export default function FaqPage() {
                   custom={i}
                 >
                   <div
-                    className={`glass-panel group cursor-pointer rounded-xl border border-slate-800/80 bg-slate-950/85 p-5 transition-all duration-300 ${
+                    className={`glass-panel group cursor-pointer rounded-xl border border-slate-200 bg-white p-5 transition-all duration-300 ${
                       isOpen
-                        ? "border-amber-300/40 bg-slate-950/95"
-                        : "hover:border-slate-700"
+                        ? "border-[#FFC72C]/40 bg-slate-50"
+                        : "hover:border-slate-300"
                     }`}
                     onClick={() => setOpenIndex(isOpen ? null : i)}
                   >
                     <div className="flex items-start justify-between gap-4">
-                      <h3 className="flex-1 text-sm font-semibold text-slate-50">
+                      <h3 className="flex-1 text-sm font-semibold text-[#002147]">
                         {item.q}
                       </h3>
                       <button
-                        className="mt-0.5 shrink-0 text-slate-400 transition-colors hover:text-amber-300"
+                        className="mt-0.5 shrink-0 text-slate-400 transition-colors hover:text-[#FFC72C]"
                         aria-label={isOpen ? "Collapse" : "Expand"}
                       >
                         {isOpen ? (
@@ -134,7 +134,7 @@ export default function FaqPage() {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="mt-4 text-sm leading-relaxed text-slate-300"
+                        className="mt-4 text-sm leading-relaxed text-slate-600"
                       >
                         {item.a}
                       </motion.p>
@@ -154,16 +154,16 @@ export default function FaqPage() {
             viewport={{ once: true, amount: 0.25 }}
             custom={faqs.length}
           >
-            <div className="glass-panel rounded-2xl border border-amber-300/20 bg-slate-950/90 p-6 text-center">
+            <div className="glass-panel rounded-2xl border border-[#FFC72C]/20 bg-white p-6 text-center">
               <div className="mb-4 flex justify-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-amber-300/20 border border-amber-300/30">
-                  <MessageCircle className="h-8 w-8 text-amber-300" />
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#FFC72C]/20 border border-[#FFC72C]/30">
+                  <MessageCircle className="h-8 w-8 text-[#FFC72C]" />
                 </div>
               </div>
-              <h3 className="mb-3 text-lg font-semibold text-slate-50">
+              <h3 className="mb-3 text-lg font-semibold text-[#002147]">
                 Can&apos;t find answer to your question?
               </h3>
-              <p className="mb-6 text-sm leading-relaxed text-slate-300">
+              <p className="mb-6 text-sm leading-relaxed text-slate-600">
                 Still have questions that aren&apos;t covered here? We&apos;re
                 here to help. Whether you need a custom quote, have
                 industry-specific concerns, or simply want to talk through your
@@ -173,7 +173,7 @@ export default function FaqPage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-[0_0_22px_rgba(245,197,110,0.65)] transition hover:brightness-110"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FFC72C] px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#002147] transition hover:bg-[#FFD54F]"
               >
                 <span>Contact Us</span>
                 <ChevronRight className="h-4 w-4" />

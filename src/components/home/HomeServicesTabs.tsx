@@ -92,7 +92,7 @@ export function HomeServicesTabs() {
   ];
 
   return (
-    <section className="bg-slate-950/95 py-20">
+    <section className="bg-white py-20">
       <div className="mx-auto max-w-6xl px-4 lg:px-6">
         <motion.div
           variants={sectionFade}
@@ -101,13 +101,13 @@ export function HomeServicesTabs() {
           viewport={{ once: true, amount: 0.2 }}
           className="text-center"
         >
-          <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
+          <h2 className="text-3xl font-semibold text-[#002147] sm:text-4xl">
             Services, built to fit your stage
           </h2>
         </motion.div>
 
         {/* Tabs */}
-        <div className="mt-10 flex flex-wrap justify-center gap-2 border-b border-slate-800/80">
+        <div className="mt-10 flex flex-wrap justify-center gap-2 border-b border-slate-200">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -116,8 +116,8 @@ export function HomeServicesTabs() {
                 onClick={() => setActiveTab(index)}
                 className={`flex items-center gap-2 rounded-t-lg border-b-2 px-4 py-3 text-sm font-medium transition-colors ${
                   activeTab === index
-                    ? "border-amber-300 text-amber-300"
-                    : "border-transparent text-slate-400 hover:text-slate-300"
+                    ? "border-[#FFC72C] text-[#002147]"
+                    : "border-transparent text-slate-500 hover:text-[#002147]"
                 }`}
               >
                 <Icon className="h-4 w-4" />
@@ -135,21 +135,21 @@ export function HomeServicesTabs() {
           animate="show"
           className="mt-8"
         >
-          <div className="glass-panel rounded-2xl border border-slate-800/80 bg-slate-950/85 p-8">
+          <div className="glass-panel rounded-2xl border border-slate-200 bg-white p-8">
             <ul className="space-y-3">
               {services[activeTab].bullets.map((bullet, i) => (
                 <li
                   key={i}
-                  className="flex items-start gap-3 text-base text-slate-300"
+                  className="flex items-start gap-3 text-base text-slate-700"
                 >
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" />
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#FFC72C]" />
                   <span>{bullet}</span>
                 </li>
               ))}
             </ul>
             <Link
               href={services[activeTab].href}
-              className="mt-8 inline-flex items-center justify-center rounded-full bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-[0_0_24px_rgba(245,197,110,0.6)] transition hover:brightness-110"
+              className="mt-8 inline-flex items-center justify-center rounded bg-[#FFC72C] px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-[#002147] transition hover:bg-[#FFD54F]"
             >
               {services[activeTab].cta}
             </Link>

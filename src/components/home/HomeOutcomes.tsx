@@ -46,7 +46,7 @@ export function HomeOutcomes() {
   ];
 
   return (
-    <section className="bg-slate-950/95 py-20">
+    <section className="bg-white py-20">
       <div className="mx-auto max-w-6xl px-4 lg:px-6">
         <motion.div
           variants={sectionFade}
@@ -55,10 +55,10 @@ export function HomeOutcomes() {
           viewport={{ once: true, amount: 0.2 }}
           className="text-center"
         >
-          <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
+          <h2 className="text-3xl font-semibold text-[#002147] sm:text-4xl">
             Typical outcomes
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-300">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">
             {/* TODO: Replace with real testimonials section if available */}
             What businesses achieve when they work with Lynx for finance,
             compliance, and accounting support.
@@ -76,15 +76,15 @@ export function HomeOutcomes() {
                 whileInView="show"
                 viewport={{ once: true, amount: 0.25 }}
                 custom={i}
-                className="glass-panel rounded-2xl border border-slate-800/80 bg-slate-950/85 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
+                className="glass-panel rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#FFC72C]/30 hover:shadow-xl"
               >
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900">
-                  <Icon className="h-5 w-5 text-amber-300" />
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-slate-50">
+                  <Icon className="h-5 w-5 text-[#FFC72C]" />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-50">
+                <h3 className="text-lg font-semibold text-[#002147]">
                   {outcome.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                <p className="mt-3 text-sm leading-relaxed text-slate-600">
                   {outcome.description}
                 </p>
               </motion.div>
@@ -95,4 +95,3 @@ export function HomeOutcomes() {
     </section>
   );
 }
-

@@ -89,7 +89,7 @@ export default function ClientsPage() {
       />
 
       {/* US Clients Section */}
-      <section className="border-y border-slate-800/70 bg-slate-950/95 py-20">
+      <section className="border-y border-slate-200 bg-white py-20">
         <div className="mx-auto max-w-6xl px-4 lg:px-6">
           <motion.div
             variants={sectionFade}
@@ -99,14 +99,14 @@ export default function ClientsPage() {
             className="mb-12"
           >
             <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 text-2xl">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-2xl">
                 🇺🇸
               </div>
               <div>
-                <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
+                <h2 className="text-3xl font-semibold text-[#002147] sm:text-4xl">
                   US Clients
                 </h2>
-                <p className="mt-2 text-sm text-slate-400">
+                <p className="mt-2 text-sm text-slate-600">
                   Businesses across the United States
                 </p>
               </div>
@@ -122,23 +122,23 @@ export default function ClientsPage() {
                 whileInView="show"
                 viewport={{ once: true, amount: 0.25 }}
                 custom={i}
-                className="glass-panel rounded-2xl border border-slate-800/80 bg-slate-950/85 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
+                className="glass-panel rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#FFC72C]/30 hover:shadow-xl"
               >
                 <div className="mb-4 flex items-start justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-50">
+                    <h3 className="text-lg font-semibold text-[#002147]">
                       {client.name}
                     </h3>
-                    <p className="mt-1 text-sm text-amber-300/80">
+                    <p className="mt-1 text-sm text-[#FFC72C]">
                       {client.industry}
                     </p>
                   </div>
                 </div>
-                <div className="mb-4 flex items-center gap-2 text-xs text-slate-400">
-                  <MapPin className="h-3.5 w-3.5 text-amber-300" />
+                <div className="mb-4 flex items-center gap-2 text-xs text-slate-600">
+                  <MapPin className="h-3.5 w-3.5 text-[#002147]" />
                   <span>{client.location}</span>
                 </div>
-                <p className="text-sm leading-relaxed text-slate-300">
+                <p className="text-sm leading-relaxed text-slate-700">
                   {client.description}
                 </p>
               </motion.div>
@@ -147,7 +147,7 @@ export default function ClientsPage() {
 
           {/* TODO: Add more US clients here as data becomes available */}
           {usClients.length === 0 && (
-            <p className="text-center text-sm text-slate-400">
+            <p className="text-center text-sm text-slate-500">
               Client information coming soon.
             </p>
           )}
@@ -155,7 +155,7 @@ export default function ClientsPage() {
       </section>
 
       {/* Nepal Clients Section */}
-      <section className="bg-slate-950/95 py-20">
+      <section className="bg-slate-50 py-20">
         <div className="mx-auto max-w-6xl px-4 lg:px-6">
           <motion.div
             variants={sectionFade}
@@ -165,14 +165,14 @@ export default function ClientsPage() {
             className="mb-12"
           >
             <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 text-2xl">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-2xl">
                 🇳🇵
               </div>
               <div>
-                <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
+                <h2 className="text-3xl font-semibold text-[#002147] sm:text-4xl">
                   Nepali Clients
                 </h2>
-                <p className="mt-2 text-sm text-slate-400">
+                <p className="mt-2 text-sm text-slate-600">
                   Businesses based in Nepal with US operations or expansion
                   plans
                 </p>
@@ -189,23 +189,23 @@ export default function ClientsPage() {
                 whileInView="show"
                 viewport={{ once: true, amount: 0.25 }}
                 custom={i}
-                className="glass-panel rounded-2xl border border-slate-800/80 bg-slate-950/85 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-300/30"
+                className="glass-panel rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#FFC72C]/30 hover:shadow-xl"
               >
                 <div className="mb-4 flex items-start justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-50">
+                    <h3 className="text-lg font-semibold text-[#002147]">
                       {client.name}
                     </h3>
-                    <p className="mt-1 text-sm text-emerald-300/80">
+                    <p className="mt-1 text-sm text-[#FFC72C]">
                       {client.industry}
                     </p>
                   </div>
                 </div>
-                <div className="mb-4 flex items-center gap-2 text-xs text-slate-400">
-                  <MapPin className="h-3.5 w-3.5 text-emerald-300" />
+                <div className="mb-4 flex items-center gap-2 text-xs text-slate-600">
+                  <MapPin className="h-3.5 w-3.5 text-[#002147]" />
                   <span>{client.location}</span>
                 </div>
-                <p className="text-sm leading-relaxed text-slate-300">
+                <p className="text-sm leading-relaxed text-slate-700">
                   {client.description}
                 </p>
               </motion.div>
@@ -214,7 +214,7 @@ export default function ClientsPage() {
 
           {/* TODO: Add more Nepali clients here as data becomes available */}
           {nepaliClients.length === 0 && (
-            <p className="text-center text-sm text-slate-400">
+            <p className="text-center text-sm text-slate-500">
               Client information coming soon.
             </p>
           )}
@@ -222,7 +222,7 @@ export default function ClientsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="border-t border-slate-800/70 bg-slate-950/95 py-16">
+      <section className="border-t border-slate-200 bg-white py-16">
         <div className="mx-auto max-w-4xl px-4 text-center lg:px-6">
           <motion.div
             variants={sectionFade}
@@ -230,23 +230,23 @@ export default function ClientsPage() {
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <h2 className="text-2xl font-semibold text-slate-50 sm:text-3xl">
+            <h2 className="text-2xl font-semibold text-[#002147] sm:text-3xl">
               Ready to join our client roster?
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base text-slate-300">
+            <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">
               Whether you&apos;re in the US, Nepal, or expanding across borders,
               we can help you manage your finance, tax, and compliance needs.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 px-7 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-[0_0_30px_rgba(245,197,110,0.7)] transition hover:brightness-110"
+                className="inline-flex items-center justify-center rounded bg-[#FFC72C] px-7 py-3 text-sm font-semibold uppercase tracking-wide text-[#002147] transition hover:bg-[#FFD54F]"
               >
                 Book a free assessment
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center rounded-full border border-slate-600/70 bg-slate-900/70 px-6 py-3 text-sm font-medium text-slate-100 transition hover:border-amber-300/70 hover:bg-slate-900"
+                className="inline-flex items-center justify-center rounded border border-[#002147] bg-transparent px-6 py-3 text-sm font-medium text-[#002147] transition hover:bg-[#002147] hover:text-white"
               >
                 Explore services
               </Link>

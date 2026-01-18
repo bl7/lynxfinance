@@ -24,9 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} bg-slate-950 text-slate-100 antialiased`}
+        className={`${inter.variable} bg-white text-slate-900 antialiased`}
       >
-        <div className="flex min-h-screen flex-col bg-[radial-gradient(circle_at_top,_rgba(17,94,163,0.55),_transparent_60%),radial-gradient(circle_at_bottom,_rgba(8,47,73,0.75),_transparent_55%)]">
+        <div className="flex min-h-screen flex-col bg-white">
           <Header />
           <main className="flex-1 pt-20 lg:pt-24">{children}</main>
           <Footer />

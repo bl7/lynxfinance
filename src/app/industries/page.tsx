@@ -133,7 +133,7 @@ export default function IndustriesPage() {
             return (
               <motion.div
                 key={industry.name}
-                className="glass-panel rounded-2xl border border-amber-300/20 bg-slate-950/85 p-5 transition-transform duration-300 hover:-translate-y-1 hover:border-amber-300/40"
+                className="glass-panel rounded-2xl border border-[#FFC72C]/20 bg-white p-5 transition-transform duration-300 hover:-translate-y-1 hover:border-[#FFC72C]/40"
                 variants={cardFade}
                 initial="hidden"
                 whileInView="show"
@@ -141,10 +141,10 @@ export default function IndustriesPage() {
                 custom={i}
               >
                 <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900">
-                    <Icon className="h-5 w-5 text-amber-300" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFC72C]/10">
+                    <Icon className="h-5 w-5 text-[#FFC72C]" />
                   </div>
-                  <h2 className="text-base font-semibold text-slate-50">
+                  <h2 className="text-base font-semibold text-[#002147]">
                     {industry.name}
                   </h2>
                 </div>
@@ -152,9 +152,9 @@ export default function IndustriesPage() {
                   {industry.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2 text-sm text-slate-300"
+                      className="flex items-start gap-2 text-sm text-slate-600"
                     >
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#FFC72C]" />
                       <span>{item}</span>
                     </li>
                   ))}

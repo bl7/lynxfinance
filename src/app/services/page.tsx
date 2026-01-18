@@ -228,33 +228,33 @@ export default function ServicesPage() {
             return (
               <motion.div
                 key={service.slug}
-                className="glass-panel flex h-full flex-col rounded-2xl border border-slate-800/80 bg-slate-950/85 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
+                className="glass-panel flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#FFC72C]/30"
                 variants={cardFade}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.25 }}
                 custom={i}
               >
-                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900">
-                  <Icon className="h-5 w-5 text-amber-300" />
+                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFC72C]/10">
+                  <Icon className="h-5 w-5 text-[#FFC72C]" />
                 </div>
-                <h2 className="text-base font-semibold text-slate-50">
+                <h2 className="text-base font-semibold text-[#002147]">
                   {service.name}
                 </h2>
-                <p className="mt-2 text-xs leading-relaxed text-slate-300">
+                <p className="mt-2 text-xs leading-relaxed text-slate-600">
                   {service.summary}
                 </p>
-                <ul className="mt-4 flex-1 space-y-2 text-xs text-slate-400">
+                <ul className="mt-4 flex-1 space-y-2 text-xs text-slate-600">
                   {service.bullets.map((item) => (
                     <li key={item} className="flex items-start gap-2">
-                      <span className="mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-300/60" />
+                      <span className="mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FFC72C]/60" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
                 <Link
                   href={`/services/${service.slug}`}
-                  className="mt-5 text-xs font-semibold text-amber-200 transition-colors hover:text-amber-100"
+                  className="mt-5 text-xs font-semibold text-[#FFC72C] transition-colors hover:text-[#FFD54F]"
                 >
                   Learn more →
                 </Link>

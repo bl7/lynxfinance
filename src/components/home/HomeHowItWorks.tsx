@@ -27,35 +27,35 @@ export function HomeHowItWorks() {
     {
       icon: Search,
       step: "1",
-      title: "Discovery and setup",
+      title: "Discovery & setup",
       description:
-        "We learn your business, current setup, and goals to design the right approach.",
+        "We understand your business, current systems, and goals to design the right engagement.",
     },
     {
       icon: FileText,
       step: "2",
-      title: "Systemize bookkeeping and reporting",
+      title: "Systemized bookkeeping & reporting",
       description:
-        "Clean up records, establish workflows, and create reliable monthly reporting.",
+        "We clean records, establish workflows, and deliver reliable monthly reporting.",
     },
     {
       icon: FileCheck,
       step: "3",
-      title: "Filing and compliance support",
+      title: "Filing & compliance management",
       description:
-        "Handle tax filings, state requirements, and keep you ahead of deadlines.",
+        "We manage tax filings, state requirements, and keep you ahead of deadlines.",
     },
     {
       icon: TrendingUp,
       step: "4",
       title: "Ongoing advisory as you scale",
       description:
-        "Strategic guidance for growth decisions, cash flow, and compliance planning.",
+        "Strategic guidance on growth, cash flow, and compliance planning.",
     },
   ];
 
   return (
-    <section className="border-y border-slate-800/70 bg-slate-950/95 py-20">
+    <section className="border-y border-slate-200 bg-slate-50 py-20">
       <div className="mx-auto max-w-6xl px-4 lg:px-6">
         <motion.div
           variants={sectionFade}
@@ -64,9 +64,12 @@ export function HomeHowItWorks() {
           viewport={{ once: true, amount: 0.2 }}
           className="text-center"
         >
-          <h2 className="text-3xl font-semibold text-slate-50 sm:text-4xl">
-            How it works
+          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#002147]">
+            HOW IT WORKS
           </h2>
+          <h3 className="mt-4 text-3xl font-semibold text-[#002147] sm:text-4xl">
+            A simple, disciplined approach
+          </h3>
         </motion.div>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -82,19 +85,19 @@ export function HomeHowItWorks() {
                 custom={i}
                 className="relative"
               >
-                <div className="glass-panel flex h-full flex-col rounded-2xl border border-slate-800/80 bg-slate-950/85 p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30">
+                <div className="glass-panel flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#FFC72C]/30 hover:shadow-xl">
                   <div className="mb-4 flex justify-center">
-                    <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-slate-900 border border-amber-300/30">
-                      <Icon className="h-6 w-6 text-amber-300" />
-                      <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-amber-300 text-xs font-bold text-slate-950">
+                    <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-slate-50 border border-[#FFC72C]/30">
+                      <Icon className="h-6 w-6 text-[#002147]" />
+                      <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-[#FFC72C] text-xs font-bold text-[#002147]">
                         {item.step}
                       </span>
                     </div>
                   </div>
-                  <h3 className="text-base font-semibold text-slate-50">
+                  <h3 className="text-base font-semibold text-[#002147]">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
                     {item.description}
                   </p>
                 </div>
@@ -108,12 +111,12 @@ export function HomeHowItWorks() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="mt-8 text-center text-sm text-slate-400"
+          className="mt-8 text-center text-sm text-slate-600"
         >
           Need US setup?{" "}
           <Link
             href="/services/us-company-formation"
-            className="font-medium text-amber-300 hover:text-amber-200"
+            className="font-medium text-[#FFC72C] hover:text-[#002147]"
           >
             We can form your company and keep it compliant.
           </Link>

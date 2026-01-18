@@ -2,28 +2,30 @@
 
 import {
   HomeHero,
-  HomePathways,
+  HomeTrustedBy,
+  HomeServicesOverview,
   HomeProofBar,
   HomeProblem,
   HomeHowItWorks,
-  HomeServicesTabs,
   HomePackages,
   HomeWhyLynx,
-  HomePersonas,
   HomeOutcomes,
   HomeFinalCTA,
 } from "@/components/home";
 
 export default function Home() {
   return (
-    <div className="relative">
+    <div className="relative -mt-20 lg:-mt-24">
       {/* 1. Hero - broad positioning */}
       <HomeHero />
 
-      {/* 2. Pathways - primary conversion area */}
-      <HomePathways />
+      {/* 2. Trusted By */}
+      <HomeTrustedBy />
 
-      {/* 3. Proof Bar - credibility points */}
+      {/* 3. Services Overview */}
+      <HomeServicesOverview />
+
+      {/* 4. Proof Bar - credibility points */}
       <HomeProofBar />
 
       {/* 4. Problem - broad pains */}
@@ -32,17 +34,11 @@ export default function Home() {
       {/* 5. How It Works - generic 4-step process */}
       <HomeHowItWorks />
 
-      {/* 6. Services Snapshot - tabs */}
-      <HomeServicesTabs />
-
-      {/* 7. Packages - renamed to Engagements */}
+      {/* 6. Packages - renamed to Engagements */}
       <HomePackages />
 
-      {/* 8. Why Lynx - trust + team + delivery model */}
+      {/* 8. Why Lynx - trust + team + delivery model + Who It's For */}
       <HomeWhyLynx />
-
-      {/* 9. Who It's For - broader personas */}
-      <HomePersonas />
 
       {/* 10. Outcomes */}
       <HomeOutcomes />
