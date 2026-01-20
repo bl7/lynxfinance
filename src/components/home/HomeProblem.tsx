@@ -52,9 +52,9 @@ export function HomeProblem() {
         >
           {/* Left Column - Content */}
           <div>
-            <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-              The real challenge isn&apos;t execution — it&apos;s clarity.
-            </h2>
+            <h3 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+              The real challenge isn&apos;t execution, it&apos;s clarity.
+            </h3>
 
             <ul className="mt-8 space-y-4">
               {problems.map((problem, i) => (

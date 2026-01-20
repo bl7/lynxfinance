@@ -108,14 +108,14 @@ export function PricingContent() {
         >
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FFC72C] px-8 py-3 text-sm font-semibold text-[#002147] transition hover:bg-[#FFD54F]"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FFC72C] px-8 py-3 text-sm font-semibold text-slate-900 transition hover:bg-[#FFD54F]"
           >
             Book free assessment
             <ChevronRight className="h-4 w-4" />
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#002147] bg-transparent px-8 py-3 text-sm font-semibold text-[#002147] transition hover:bg-[#002147] hover:text-white"
+            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#002147] bg-transparent px-8 py-3 text-sm font-semibold text-slate-900 transition hover:bg-[#002147] hover:text-white"
           >
             Talk to sales
           </Link>
@@ -138,7 +138,7 @@ export function PricingContent() {
                 onClick={() => handleTabChange(tab.id)}
                 className={`whitespace-nowrap border-b-2 px-4 py-3 text-sm font-semibold transition-colors ${
                   activeTab === tab.id
-                    ? "border-[#FFC72C] text-[#002147]"
+                    ? "border-[#FFC72C] text-slate-900"
                     : "border-transparent text-slate-600 hover:border-slate-300 hover:text-slate-900"
                 }`}
               >
@@ -174,11 +174,11 @@ export function PricingContent() {
                   }`}
                 >
                   <div className="mb-4">
-                    <h3 className="text-xl font-bold text-[#002147]">
+                    <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
                       {plan.name}
                     </h3>
                     <div className="mt-2">
-                      <span className="text-3xl font-bold text-[#002147]">
+                      <span className="text-2xl font-bold text-slate-900 sm:text-3xl">
                         {plan.price}
                       </span>
                       <span className="text-sm text-slate-600">/month</span>
@@ -190,19 +190,19 @@ export function PricingContent() {
                   <div className="space-y-3 border-t border-slate-200 pt-4">
                     <div className="flex justify-between text-sm">
                       <span className="text-slate-600">Transactions:</span>
-                      <span className="font-medium text-[#002147]">
+                      <span className="font-medium text-slate-900">
                         {plan.transactions}
                       </span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-slate-600">Accounts:</span>
-                      <span className="font-medium text-[#002147]">
+                      <span className="font-medium text-slate-900">
                         {plan.accounts}
                       </span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-slate-600">Strategy Review:</span>
-                      <span className="font-medium text-[#002147]">
+                      <span className="font-medium text-slate-900">
                         {plan.strategyReview}
                       </span>
                     </div>
@@ -227,7 +227,7 @@ export function PricingContent() {
               viewport={{ once: true }}
             >
               {/* Header */}
-              <h2 className="mb-8 text-3xl font-bold text-[#002147] sm:text-4xl">
+              <h2 className="mb-8 text-2xl font-semibold text-slate-900 sm:text-3xl">
                 Pick Your Plan: Fast, Flexible, Full-Service
               </h2>
 
@@ -240,17 +240,17 @@ export function PricingContent() {
                 custom={0}
                 className="mb-8 rounded-2xl border-2 border-[#FFC72C] bg-[#FFC72C]/10 p-6"
               >
-                <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#FFC72C]">
+                <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-900">
                   FREE SERVICES
                 </div>
-                <h3 className="mb-2 text-xl font-bold text-[#002147]">
+                <h3 className="mb-2 text-xl font-semibold text-slate-900 sm:text-2xl">
                   {freeServices.name}
                 </h3>
                 <p className="mb-4 text-sm text-slate-600">
                   {freeServices.description}
                 </p>
                 <div className="flex items-center gap-2 text-sm">
-                  <span className="font-semibold text-[#002147]">Fee:</span>
+                  <span className="font-semibold text-slate-900">Fee:</span>
                   <span className="text-slate-600">{freeServices.fee}</span>
                 </div>
               </motion.div>
@@ -267,11 +267,11 @@ export function PricingContent() {
                     custom={i}
                     className="rounded-2xl border-2 border-slate-200 bg-white p-6 transition-all hover:shadow-lg"
                   >
-                    <h3 className="mb-2 text-xl font-bold text-[#002147]">
+                    <h3 className="mb-2 text-xl font-semibold text-slate-900 sm:text-2xl">
                       {plan.name}
                     </h3>
                     <div className="mb-4">
-                      <span className="text-2xl font-bold text-[#002147]">
+                      <span className="text-2xl font-bold text-slate-900">
                         {plan.price}
                       </span>
                       <span className="ml-2 text-sm text-slate-600">
@@ -315,7 +315,7 @@ export function PricingContent() {
                         onClick={() =>
                           setOpenCategory(isOpen ? null : category)
                         }
-                        className="w-full px-6 py-4 text-left text-base font-semibold text-[#002147] transition hover:bg-slate-50"
+                        className="w-full px-6 py-4 text-left text-base font-semibold text-slate-900 transition hover:bg-slate-50"
                       >
                         {category}
                       </button>
@@ -392,7 +392,7 @@ export function PricingContent() {
                 >
                   <div className="mb-4 flex items-start justify-between">
                     <div>
-                      <h3 className="text-lg font-bold text-[#002147]">
+                      <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">
                         {service.name}
                       </h3>
                       <p className="mt-1 text-sm text-slate-600">
@@ -400,7 +400,7 @@ export function PricingContent() {
                       </p>
                     </div>
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-[#002147]">
+                      <div className="text-xl font-bold text-slate-900 sm:text-2xl">
                         {service.price}
                       </div>
                     </div>
@@ -438,23 +438,23 @@ export function PricingContent() {
             >
               {/* Add-on Services */}
               <div className="mb-12">
-                <h2 className="mb-6 text-2xl font-bold text-[#002147]">
+                <h2 className="mb-6 text-2xl font-semibold text-slate-900 sm:text-3xl">
                   Add-on Services & Pricing
                 </h2>
                 <div className="overflow-x-auto">
                   <table className="w-full border-collapse">
                     <thead>
                       <tr className="border-b-2 border-slate-200 bg-slate-50">
-                        <th className="px-4 py-3 text-left text-sm font-semibold text-[#002147]">
+                        <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">
                           Add-on Service
                         </th>
-                        <th className="px-4 py-3 text-left text-sm font-semibold text-[#002147]">
+                        <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">
                           Description
                         </th>
-                        <th className="px-4 py-3 text-left text-sm font-semibold text-[#002147]">
+                        <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">
                           Fee
                         </th>
-                        <th className="px-4 py-3 text-left text-sm font-semibold text-[#002147]">
+                        <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">
                           Recommended Plan
                         </th>
                       </tr>
@@ -465,13 +465,13 @@ export function PricingContent() {
                           key={i}
                           className="border-b border-slate-100 transition hover:bg-slate-50"
                         >
-                          <td className="px-4 py-4 text-sm font-medium text-[#002147]">
+                          <td className="px-4 py-4 text-sm font-medium text-slate-900">
                             {addon.service}
                           </td>
                           <td className="px-4 py-4 text-sm text-slate-600">
                             {addon.description}
                           </td>
-                          <td className="px-4 py-4 text-sm font-medium text-[#002147]">
+                          <td className="px-4 py-4 text-sm font-medium text-slate-900">
                             {addon.fee}
                           </td>
                           <td className="px-4 py-4 text-sm text-slate-600">
@@ -486,7 +486,7 @@ export function PricingContent() {
 
               {/* Other Fees */}
               <div>
-                <h2 className="mb-6 text-2xl font-bold text-[#002147]">
+                <h2 className="mb-6 text-2xl font-semibold text-slate-900 sm:text-3xl">
                   Other Fees
                 </h2>
                 <p className="mb-6 text-sm italic text-slate-600">
@@ -503,13 +503,13 @@ export function PricingContent() {
                       custom={i}
                       className="rounded-xl border border-slate-200 bg-white p-5"
                     >
-                      <h3 className="mb-2 text-base font-semibold text-[#002147]">
+                      <h3 className="mb-2 text-lg font-semibold text-slate-900 sm:text-xl">
                         {fee.service}
                       </h3>
                       <p className="mb-3 text-sm text-slate-600">
                         {fee.description}
                       </p>
-                      <p className="text-sm font-medium text-[#002147]">
+                      <p className="text-sm font-medium text-slate-900">
                         {fee.fee}
                       </p>
                     </motion.div>
@@ -530,7 +530,7 @@ export function PricingContent() {
           viewport={{ once: true }}
           className="rounded-2xl border-2 border-[#FFC72C] bg-slate-50 p-8"
         >
-          <h2 className="mb-4 text-2xl font-bold text-[#002147]">
+          <h2 className="mb-4 text-2xl font-semibold text-slate-900 sm:text-3xl">
             Not sure what you need?
           </h2>
           <p className="mb-6 text-base text-slate-600">
@@ -548,7 +548,7 @@ export function PricingContent() {
           whileInView="show"
           viewport={{ once: true }}
         >
-          <h2 className="mb-8 text-3xl font-bold text-[#002147]">
+          <h2 className="mb-8 text-2xl font-semibold text-slate-900 sm:text-3xl">
             Frequently Asked Questions
           </h2>
           <div className="space-y-3">
@@ -568,7 +568,7 @@ export function PricingContent() {
                     onClick={() => setOpenFaqIndex(isOpen ? null : i)}
                     className="flex w-full items-start justify-between gap-4 text-left"
                   >
-                    <h3 className="flex-1 text-base font-semibold text-[#002147]">
+                    <h3 className="flex-1 text-xl font-semibold text-slate-900 sm:text-2xl">
                       {faq.q}
                     </h3>
                     <span className="shrink-0 text-slate-400">
@@ -597,7 +597,7 @@ export function PricingContent() {
       <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-slate-200 bg-white p-4 shadow-lg lg:hidden">
         <Link
           href="/contact"
-          className="block w-full rounded-lg bg-[#FFC72C] px-4 py-3 text-center text-sm font-semibold text-[#002147] transition hover:bg-[#FFD54F]"
+          className="block w-full rounded-lg bg-[#FFC72C] px-4 py-3 text-center text-sm font-semibold text-slate-900 transition hover:bg-[#FFD54F]"
         >
           Book free assessment
         </Link>
@@ -639,13 +639,13 @@ function PlanFinder() {
   return (
     <div className="space-y-4">
       <div>
-        <label className="mb-2 block text-sm font-medium text-[#002147]">
+        <label className="mb-2 block text-sm font-medium text-slate-900">
           Stage
         </label>
         <select
           value={stage}
           onChange={(e) => setStage(e.target.value)}
-          className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm text-[#002147] focus:border-[#FFC72C] focus:outline-none focus:ring-2 focus:ring-[#FFC72C]/20"
+          className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm text-slate-900 focus:border-[#FFC72C] focus:outline-none focus:ring-2 focus:ring-[#FFC72C]/20"
         >
           <option value="">Select stage</option>
           <option value="Just starting">Just starting</option>
@@ -654,13 +654,13 @@ function PlanFinder() {
         </select>
       </div>
       <div>
-        <label className="mb-2 block text-sm font-medium text-[#002147]">
+        <label className="mb-2 block text-sm font-medium text-slate-900">
           Need
         </label>
         <select
           value={need}
           onChange={(e) => setNeed(e.target.value)}
-          className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm text-[#002147] focus:border-[#FFC72C] focus:outline-none focus:ring-2 focus:ring-[#FFC72C]/20"
+          className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm text-slate-900 focus:border-[#FFC72C] focus:outline-none focus:ring-2 focus:ring-[#FFC72C]/20"
         >
           <option value="">Select need</option>
           <option value="Formation only">Formation only</option>
@@ -669,13 +669,13 @@ function PlanFinder() {
         </select>
       </div>
       <div>
-        <label className="mb-2 block text-sm font-medium text-[#002147]">
+        <label className="mb-2 block text-sm font-medium text-slate-900">
           Volume
         </label>
         <select
           value={volume}
           onChange={(e) => setVolume(e.target.value)}
-          className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm text-[#002147] focus:border-[#FFC72C] focus:outline-none focus:ring-2 focus:ring-[#FFC72C]/20"
+          className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm text-slate-900 focus:border-[#FFC72C] focus:outline-none focus:ring-2 focus:ring-[#FFC72C]/20"
         >
           <option value="">Select volume</option>
           <option value="Low">Low</option>
@@ -691,17 +691,17 @@ function PlanFinder() {
       </button>
       {recommendation && (
         <div className="mt-4 rounded-lg border-2 border-[#FFC72C] bg-[#FFC72C]/10 p-4">
-          <p className="text-sm font-semibold text-[#002147]">
+          <p className="text-sm font-semibold text-slate-900">
             Recommended Plan:
           </p>
-          <p className="mt-1 text-base font-bold text-[#002147]">
+          <p className="mt-1 text-base font-bold text-slate-900">
             {recommendation}
           </p>
         </div>
       )}
       <Link
         href="/contact"
-        className="mt-4 block w-full rounded-lg bg-[#FFC72C] px-4 py-2.5 text-center text-sm font-semibold text-[#002147] transition hover:bg-[#FFD54F]"
+        className="mt-4 block w-full rounded-lg bg-[#FFC72C] px-4 py-2.5 text-center text-sm font-semibold text-slate-900 transition hover:bg-[#FFD54F]"
       >
         Book free assessment
       </Link>

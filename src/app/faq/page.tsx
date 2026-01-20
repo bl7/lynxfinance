@@ -9,7 +9,7 @@ import Link from "next/link";
 const faqs = [
   {
     q: "What types of businesses do you work with?",
-    a: "We work with a diverse range of businesses—from early-stage startups to mature enterprises, as well as nonprofit organizations. Our clients include e-commerce platforms, real estate developers, IT firms, health and wellness companies, education providers, financial service firms, and more. We understand that each business is unique, and we tailor our services to fit their size, complexity, and industry regulations.",
+    a: "We work with a diverse range of businesses, from early-stage startups to mature enterprises, as well as nonprofit organizations. Our clients include e-commerce platforms, real estate developers, IT firms, health and wellness companies, education providers, financial service firms, and more. We understand that each business is unique, and we tailor our services to fit their size, complexity, and industry regulations.",
   },
   {
     q: "Do you offer services globally?",
@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: "Can you help migrate from Excel to a cloud system?",
-    a: "Absolutely. Transitioning from manual or spreadsheet-based accounting to a cloud-based platform like QuickBooks Online, Xero, or Zoho Books is one of our most requested services. We guide you through every step—from selecting the right software, to setting up your chart of accounts, migrating data, configuring user roles, and providing training to your internal team.",
+    a: "Absolutely. Transitioning from manual or spreadsheet-based accounting to a cloud-based platform like QuickBooks Online, Xero, or Zoho Books is one of our most requested services. We guide you through every step, from selecting the right software, to setting up your chart of accounts, migrating data, configuring user roles, and providing training to your internal team.",
   },
   {
     q: "Do you offer catch-up bookkeeping?",
@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "Do you assist with individual tax planning?",
-    a: "Yes. We provide personalized tax planning services for individuals, especially freelancers, remote workers, consultants, and high-net-worth individuals. Our advisors help you reduce liabilities through smart use of deductions, credits, income deferral strategies, retirement contributions, and charitable giving—all aligned with your long-term financial goals.",
+    a: "Yes. We provide personalized tax planning services for individuals, especially freelancers, remote workers, consultants, and high-net-worth individuals. Our advisors help you reduce liabilities through smart use of deductions, credits, income deferral strategies, retirement contributions, and charitable giving, all aligned with your long-term financial goals.",
   },
   {
     q: "How do you price your services?",
@@ -114,7 +114,7 @@ export default function FaqPage() {
                     onClick={() => setOpenIndex(isOpen ? null : i)}
                   >
                     <div className="flex items-start justify-between gap-4">
-                      <h3 className="flex-1 text-sm font-semibold text-[#002147]">
+                      <h3 className="flex-1 text-base font-semibold text-slate-900 sm:text-lg">
                         {item.q}
                       </h3>
                       <button
@@ -160,7 +160,7 @@ export default function FaqPage() {
                   <MessageCircle className="h-8 w-8 text-[#FFC72C]" />
                 </div>
               </div>
-              <h3 className="mb-3 text-lg font-semibold text-[#002147]">
+              <h3 className="mb-3 text-xl font-semibold text-slate-900 sm:text-2xl">
                 Can&apos;t find answer to your question?
               </h3>
               <p className="mb-6 text-sm leading-relaxed text-slate-600">
@@ -173,7 +173,7 @@ export default function FaqPage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FFC72C] px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#002147] transition hover:bg-[#FFD54F]"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FFC72C] px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-slate-900 transition hover:bg-[#FFD54F]"
               >
                 <span>Contact Us</span>
                 <ChevronRight className="h-4 w-4" />

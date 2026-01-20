@@ -7,7 +7,6 @@ import { useState } from "react";
 
 const navItems = [
   { href: "/about", label: "About Us" },
-  { href: "/clients", label: "Our Clients" },
   { href: "/services", label: "Services" },
   { href: "/industries", label: "Industries" },
   { href: "/pricing", label: "Pricing" },
@@ -28,9 +27,9 @@ export function Header() {
           <Image
             src="/logo.png"
             alt="LYNX Finance Consulting logo"
-            width={220}
-            height={60}
-            className="h-12 w-auto object-contain brightness-0 invert sm:h-14"
+            width={280}
+            height={76}
+            className="h-16 w-auto object-contain sm:h-20"
             priority
           />
         </Link>

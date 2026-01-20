@@ -59,8 +59,7 @@ export function HomeHero() {
               className="max-w-xl text-base leading-relaxed text-white/90 sm:text-lg lg:text-xl"
             >
               We help startups, growing companies, and global teams simplify
-              accounting, tax, and compliance — so you can scale with
-              confidence.
+              accounting, tax, and compliance, so you can scale with confidence.
             </motion.p>
 
             {/* CTAs */}
@@ -70,7 +69,7 @@ export function HomeHero() {
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded bg-[#FFC72C] px-6 py-3 text-sm font-semibold uppercase tracking-wide text-[#002147] transition hover:bg-[#FFD54F]"
+                className="inline-flex items-center justify-center rounded bg-[#FFC72C] px-6 py-3 text-sm font-semibold uppercase tracking-wide text-slate-900 transition hover:bg-[#FFD54F]"
               >
                 Book a free assessment
               </Link>

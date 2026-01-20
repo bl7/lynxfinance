@@ -50,9 +50,9 @@ export default function VirtualCFOPage() {
               <LineChart className="h-4 w-4 text-[#FFC72C]" />
             </div>
             <div>
-              <h2 className="text-sm font-semibold text-[#002147]">
+              <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
                 What&apos;s included
-              </h2>
+              </h3>
               <p className="mt-1 text-xs text-slate-600">
                 We partner with your leadership team to translate financial data
                 into clear decisions, tradeoffs, and action plans.

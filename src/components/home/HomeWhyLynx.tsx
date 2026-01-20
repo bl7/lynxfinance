@@ -18,7 +18,7 @@ const cardFade = {
   show: (i: number = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, delay: i * 0.08 },
+    transition: { duration: 0.5, delay: i * 0.1 },
   }),
 };
 
@@ -57,16 +57,16 @@ export function HomeWhyLynx() {
       description: "Consolidated reporting and multi-jurisdiction support.",
     },
     {
-      title: "Teams expanding into the US (Optional)",
+      title: "Teams expanding into the US",
       description:
-        "Company formation, compliance, accounting, and tax — handled together.",
+        "Company formation, compliance, accounting, and tax, all handled together.",
     },
   ];
 
   return (
-    <section className="my-12 px-4 sm:px-12 lg:mx-auto lg:max-w-6xl">
+    <section className="my-16 px-4 sm:px-6 lg:mx-auto lg:max-w-7xl">
       <div
-        className="rounded-2xl p-8 sm:p-12 lg:p-16"
+        className="rounded-3xl p-8 sm:p-12 lg:p-16"
         style={{ backgroundColor: "#E5EAF1" }}
       >
         {/* Header */}
@@ -77,10 +77,10 @@ export function HomeWhyLynx() {
           viewport={{ once: true, amount: 0.2 }}
           className="mb-12 text-center"
         >
-          <h2 className="text-4xl font-bold text-[#002147] sm:text-5xl lg:text-6xl">
+          <h3 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl lg:text-4xl">
             Why Lynx
-          </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg lg:text-xl">
+          </h3>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
             We combine expertise across bookkeeping, tax, compliance, and
             company setup, so you don&apos;t have to juggle multiple vendors or
             worry about missed deadlines.
@@ -88,7 +88,7 @@ export function HomeWhyLynx() {
         </motion.div>
 
         {/* Main Content Grid */}
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
           {/* Left Column - Benefits */}
           <motion.div
             variants={sectionFade}
@@ -97,7 +97,7 @@ export function HomeWhyLynx() {
             viewport={{ once: true, amount: 0.2 }}
             className="flex flex-col"
           >
-            <h3 className="mb-8 text-2xl font-bold text-[#002147] sm:text-3xl">
+            <h3 className="mb-8 text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
               What we deliver
             </h3>
             <ul className="space-y-6">
@@ -113,24 +113,24 @@ export function HomeWhyLynx() {
                     custom={i}
                     className="flex items-start gap-5"
                   >
-                    <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#FFC72C]/15">
-                      <Icon className="h-5 w-5 text-[#FFC72C]" />
+                    <div className="mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm ring-1 ring-slate-200/50">
+                      <Icon className="h-6 w-6 text-[#FFC72C]" />
                     </div>
-                    <span className="text-lg leading-relaxed text-slate-700 sm:text-xl">
+                    <p className="pt-1.5 text-base font-medium leading-relaxed text-slate-700 sm:text-lg">
                       {item.text}
-                    </span>
+                    </p>
                   </motion.li>
                 );
               })}
             </ul>
 
             {/* Team Box */}
-            <div className="mt-10 w-full rounded-2xl border border-slate-200/50 bg-white p-8 shadow-lg">
+            <div className="mt-10 w-full rounded-2xl border-2 border-slate-200/60 bg-white p-8 shadow-lg">
               <div className="mb-6 text-center">
-                <h3 className="text-xl font-bold text-[#002147]">
+                <h3 className="text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
                   Experienced team
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
                   60+ years of combined experience across US tax, compliance,
                   and accounting
                 </p>
@@ -139,7 +139,7 @@ export function HomeWhyLynx() {
                 {[1, 2, 3].map((i) => (
                   <div
                     key={i}
-                    className="relative h-20 w-20 overflow-hidden rounded-full border-2 border-slate-100 bg-slate-50 shadow-sm"
+                    className="relative h-20 w-20 overflow-hidden rounded-full border-4 border-white bg-slate-50 shadow-md ring-2 ring-slate-100"
                   >
                     <Image
                       src="/person.png"
@@ -150,7 +150,7 @@ export function HomeWhyLynx() {
                   </div>
                 ))}
               </div>
-              <p className="mt-6 text-center text-xs leading-relaxed text-slate-500">
+              <p className="mt-6 text-center text-sm leading-relaxed text-slate-500">
                 US and Nepal delivery teams working across time zones
               </p>
             </div>
@@ -164,15 +164,17 @@ export function HomeWhyLynx() {
             viewport={{ once: true, amount: 0.2 }}
             className="flex flex-col"
           >
-            <h3 className="mb-4 text-2xl font-bold text-[#002147] sm:text-3xl">
-              Who it&apos;s for
-            </h3>
-            <p className="mb-8 text-base leading-relaxed text-slate-600 sm:text-lg">
-              We support businesses at every stage.
-            </p>
+            <div className="mb-8">
+              <h3 className="mb-3 text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
+                Who it&apos;s for
+              </h3>
+              <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
+                We support businesses at every stage.
+              </p>
+            </div>
 
             {/* Personas List */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-5">
               {personas.map((persona, i) => (
                 <motion.div
                   key={persona.title}
@@ -181,12 +183,12 @@ export function HomeWhyLynx() {
                   whileInView="show"
                   viewport={{ once: true, amount: 0.25 }}
                   custom={i}
-                  className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md"
+                  className="group rounded-xl border-2 border-slate-200/60 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#FFC72C]/30 hover:shadow-md"
                 >
-                  <h4 className="text-lg font-bold text-[#002147] sm:text-xl">
+                  <h4 className="text-lg font-semibold tracking-tight text-slate-900 transition-colors group-hover:text-slate-700 sm:text-xl">
                     {persona.title}
                   </h4>
-                  <p className="mt-2 text-base leading-relaxed text-slate-600">
+                  <p className="mt-2.5 text-base leading-relaxed text-slate-600 sm:text-base">
                     {persona.description}
                   </p>
                 </motion.div>

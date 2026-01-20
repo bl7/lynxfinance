@@ -144,9 +144,9 @@ export default function IndustriesPage() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFC72C]/10">
                     <Icon className="h-5 w-5 text-[#FFC72C]" />
                   </div>
-                  <h2 className="text-base font-semibold text-[#002147]">
+                  <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
                     {industry.name}
-                  </h2>
+                  </h3>
                 </div>
                 <ul className="space-y-2">
                   {industry.items.map((item) => (

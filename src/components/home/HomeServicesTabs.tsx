@@ -76,7 +76,7 @@ export function HomeServicesTabs() {
       href: "/services/virtual-cfo",
     },
     {
-      label: "US Setup (optional)",
+      label: "US Setup",
       icon: Building2,
       bullets: [
         "LLC or C-Corp formation",
@@ -101,9 +101,9 @@ export function HomeServicesTabs() {
           viewport={{ once: true, amount: 0.2 }}
           className="text-center"
         >
-          <h2 className="text-3xl font-semibold text-[#002147] sm:text-4xl">
+          <h3 className="text-2xl font-semibold text-slate-900 sm:text-3xl">
             Services, built to fit your stage
-          </h2>
+          </h3>
         </motion.div>
 
         {/* Tabs */}
@@ -116,8 +116,8 @@ export function HomeServicesTabs() {
                 onClick={() => setActiveTab(index)}
                 className={`flex items-center gap-2 rounded-t-lg border-b-2 px-4 py-3 text-sm font-medium transition-colors ${
                   activeTab === index
-                    ? "border-[#FFC72C] text-[#002147]"
-                    : "border-transparent text-slate-500 hover:text-[#002147]"
+                    ? "border-[#FFC72C] text-slate-900"
+                    : "border-transparent text-slate-500 hover:text-slate-900"
                 }`}
               >
                 <Icon className="h-4 w-4" />
@@ -149,7 +149,7 @@ export function HomeServicesTabs() {
             </ul>
             <Link
               href={services[activeTab].href}
-              className="mt-8 inline-flex items-center justify-center rounded bg-[#FFC72C] px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-[#002147] transition hover:bg-[#FFD54F]"
+              className="mt-8 inline-flex items-center justify-center rounded bg-[#FFC72C] px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-slate-900 transition hover:bg-[#FFD54F]"
             >
               {services[activeTab].cta}
             </Link>

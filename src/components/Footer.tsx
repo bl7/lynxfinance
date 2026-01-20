@@ -20,50 +20,50 @@ export function Footer() {
 
         <div className="flex flex-1 flex-col gap-6 text-sm lg:flex-row">
           <div className="space-y-2">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#002147]">
-              USA Branch
+            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-900">
+              US Office
             </h3>
             <div className="flex items-start gap-2 text-xs text-slate-600">
-              <MapPin className="mt-0.5 h-3.5 w-3.5 text-[#002147]" />
+              <MapPin className="mt-0.5 h-3.5 w-3.5 text-slate-900" />
               <p>Texas, USA</p>
             </div>
             <div className="flex items-center gap-2 text-xs text-slate-600">
-              <PhoneCall className="h-3.5 w-3.5 text-[#002147]" />
+              <PhoneCall className="h-3.5 w-3.5 text-slate-900" />
               <span>+1 (817) 966-0481</span>
             </div>
             <div className="mt-3 flex items-start gap-2 text-xs text-slate-600">
-              <MapPin className="mt-0.5 h-3.5 w-3.5 text-[#002147]" />
+              <MapPin className="mt-0.5 h-3.5 w-3.5 text-slate-900" />
               <p>Virginia, USA</p>
             </div>
             <div className="flex items-center gap-2 text-xs text-slate-600">
-              <PhoneCall className="h-3.5 w-3.5 text-[#002147]" />
+              <PhoneCall className="h-3.5 w-3.5 text-slate-900" />
               <span>+1 (757) 338-3452</span>
             </div>
           </div>
 
           <div className="space-y-2">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#002147]">
-              Nepal Branch
+            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-900">
+              Nepal Office
             </h3>
             <div className="flex items-start gap-2 text-xs text-slate-600">
-              <MapPin className="mt-0.5 h-3.5 w-3.5 text-[#002147]" />
+              <MapPin className="mt-0.5 h-3.5 w-3.5 text-slate-900" />
               <p>Kathmandu, Nepal</p>
             </div>
             <div className="flex items-center gap-2 text-xs text-slate-600">
-              <PhoneCall className="h-3.5 w-3.5 text-[#002147]" />
+              <PhoneCall className="h-3.5 w-3.5 text-slate-900" />
               <span>+977-9861888856</span>
             </div>
           </div>
 
           <div className="space-y-2">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#002147]">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-900">
               Links
             </h3>
             <div className="mt-2 flex flex-col gap-2 text-xs text-slate-600">
-              <Link href="/privacy" className="hover:text-[#002147]">
+              <Link href="/privacy" className="hover:text-slate-900">
                 Privacy
               </Link>
-              <Link href="/terms" className="hover:text-[#002147]">
+              <Link href="/terms" className="hover:text-slate-900">
                 Terms
               </Link>
             </div>

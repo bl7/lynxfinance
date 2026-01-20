@@ -42,7 +42,7 @@ export function HomePathways() {
       href: "/services/tax-compliance",
     },
     {
-      title: "US Company Setup (optional)",
+      title: "US Company Setup",
       icon: Briefcase,
       description:
         "Start your US business without leaving your location. We guide you through the right entity and state, complete the formation workflow, and support essentials like Registered Agent and EIN. Everything stays trackable, documented, and compliance ready from day one.",
@@ -79,9 +79,9 @@ export function HomePathways() {
               How we can help
             </span>
           </div>
-          <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+          <h3 className="text-2xl font-semibold text-white sm:text-3xl lg:text-4xl">
             Choose what you need
-          </h2>
+          </h3>
           <p className="mt-4 text-base leading-relaxed text-white/90 sm:text-lg">
             We uncover opportunities that others miss, from optimizing entity
             structures to unlocking hidden deductions. Our proactive strategies
@@ -106,11 +106,11 @@ export function HomePathways() {
               >
                 {/* Icon */}
                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50">
-                  <Icon className="h-6 w-6 text-[#002147]" />
+                  <Icon className="h-6 w-6 text-slate-900" />
                 </div>
 
                 {/* Title */}
-                <h3 className="mb-4 text-xl font-bold text-[#002147] sm:text-2xl">
+                <h3 className="mb-4 text-xl font-semibold text-slate-900 sm:text-2xl">
                   {pathway.title}
                 </h3>
 

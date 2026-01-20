@@ -49,11 +49,11 @@ export default function TaxCompliancePage() {
               <Receipt className="h-4 w-4 text-[#FFC72C]" />
             </div>
             <div>
-              <h2 className="text-sm font-semibold text-[#002147]">
+              <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
                 What&apos;s included
-              </h2>
+              </h3>
               <p className="mt-1 text-xs text-slate-600">
-                Practical, coordinated support across your tax lifecycle—from
+                Practical, coordinated support across your tax lifecycle, from
                 registrations and filings to planning and audit responses.
               </p>
               <ul className="mt-3 grid gap-2 text-xs text-slate-700 sm:grid-cols-2">

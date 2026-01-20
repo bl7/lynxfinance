@@ -12,11 +12,17 @@
     font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont,
       "SF Pro Text", sans-serif;
   }
+}
 
-  ::selection {
-    background: rgba(249, 250, 251, 0.18);
-    color: #fefce8;
-  }
+/* Text selection styles - must be outside @layer for better browser support */
+*::selection {
+  background: #002147 !important;
+  color: #ffffff !important;
+}
+
+*::-moz-selection {
+  background: #002147 !important;
+  color: #ffffff !important;
 }
 
 @layer utilities {
@@ -45,6 +51,24 @@
 
   .glass-panel {
     @apply border border-slate-200 bg-white shadow-lg;
+  }
+
+  /* Rotating carousel animations */
+  @keyframes scroll-horizontal {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-33.333%);
+    }
+  }
+
+  .animate-scroll-horizontal {
+    animation: scroll-horizontal 40s linear infinite;
+  }
+
+  .animate-scroll-horizontal-paused {
+    animation-play-state: paused;
   }
 }
 

@@ -40,49 +40,49 @@ export default function ContactPage() {
         >
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <label className="block text-xs font-medium text-[#002147]">
+              <label className="block text-xs font-medium text-slate-900">
                 Name
               </label>
               <input
-                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs text-[#002147] outline-none ring-0 focus:border-[#FFC72C] focus:ring-1 focus:ring-[#FFC72C]/20"
+                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs text-slate-900 outline-none ring-0 focus:border-[#FFC72C] focus:ring-1 focus:ring-[#FFC72C]/20"
                 placeholder="Full name"
               />
             </div>
             <div>
-              <label className="block text-xs font-medium text-[#002147]">
+              <label className="block text-xs font-medium text-slate-900">
                 Email
               </label>
               <input
-                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs text-[#002147] outline-none ring-0 focus:border-[#FFC72C] focus:ring-1 focus:ring-[#FFC72C]/20"
+                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs text-slate-900 outline-none ring-0 focus:border-[#FFC72C] focus:ring-1 focus:ring-[#FFC72C]/20"
                 placeholder="you@company.com"
               />
             </div>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <label className="block text-xs font-medium text-[#002147]">
+              <label className="block text-xs font-medium text-slate-900">
                 Phone
               </label>
               <input
-                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs text-[#002147] outline-none ring-0 focus:border-[#FFC72C] focus:ring-1 focus:ring-[#FFC72C]/20"
+                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs text-slate-900 outline-none ring-0 focus:border-[#FFC72C] focus:ring-1 focus:ring-[#FFC72C]/20"
                 placeholder="+1 (817) 966-0481"
               />
             </div>
             <div>
-              <label className="block text-xs font-medium text-[#002147]">
+              <label className="block text-xs font-medium text-slate-900">
                 Country
               </label>
               <input
-                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs text-[#002147] outline-none ring-0 focus:border-[#FFC72C] focus:ring-1 focus:ring-[#FFC72C]/20"
+                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs text-slate-900 outline-none ring-0 focus:border-[#FFC72C] focus:ring-1 focus:ring-[#FFC72C]/20"
                 placeholder="Country where you operate"
               />
             </div>
           </div>
           <div>
-            <label className="block text-xs font-medium text-[#002147]">
+            <label className="block text-xs font-medium text-slate-900">
               Service interest
             </label>
-            <select className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs text-[#002147] outline-none ring-0 focus:border-[#FFC72C] focus:ring-1 focus:ring-[#FFC72C]/20">
+            <select className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs text-slate-900 outline-none ring-0 focus:border-[#FFC72C] focus:ring-1 focus:ring-[#FFC72C]/20">
               <option>Accounting &amp; Bookkeeping</option>
               <option>Tax Compliance</option>
               <option>Virtual CFO</option>
@@ -90,18 +90,18 @@ export default function ContactPage() {
             </select>
           </div>
           <div>
-            <label className="block text-xs font-medium text-[#002147]">
+            <label className="block text-xs font-medium text-slate-900">
               Tell us briefly about your organization
             </label>
             <textarea
               rows={4}
-              className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs text-[#002147] outline-none ring-0 focus:border-[#FFC72C] focus:ring-1 focus:ring-[#FFC72C]/20"
+              className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs text-slate-900 outline-none ring-0 focus:border-[#FFC72C] focus:ring-1 focus:ring-[#FFC72C]/20"
               placeholder="Size of your team, industry, current finance setup, and what you'd like help with."
             />
           </div>
           <button
             type="submit"
-            className="mt-2 inline-flex items-center justify-center rounded-full bg-[#FFC72C] px-6 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#002147] transition hover:bg-[#FFD54F]"
+            className="mt-2 inline-flex items-center justify-center rounded-full bg-[#FFC72C] px-6 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-900 transition hover:bg-[#FFD54F]"
           >
             Submit inquiry
           </button>
@@ -122,9 +122,9 @@ export default function ContactPage() {
             viewport={{ once: true, amount: 0.25 }}
             custom={1}
           >
-            <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#002147]">
-              USA Branch
-            </h2>
+            <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-900">
+              US Office
+            </h3>
             <p className="mt-2 text-slate-600">Texas, USA</p>
             <p className="mt-2 text-slate-600">Phone: +1 (817) 966-0481</p>
             <p className="mt-3 text-slate-600">Virginia, USA</p>
@@ -138,9 +138,9 @@ export default function ContactPage() {
             viewport={{ once: true, amount: 0.25 }}
             custom={2}
           >
-            <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#002147]">
-              Nepal Branch
-            </h2>
+            <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-900">
+              Nepal Office
+            </h3>
             <p className="mt-2 text-slate-600">Kathmandu, Nepal</p>
             <p className="mt-2 text-slate-600">Phone: +977-9861888856</p>
           </motion.div>

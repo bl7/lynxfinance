@@ -91,9 +91,9 @@ export function HomePersonas() {
           viewport={{ once: true, amount: 0.2 }}
           className="text-center"
         >
-          <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+          <h3 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
             Who it&apos;s for
-          </h2>
+          </h3>
           <p className="mx-auto mt-4 max-w-2xl text-base text-white/80 sm:text-lg">
             Whether you&apos;re a solo founder or scaling a team, we help you
             maintain clean books, stay compliant, and make informed decisions.

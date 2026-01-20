@@ -238,9 +238,9 @@ export default function ServicesPage() {
                 <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFC72C]/10">
                   <Icon className="h-5 w-5 text-[#FFC72C]" />
                 </div>
-                <h2 className="text-base font-semibold text-[#002147]">
+                <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
                   {service.name}
-                </h2>
+                </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
                   {service.summary}
                 </p>
@@ -254,7 +254,7 @@ export default function ServicesPage() {
                 </ul>
                 <Link
                   href={`/services/${service.slug}`}
-                  className="mt-5 text-xs font-semibold text-[#FFC72C] transition-colors hover:text-[#FFD54F]"
+                  className="mt-5 text-xs font-semibold text-slate-900 transition-colors hover:text-slate-700"
                 >
                   Learn more →
                 </Link>

@@ -22,9 +22,9 @@ export function HomeFinalCTA() {
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+          <h3 className="text-2xl font-semibold text-white sm:text-3xl">
             Ready to get your finance and compliance sorted?
-          </h2>
+          </h3>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-200">
             We&apos;ll recommend the right setup based on your business and
             location.
@@ -32,7 +32,7 @@ export function HomeFinalCTA() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded bg-[#FFC72C] px-7 py-3 text-sm font-semibold uppercase tracking-wide text-[#002147] transition hover:bg-[#FFD54F]"
+              className="inline-flex items-center justify-center rounded bg-[#FFC72C] px-7 py-3 text-sm font-semibold uppercase tracking-wide text-slate-900 transition hover:bg-[#FFD54F]"
             >
               Book a free assessment
             </Link>

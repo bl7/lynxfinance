@@ -56,7 +56,7 @@ export const bookkeepingPlans: BookkeepingPlan[] = [
   },
   {
     name: "Growth",
-    price: "$300",
+    price: "$250",
     idealFor: "Growing investors or scaling businesses with more complexity",
     transactions: "≤ 300",
     accounts: "≤ 2",
@@ -64,12 +64,12 @@ export const bookkeepingPlans: BookkeepingPlan[] = [
     highlight: true,
   },
   {
-    name: "Supreme",
-    price: "$900",
+    name: "Premium",
+    price: "$400",
     idealFor: "Companies needing detailed oversight, reporting, and communication",
     transactions: "≤ 1000",
     accounts: "≤ 6",
-    strategyReview: "Weekly",
+    strategyReview: "Bi-weekly",
   },
   {
     name: "Enterprise",

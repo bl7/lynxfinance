@@ -64,10 +64,10 @@ export function HomeHowItWorks() {
           viewport={{ once: true, amount: 0.2 }}
           className="text-center"
         >
-          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#002147]">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900">
             HOW IT WORKS
-          </h2>
-          <h3 className="mt-4 text-3xl font-semibold text-[#002147] sm:text-4xl">
+          </p>
+          <h3 className="mt-4 text-2xl font-semibold text-slate-900 sm:text-3xl">
             A simple, disciplined approach
           </h3>
         </motion.div>
@@ -88,13 +88,13 @@ export function HomeHowItWorks() {
                 <div className="glass-panel flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#FFC72C]/30 hover:shadow-xl">
                   <div className="mb-4 flex justify-center">
                     <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-slate-50 border border-[#FFC72C]/30">
-                      <Icon className="h-6 w-6 text-[#002147]" />
-                      <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-[#FFC72C] text-xs font-bold text-[#002147]">
+                      <Icon className="h-6 w-6 text-slate-900" />
+                      <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-[#FFC72C] text-xs font-bold text-slate-900">
                         {item.step}
                       </span>
                     </div>
                   </div>
-                  <h3 className="text-base font-semibold text-[#002147]">
+                  <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -116,7 +116,7 @@ export function HomeHowItWorks() {
           Need US setup?{" "}
           <Link
             href="/services/us-company-formation"
-            className="font-medium text-[#FFC72C] hover:text-[#002147]"
+            className="font-medium text-slate-900 hover:text-slate-700"
           >
             We can form your company and keep it compliant.
           </Link>

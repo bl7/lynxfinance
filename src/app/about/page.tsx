@@ -71,12 +71,12 @@ export default function AboutPage() {
     {
       title: "Integrity",
       description:
-        "We act with unwavering honesty, confidentiality, and ethical conduct in every interaction. At LYNX, integrity is not just a value—it's a foundation. We honor our commitments, protect client confidentiality, and uphold the highest standards of professionalism, ensuring that our guidance and reporting can always be trusted.",
+        "We act with unwavering honesty, confidentiality, and ethical conduct in every interaction. At LYNX, integrity is not just a value, it's a foundation. We honor our commitments, protect client confidentiality, and uphold the highest standards of professionalism, ensuring that our guidance and reporting can always be trusted.",
     },
     {
       title: "Precision",
       description:
-        "We pride ourselves on detail, accuracy, and operational excellence. From reconciliations to regulatory filings, every number we report is triple-checked and purpose-driven. Our clients rely on us for insights that are not just accurate, but actionable—fueling better decisions and long-term growth.",
+        "We pride ourselves on detail, accuracy, and operational excellence. From reconciliations to regulatory filings, every number we report is triple-checked and purpose-driven. Our clients rely on us for insights that are not just accurate, but actionable, fueling better decisions and long-term growth.",
     },
     {
       title: "Client Commitment",
@@ -86,7 +86,7 @@ export default function AboutPage() {
     {
       title: "Innovation",
       description:
-        "We embrace financial technology, industry evolution, and continuous improvement. Our solutions incorporate the latest tools and platforms—from AI-powered analytics to cloud-based systems—empowering clients to stay competitive, efficient, and future-ready.",
+        "We embrace financial technology, industry evolution, and continuous improvement. Our solutions incorporate the latest tools and platforms, from AI-powered analytics to cloud-based systems, empowering clients to stay competitive, efficient, and future-ready.",
     },
   ];
 
@@ -100,7 +100,7 @@ export default function AboutPage() {
             LYNX Finance Consulting was founded by senior finance leaders who
             have spent their careers inside high-growth companies, public
             accounting firms, and cross-border groups. We bring together{" "}
-            <span className="font-semibold text-[#002147]">
+            <span className="font-semibold text-slate-900">
               more than six decades of combined experience
             </span>{" "}
             across audit, tax, controllership, and FP&amp;A to build finance
@@ -129,13 +129,13 @@ export default function AboutPage() {
                 <Users className="h-4 w-4 text-[#FFC72C]" />
               </div>
               <div>
-                <h2 className="text-sm font-semibold text-[#002147]">
+                <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
                   60+ years of shared experience
-                </h2>
+                </h3>
                 <p className="mt-1 text-xs text-slate-600">
                   Our partners and leads have sat in the seats of controllers,
                   CFOs, and Big Four managers. We know what your auditors,
-                  lenders, and investors expect—and how to deliver it without
+                  lenders, and investors expect, and how to deliver it without
                   slowing your growth.
                 </p>
               </div>
@@ -155,9 +155,9 @@ export default function AboutPage() {
                 <Globe2 className="h-4 w-4 text-[#FFC72C]" />
               </div>
               <div>
-                <h2 className="text-sm font-semibold text-[#002147]">
+                <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
                   Dual-hemisphere delivery model
-                </h2>
+                </h3>
                 <p className="mt-1 text-xs text-slate-600">
                   With teams in the United States and Nepal, we operate in
                   complementary time zones. Your US-based client lead speaks the
@@ -185,7 +185,7 @@ export default function AboutPage() {
             custom={0}
           >
             <ShieldCheck className="h-5 w-5 text-[#FFC72C]" />
-            <h3 className="mt-3 text-sm font-semibold text-[#002147]">
+            <h3 className="mt-3 text-lg font-semibold text-slate-900 sm:text-xl">
               Governance you can trust
             </h3>
             <p className="mt-1 text-xs text-slate-600">
@@ -203,7 +203,7 @@ export default function AboutPage() {
             custom={1}
           >
             <Clock3 className="h-5 w-5 text-[#FFC72C]" />
-            <h3 className="mt-3 text-sm font-semibold text-[#002147]">
+            <h3 className="mt-3 text-lg font-semibold text-slate-900 sm:text-xl">
               Around-the-clock coverage
             </h3>
             <p className="mt-1 text-xs text-slate-600">
@@ -221,7 +221,7 @@ export default function AboutPage() {
             custom={2}
           >
             <Users className="h-5 w-5 text-[#FFC72C]" />
-            <h3 className="mt-3 text-sm font-semibold text-[#002147]">
+            <h3 className="mt-3 text-lg font-semibold text-slate-900 sm:text-xl">
               Embedded with your team
             </h3>
             <p className="mt-1 text-xs text-slate-600">
@@ -254,9 +254,9 @@ export default function AboutPage() {
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFC72C]/10">
                 <TrendingUp className="h-6 w-6 text-[#FFC72C]" />
               </div>
-              <h2 className="text-lg font-semibold text-[#002147]">
+              <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">
                 Our Mission
-              </h2>
+              </h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
                 To simplify finance and deliver sustainable growth through
                 expertise, innovation, and partnership.
@@ -274,9 +274,9 @@ export default function AboutPage() {
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFC72C]/10">
                 <Lightbulb className="h-6 w-6 text-[#FFC72C]" />
               </div>
-              <h2 className="text-lg font-semibold text-[#002147]">
+              <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">
                 Our Vision
-              </h2>
+              </h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
                 To become the premier financial partner for purpose-driven
                 businesses and nonprofits worldwide.
@@ -296,11 +296,8 @@ export default function AboutPage() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div className="text-center">
-            <h2 className="text-balance text-2xl font-semibold text-[#002147] sm:text-3xl">
-              Our{" "}
-              <span className="text-[#FFC72C]">
-                Core Values
-              </span>
+            <h2 className="text-balance text-2xl font-semibold text-slate-900 sm:text-3xl">
+              Our <span className="text-slate-900">Core Values</span>
             </h2>
           </div>
 
@@ -321,13 +318,13 @@ export default function AboutPage() {
                 >
                   <div className="relative z-10 flex-shrink-0">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FFC72C]/10 border border-[#FFC72C]/30 transition-shadow duration-300 group-hover:shadow-[0_0_24px_rgba(255,199,44,0.3)] group-hover:border-[#FFC72C]/60">
-                      <span className="text-sm font-semibold text-[#FFC72C]">
+                      <span className="text-sm font-semibold text-slate-900">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-[#002147]">
+                    <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
                       {value.title}
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -351,11 +348,8 @@ export default function AboutPage() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div className="text-center">
-            <h2 className="text-balance text-2xl font-semibold text-[#002147] sm:text-3xl">
-              Check Our{" "}
-              <span className="text-[#FFC72C]">
-                Expert Team
-              </span>
+            <h2 className="text-balance text-2xl font-semibold text-slate-900 sm:text-3xl">
+              Check Our <span className="text-slate-900">Expert Team</span>
             </h2>
           </div>
 
@@ -379,16 +373,16 @@ export default function AboutPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   {member.experienceBadge && (
-                    <div className="absolute bottom-4 right-4 rounded-full bg-[#FFC72C]/20 border border-[#FFC72C]/50 px-3.5 py-1.5 text-xs font-semibold text-[#002147] backdrop-blur-md shadow-lg shadow-[#FFC72C]/20">
+                    <div className="absolute bottom-4 right-4 rounded-full bg-[#FFC72C]/20 border border-[#FFC72C]/50 px-3.5 py-1.5 text-xs font-semibold text-slate-900 backdrop-blur-md shadow-lg shadow-[#FFC72C]/20">
                       {member.experienceBadge}
                     </div>
                   )}
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-[#002147] transition-colors duration-300 group-hover:text-[#002147]/90">
+                  <h3 className="text-xl font-semibold text-slate-900 transition-colors duration-300 group-hover:text-slate-700 sm:text-2xl">
                     {member.name}
                   </h3>
-                  <p className="text-sm font-medium text-[#FFC72C]">
+                  <p className="text-sm font-medium text-slate-900">
                     {member.title}
                   </p>
                   <p className="text-xs font-medium text-slate-600">

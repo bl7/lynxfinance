@@ -57,10 +57,10 @@ export function HomeServicesOverview() {
           viewport={{ once: true, amount: 0.2 }}
           className="mb-12"
         >
-          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#002147]">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900">
             SERVICES OVERVIEW
-          </h2>
-          <h3 className="mt-4 text-3xl font-bold text-[#002147] sm:text-4xl lg:text-5xl">
+          </p>
+          <h3 className="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
             How we support your finance and compliance
           </h3>
         </motion.div>
@@ -94,7 +94,7 @@ export function HomeServicesOverview() {
 
                 <Link
                   href={service.href}
-                  className="mt-6 inline-flex w-fit items-center gap-2 rounded-lg border border-white/30 bg-white px-4 py-2.5 text-sm font-medium text-[#002147] transition hover:border-white/50 hover:bg-white/90"
+                  className="mt-6 inline-flex w-fit items-center gap-2 rounded-lg border border-white/30 bg-white px-4 py-2.5 text-sm font-medium text-slate-900 transition hover:border-white/50 hover:bg-white/90"
                 >
                   Learn More
                   <div className="flex h-6 w-6 items-center justify-center rounded-full border border-[#002147] bg-[#002147]">

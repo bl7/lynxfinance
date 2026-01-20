@@ -81,9 +81,9 @@ export function HomePackages() {
           viewport={{ once: true, amount: 0.2 }}
           className="text-center"
         >
-          <h2 className="text-3xl font-semibold text-[#002147] sm:text-4xl">
+          <h3 className="text-2xl font-semibold text-slate-900 sm:text-3xl">
             Engagements
-          </h2>
+          </h3>
           <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">
             Flexible engagement models to match your business needs and stage.
           </p>
@@ -105,12 +105,12 @@ export function HomePackages() {
                 }`}
               >
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50">
-                  <Icon className="h-6 w-6 text-[#002147]" />
+                  <Icon className="h-6 w-6 text-slate-900" />
                 </div>
-                <h3 className="text-xl font-semibold text-[#002147]">
+                <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
                   {pkg.title}
                 </h3>
-                <p className="mt-2 text-sm text-[#FFC72C]">
+                <p className="mt-2 text-sm text-slate-900">
                   Best for: {pkg.bestFor}
                 </p>
                 <ul className="mt-5 flex-1 space-y-2.5">
@@ -128,8 +128,8 @@ export function HomePackages() {
                   href={pkg.href}
                   className={`mt-6 inline-flex items-center justify-center rounded px-6 py-2.5 text-sm font-semibold uppercase tracking-wide transition-all ${
                     pkg.highlight
-                      ? "bg-[#FFC72C] text-[#002147] hover:bg-[#FFD54F]"
-                      : "border border-[#002147] bg-transparent text-[#002147] hover:bg-[#002147] hover:text-white"
+                      ? "bg-[#FFC72C] text-slate-900 hover:bg-[#FFD54F]"
+                      : "border border-[#002147] bg-transparent text-slate-900 hover:bg-[#002147] hover:text-white"
                   }`}
                 >
                   {pkg.cta}
@@ -152,10 +152,10 @@ export function HomePackages() {
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
               <div className="flex items-center gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50">
-                  <Building2 className="h-6 w-6 text-[#002147]" />
+                  <Building2 className="h-6 w-6 text-slate-900" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-[#002147]">
+                  <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">
                     US Company Setup
                   </h3>
                   <p className="mt-1 text-sm text-slate-600">
@@ -166,7 +166,7 @@ export function HomePackages() {
               </div>
               <Link
                 href="/services/us-company-formation"
-                className="shrink-0 rounded border border-[#002147] bg-transparent px-5 py-2.5 text-sm font-medium text-[#002147] transition hover:bg-[#002147] hover:text-white"
+                className="shrink-0 rounded border border-[#002147] bg-transparent px-5 py-2.5 text-sm font-medium text-slate-900 transition hover:bg-[#002147] hover:text-white"
               >
                 Explore US setup
               </Link>
