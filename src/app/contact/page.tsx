@@ -126,14 +126,13 @@ export default function ContactPage() {
       if (normalizedPhone && !/^[0-9+\-().\s]{7,30}$/.test(normalizedPhone)) {
         throw new Error("Please enter a valid phone number");
       }
-      if (normalizedCountry && normalizedCountry.length > 60) {
-        throw new Error("Country is too long");
-      }
       if (
-        normalizedCountry &&
-        !/^[A-Za-z][A-Za-z\s.'-]*$/.test(normalizedCountry)
+        !normalizedCountry ||
+        (normalizedCountry !== "US" &&
+          normalizedCountry !== "Nepal" &&
+          normalizedCountry !== "Others")
       ) {
-        throw new Error("Country contains invalid characters");
+        throw new Error("Please select a valid country");
       }
       if (normalizedMessage && normalizedMessage.length > 1500) {
         throw new Error("Message is too long (max 1500 characters)");
@@ -238,13 +237,18 @@ export default function ContactPage() {
               <label className="block text-xs font-medium text-slate-900">
                 Country
               </label>
-              <input
+              <select
                 name="country"
-                type="text"
+                required
                 disabled={isSubmitting}
                 className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs text-slate-900 outline-none ring-0 focus:border-[#FFC72C] focus:ring-1 focus:ring-[#FFC72C]/20 disabled:bg-slate-50 disabled:text-slate-500"
-                placeholder="Country where you operate"
-              />
+                defaultValue=""
+              >
+                <option value="">Select country</option>
+                <option value="US">US</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Others">Others</option>
+              </select>
             </div>
           </div>
           <div>

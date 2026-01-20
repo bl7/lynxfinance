@@ -54,7 +54,7 @@ export function PricingContent() {
   );
 
   useEffect(() => {
-    const tabParam = searchParams.get("tab") as TabId;
+    const tabParam = searchParams?.get?.("tab") as TabId | null;
     if (tabParam && tabs.some((t) => t.id === tabParam)) {
       setActiveTab(tabParam);
     }
@@ -184,9 +184,7 @@ export function PricingContent() {
                       <span className="text-sm text-slate-600">/month</span>
                     </div>
                   </div>
-                  <p className="mb-6 text-sm text-slate-600">
-                    {plan.idealFor}
-                  </p>
+                  <p className="mb-6 text-sm text-slate-600">{plan.idealFor}</p>
                   <div className="space-y-3 border-t border-slate-200 pt-4">
                     <div className="flex justify-between text-sm">
                       <span className="text-slate-600">Transactions:</span>
@@ -708,4 +706,3 @@ function PlanFinder() {
     </div>
   );
 }
-

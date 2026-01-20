@@ -22,6 +22,8 @@ const ALLOWED_SERVICES = new Set<string>([
   "Multiple / Not sure yet",
 ]);
 
+const ALLOWED_COUNTRIES = new Set<string>(["US", "Nepal", "Others"]);
+
 function isNonEmptyString(value: unknown): value is string {
   return typeof value === "string" && value.trim().length > 0;
 }
@@ -39,21 +41,17 @@ export default async function handler(
   const apiKey = process.env.NEXT_PUBLIC_ENQUIRY_API_KEY;
 
   if (!endpoint) {
-    return res
-      .status(500)
-      .json({
-        ok: false,
-        error: "NEXT_PUBLIC_ENQUIRY_ENDPOINT is not configured",
-      });
+    return res.status(500).json({
+      ok: false,
+      error: "NEXT_PUBLIC_ENQUIRY_ENDPOINT is not configured",
+    });
   }
 
   if (!apiKey) {
-    return res
-      .status(500)
-      .json({
-        ok: false,
-        error: "NEXT_PUBLIC_ENQUIRY_API_KEY is not configured",
-      });
+    return res.status(500).json({
+      ok: false,
+      error: "NEXT_PUBLIC_ENQUIRY_API_KEY is not configured",
+    });
   }
 
   try {
@@ -103,10 +101,7 @@ export default async function handler(
     if (phone && (phone.length > 30 || !/^[0-9+\-().\s]{7,30}$/.test(phone))) {
       return res.status(400).json({ ok: false, error: "Invalid phone number" });
     }
-    if (
-      country &&
-      (country.length > 60 || !/^[A-Za-z][A-Za-z\s.'-]*$/.test(country))
-    ) {
+    if (!isNonEmptyString(country) || !ALLOWED_COUNTRIES.has(country)) {
       return res.status(400).json({ ok: false, error: "Invalid country" });
     }
     if (message && message.length > 1500) {
