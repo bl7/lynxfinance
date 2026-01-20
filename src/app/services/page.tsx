@@ -16,6 +16,7 @@ import {
   BookOpen,
   Users,
   ArrowRight,
+  Zap,
 } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { motion } from "framer-motion";
@@ -107,6 +108,19 @@ const services = [
       "Cost management and performance tracking",
       "Financial risk assessment and mitigation",
       "Scenario planning and agile financial management",
+    ],
+  },
+  {
+    slug: "process-automation-services",
+    name: "Process Automation Services",
+    icon: Zap,
+    summary:
+      "Streamline repetitive tasks, reduce manual errors, and boost overall efficiency through holistic process automation and optimization.",
+    bullets: [
+      "Comprehensive business assessment and benchmarking",
+      "Workflow optimization and bottleneck elimination",
+      "Strategic planning and stakeholder alignment",
+      "Risk assessment and scenario planning",
     ],
   },
   {

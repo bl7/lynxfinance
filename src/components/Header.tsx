@@ -17,6 +17,10 @@ const services = [
     slug: "budgeting-financial-services",
     name: "Budgeting and Financial Services",
   },
+  {
+    slug: "process-automation-services",
+    name: "Process Automation Services",
+  },
   { slug: "virtual-cfo", name: "Virtual CFO" },
   { slug: "us-company-formation", name: "US Company Formation" },
   { slug: "ein", name: "EIN (Employer Identification Number)" },
