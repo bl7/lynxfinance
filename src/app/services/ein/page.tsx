@@ -16,27 +16,24 @@ const cardFade = {
   },
 };
 
-export default function VirtualCFOPage() {
+export default function EINPage() {
   const items = [
-    "Forward-looking cash flow forecasting and runway analysis",
-    "Design and tracking of KPIs aligned to your operating model",
-    "Monthly and quarterly performance reviews with leadership",
-    "Board and investor-ready reporting and presentations",
-    "Budgeting, reforecasting, and scenario planning",
-    "Support for funding rounds, debt, and capital allocation",
+    "Complete EIN application process management",
+    "Your company's financial identity",
+    "Essential for banking and taxation",
+    "Required for hiring and regulatory filings",
   ];
 
   return (
     <div>
       <PageHero
-        eyebrow="Services · Virtual CFO"
-        title="Virtual CFO"
+        eyebrow="Services · EIN"
+        title="EIN (Employer Identification Number)"
         subtitle={
           <>
-            You may not be ready for a full-time CFO, but you still need clear
-            financial narratives for your board, investors, and team. Our
-            Virtual CFO engagements provide executive-level guidance on a
-            flexible schedule.
+            An EIN is a unique 9-digit tax identification number issued by the
+            IRS, essential for banking, taxation, hiring, and regulatory
+            filings.
           </>
         }
       />
@@ -55,10 +52,10 @@ export default function VirtualCFOPage() {
                 Overview
               </h2>
               <p className="text-base leading-relaxed text-slate-700 sm:text-lg">
-                You may not be ready for a full-time CFO, but you still need
-                clear financial narratives for your board, investors, and team.
-                Our Virtual CFO engagements provide executive-level guidance on
-                a flexible schedule.
+                An EIN is a unique 9-digit tax identification number issued by
+                the IRS, essential for banking, taxation, hiring, and regulatory
+                filings. We manage the complete EIN application process for your
+                business.
               </p>
             </motion.section>
 
@@ -74,8 +71,8 @@ export default function VirtualCFOPage() {
                 What&apos;s included
               </h2>
               <p className="mb-6 text-base leading-relaxed text-slate-700 sm:text-lg">
-                We partner with your leadership team to translate financial data
-                into clear decisions, tradeoffs, and action plans.
+                We handle the entire EIN application process, ensuring accuracy
+                and timely issuance for your business needs.
               </p>
               <ul className="space-y-3 text-base text-slate-700 sm:text-lg">
                 {items.map((item, i) => (

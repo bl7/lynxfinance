@@ -136,14 +136,21 @@ export function HomeWhyLynx() {
                 </p>
               </div>
               <div className="flex justify-center gap-4">
-                {[1, 2, 3].map((i) => (
+                {[
+                  { src: "/staffs/DilipGyawali.jpeg", alt: "Dilip Gyawali" },
+                  { src: "/staffs/SagarKandel.jpeg", alt: "Sagar Kandel" },
+                  {
+                    src: "/staffs/ShisirPokharel.jpeg",
+                    alt: "Shisir Pokharel",
+                  },
+                ].map((member, i) => (
                   <div
                     key={i}
                     className="relative h-20 w-20 overflow-hidden rounded-full border-4 border-white bg-slate-50 shadow-md ring-2 ring-slate-100"
                   >
                     <Image
-                      src="/person.png"
-                      alt="Team member"
+                      src={member.src}
+                      alt={member.alt}
                       fill
                       className="object-cover"
                     />

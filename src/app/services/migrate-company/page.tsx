@@ -16,27 +16,23 @@ const cardFade = {
   },
 };
 
-export default function VirtualCFOPage() {
+export default function MigrateCompanyPage() {
   const items = [
-    "Forward-looking cash flow forecasting and runway analysis",
-    "Design and tracking of KPIs aligned to your operating model",
-    "Monthly and quarterly performance reviews with leadership",
-    "Board and investor-ready reporting and presentations",
-    "Budgeting, reforecasting, and scenario planning",
-    "Support for funding rounds, debt, and capital allocation",
+    "Seamless onboarding of existing entity",
+    "Structured support for operations",
+    "Stay compliant at every stage",
+    "Single trusted partner for all needs",
   ];
 
   return (
     <div>
       <PageHero
-        eyebrow="Services · Virtual CFO"
-        title="Virtual CFO"
+        eyebrow="Services · Migrate Your Company to Lynx"
+        title="Migrate Your Company to Lynx"
         subtitle={
           <>
-            You may not be ready for a full-time CFO, but you still need clear
-            financial narratives for your board, investors, and team. Our
-            Virtual CFO engagements provide executive-level guidance on a
-            flexible schedule.
+            Transitioning your company to Lynx means gaining a single, trusted
+            partner for incorporation, compliance, and tax management.
           </>
         }
       />
@@ -55,10 +51,10 @@ export default function VirtualCFOPage() {
                 Overview
               </h2>
               <p className="text-base leading-relaxed text-slate-700 sm:text-lg">
-                You may not be ready for a full-time CFO, but you still need
-                clear financial narratives for your board, investors, and team.
-                Our Virtual CFO engagements provide executive-level guidance on
-                a flexible schedule.
+                Transitioning your company to Lynx means gaining a single,
+                trusted partner for incorporation, compliance, and tax
+                management. We ensure a seamless migration process that
+                minimizes disruption to your operations.
               </p>
             </motion.section>
 
@@ -74,8 +70,9 @@ export default function VirtualCFOPage() {
                 What&apos;s included
               </h2>
               <p className="mb-6 text-base leading-relaxed text-slate-700 sm:text-lg">
-                We partner with your leadership team to translate financial data
-                into clear decisions, tradeoffs, and action plans.
+                We provide comprehensive migration support, ensuring your
+                transition is smooth and your business continues to operate
+                without interruption.
               </p>
               <ul className="space-y-3 text-base text-slate-700 sm:text-lg">
                 {items.map((item, i) => (

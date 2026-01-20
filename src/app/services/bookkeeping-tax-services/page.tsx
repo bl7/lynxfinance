@@ -16,27 +16,23 @@ const cardFade = {
   },
 };
 
-export default function VirtualCFOPage() {
+export default function BookkeepingTaxServicesPage() {
   const items = [
-    "Forward-looking cash flow forecasting and runway analysis",
-    "Design and tracking of KPIs aligned to your operating model",
-    "Monthly and quarterly performance reviews with leadership",
-    "Board and investor-ready reporting and presentations",
-    "Budgeting, reforecasting, and scenario planning",
-    "Support for funding rounds, debt, and capital allocation",
+    "Federal and state tax filings",
+    "Forms 5472, 1120, 1065, and 1040-NR support",
+    "Expert oversight and structured reporting",
+    "Accuracy, compliance, and peace of mind",
   ];
 
   return (
     <div>
       <PageHero
-        eyebrow="Services · Virtual CFO"
-        title="Virtual CFO"
+        eyebrow="Services · Bookkeeping & Tax Services"
+        title="Bookkeeping & Tax Services"
         subtitle={
           <>
-            You may not be ready for a full-time CFO, but you still need clear
-            financial narratives for your board, investors, and team. Our
-            Virtual CFO engagements provide executive-level guidance on a
-            flexible schedule.
+            Lynx delivers end-to-end bookkeeping and tax compliance solutions
+            for US businesses, including federal and state tax filings.
           </>
         }
       />
@@ -55,10 +51,10 @@ export default function VirtualCFOPage() {
                 Overview
               </h2>
               <p className="text-base leading-relaxed text-slate-700 sm:text-lg">
-                You may not be ready for a full-time CFO, but you still need
-                clear financial narratives for your board, investors, and team.
-                Our Virtual CFO engagements provide executive-level guidance on
-                a flexible schedule.
+                Lynx delivers end-to-end bookkeeping and tax compliance
+                solutions for US businesses, including federal and state tax
+                filings. Our comprehensive approach ensures accuracy,
+                compliance, and peace of mind.
               </p>
             </motion.section>
 
@@ -74,8 +70,8 @@ export default function VirtualCFOPage() {
                 What&apos;s included
               </h2>
               <p className="mb-6 text-base leading-relaxed text-slate-700 sm:text-lg">
-                We partner with your leadership team to translate financial data
-                into clear decisions, tradeoffs, and action plans.
+                We provide comprehensive bookkeeping and tax services that keep
+                your business compliant and well-documented.
               </p>
               <ul className="space-y-3 text-base text-slate-700 sm:text-lg">
                 {items.map((item, i) => (

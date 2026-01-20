@@ -43,7 +43,7 @@ export default function AboutPage() {
       location: "Based in Texas",
       description:
         "Dilip is a seasoned leader focused on client acquisition, relationship management, and market expansion. With over two decades in strategic sales and partnership building, he is key to expanding LYNX Finance Consulting's client base and building lasting relationships. His deep understanding of client needs, combined with a consultative approach, ensures customized service solutions.",
-      image: null,
+      image: "/staffs/DilipGyawali.jpeg",
       experienceBadge: null,
     },
     {
@@ -53,16 +53,35 @@ export default function AboutPage() {
       location: "Based in Virginia",
       description:
         "Sagar is an experienced tax strategist and compliance expert in U.S. and international tax systems. As a Chartered Accountant and Enrolled Agent, he navigates complex tax codes and structures transactions for optimal tax efficiency. His expertise includes tax planning, forensic accounting, and regulatory compliance, helping clients minimize liabilities and manage audits.",
-      image: null,
-      experienceBadge: "10+ Experience",
+      image: "/staffs/SagarKandel.jpeg",
+      experienceBadge: null,
     },
     {
-      name: "Sandhya G.C.",
-      title: "CA | MBS, Audit Senior",
-      location: "Based in Virginia",
+      name: "Shisir Pokharel",
+      title:
+        "CA | CPA Australia Associate | MA Economics | DipIFRS, Senior Finance Consultant",
+      location: "Based in Nepal",
       description:
-        "Sandhya is an accomplished audit professional specializing in internal controls, governance, and financial integrity. With a decade of experience in statutory and internal audits, she rigorously evaluates financial systems and ensures regulatory compliance. Her work enhances transparency and accountability by identifying control weaknesses and recommending process improvements.",
-      image: null,
+        "Shisir is a senior finance consultant with expertise in financial analysis, budgeting, and cost management. His comprehensive background in accounting, economics, and international financial reporting standards enables him to deliver strategic financial insights and solutions that drive business performance and growth.",
+      image: "/staffs/ShisirPokharel.jpeg",
+      experienceBadge: null,
+    },
+    {
+      name: "Nabin Dhaubanjar",
+      title: "CA | MBA, Senior - Research & Financial Innovation",
+      location: "Based in Nepal",
+      description:
+        "Nabin specializes in financial research, tools, and market trends. With his expertise in accounting and business administration, he drives innovation in financial processes and systems, helping clients leverage cutting-edge tools and methodologies to stay ahead in an evolving financial landscape.",
+      image: "/staffs/NabinDhaubanjar.jpeg",
+      experienceBadge: null,
+    },
+    {
+      name: "Kriti Dhakal",
+      title: "CA | MBA, Senior Strategy & Risk Advisor",
+      location: "Based in Nepal",
+      description:
+        "Kriti brings a strategic mindset to risk management and operational scalability. With her strong foundation in accounting and business strategy, she helps organizations identify, assess, and mitigate risks while designing scalable operations that support sustainable growth and long-term success.",
+      image: "/staffs/KritiDhakal.jpeg",
       experienceBadge: null,
     },
   ];
@@ -133,10 +152,9 @@ export default function AboutPage() {
                   60+ years of shared experience
                 </h3>
                 <p className="mt-1 text-xs text-slate-600">
-                  Our partners and leads have sat in the seats of controllers,
-                  CFOs, and Big Four managers. We know what your auditors,
-                  lenders, and investors expect, and how to deliver it without
-                  slowing your growth.
+                  Our partners and leads have sat in the seats of controllers
+                  and CFOs. We know what your auditors, lenders, and investors
+                  expect, and how to deliver it without slowing your growth.
                 </p>
               </div>
             </div>
@@ -303,7 +321,7 @@ export default function AboutPage() {
 
           <div className="relative mt-12">
             {/* Vertical timeline line */}
-            <div className="absolute left-6 top-6 bottom-6 z-0 w-px bg-gradient-to-b from-amber-300/40 via-amber-300/30 to-amber-300/20" />
+            <div className="absolute left-6 top-6 bottom-6 z-0 w-px bg-gradient-to-b from-[#FFC72C]/20 via-[#FFC72C]/30 to-[#FFC72C]/20" />
 
             <div className="space-y-8">
               {coreValues.map((value, i) => (
@@ -316,9 +334,9 @@ export default function AboutPage() {
                   viewport={{ once: true, amount: 0.25 }}
                   custom={i}
                 >
-                  <div className="relative z-10 flex-shrink-0">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FFC72C]/10 border border-[#FFC72C]/30 transition-shadow duration-300 group-hover:shadow-[0_0_24px_rgba(255,199,44,0.3)] group-hover:border-[#FFC72C]/60">
-                      <span className="text-sm font-semibold text-slate-900">
+                  <div className="relative z-10 shrink-0">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FFC72C]/10 border-2 border-[#FFC72C]/30 transition-all duration-300 group-hover:bg-[#FFC72C] group-hover:border-[#FFC72C] group-hover:shadow-lg group-hover:shadow-[#FFC72C]/30">
+                      <span className="text-sm font-bold text-slate-900 transition-colors duration-300 group-hover:text-white">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                     </div>
@@ -389,7 +407,7 @@ export default function AboutPage() {
                     {member.location}
                   </p>
                 </div>
-                <p className="mt-5 text-sm leading-relaxed text-slate-600 line-clamp-4">
+                <p className="mt-5 text-sm leading-relaxed text-slate-600">
                   {member.description}
                 </p>
               </motion.div>

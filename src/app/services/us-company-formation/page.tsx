@@ -16,27 +16,24 @@ const cardFade = {
   },
 };
 
-export default function VirtualCFOPage() {
+export default function USCompanyFormationPage() {
   const items = [
-    "Forward-looking cash flow forecasting and runway analysis",
-    "Design and tracking of KPIs aligned to your operating model",
-    "Monthly and quarterly performance reviews with leadership",
-    "Board and investor-ready reporting and presentations",
-    "Budgeting, reforecasting, and scenario planning",
-    "Support for funding rounds, debt, and capital allocation",
+    "Entity formation and registration",
+    "Ongoing regulatory requirements",
+    "Compliant and future-ready setup",
+    "Support regardless of location or industry",
   ];
 
   return (
     <div>
       <PageHero
-        eyebrow="Services · Virtual CFO"
-        title="Virtual CFO"
+        eyebrow="Services · US Company Formation"
+        title="US Company Formation"
         subtitle={
           <>
-            You may not be ready for a full-time CFO, but you still need clear
-            financial narratives for your board, investors, and team. Our
-            Virtual CFO engagements provide executive-level guidance on a
-            flexible schedule.
+            Simplify the US company incorporation journey from start to scale.
+            Our experienced incorporation and compliance specialists guide you
+            through every stage.
           </>
         }
       />
@@ -55,10 +52,10 @@ export default function VirtualCFOPage() {
                 Overview
               </h2>
               <p className="text-base leading-relaxed text-slate-700 sm:text-lg">
-                You may not be ready for a full-time CFO, but you still need
-                clear financial narratives for your board, investors, and team.
-                Our Virtual CFO engagements provide executive-level guidance on
-                a flexible schedule.
+                Simplify the US company incorporation journey from start to
+                scale. Our experienced incorporation and compliance specialists
+                guide you through every stage of the process, from entity
+                selection to ongoing compliance management.
               </p>
             </motion.section>
 
@@ -74,8 +71,8 @@ export default function VirtualCFOPage() {
                 What&apos;s included
               </h2>
               <p className="mb-6 text-base leading-relaxed text-slate-700 sm:text-lg">
-                We partner with your leadership team to translate financial data
-                into clear decisions, tradeoffs, and action plans.
+                We handle the complete incorporation process, ensuring your
+                business is set up correctly and remains compliant from day one.
               </p>
               <ul className="space-y-3 text-base text-slate-700 sm:text-lg">
                 {items.map((item, i) => (

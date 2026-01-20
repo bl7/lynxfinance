@@ -16,27 +16,23 @@ const cardFade = {
   },
 };
 
-export default function VirtualCFOPage() {
+export default function USBusinessBankAccountPage() {
   const items = [
-    "Forward-looking cash flow forecasting and runway analysis",
-    "Design and tracking of KPIs aligned to your operating model",
-    "Monthly and quarterly performance reviews with leadership",
-    "Board and investor-ready reporting and presentations",
-    "Budgeting, reforecasting, and scenario planning",
-    "Support for funding rounds, debt, and capital allocation",
+    "Separate personal and business finances",
+    "Reduce liability",
+    "Streamline accounting and tax reporting",
+    "Compliant banking relationship setup",
   ];
 
   return (
     <div>
       <PageHero
-        eyebrow="Services · Virtual CFO"
-        title="Virtual CFO"
+        eyebrow="Services · US Business Bank Account"
+        title="US Business Bank Account"
         subtitle={
           <>
-            You may not be ready for a full-time CFO, but you still need clear
-            financial narratives for your board, investors, and team. Our
-            Virtual CFO engagements provide executive-level guidance on a
-            flexible schedule.
+            Opening a dedicated US business bank account is critical after
+            incorporation. Lynx helps establish compliant banking relationships.
           </>
         }
       />
@@ -55,10 +51,10 @@ export default function VirtualCFOPage() {
                 Overview
               </h2>
               <p className="text-base leading-relaxed text-slate-700 sm:text-lg">
-                You may not be ready for a full-time CFO, but you still need
-                clear financial narratives for your board, investors, and team.
-                Our Virtual CFO engagements provide executive-level guidance on
-                a flexible schedule.
+                Opening a dedicated US business bank account is critical after
+                incorporation. Lynx helps establish compliant banking
+                relationships, ensuring your business has the financial
+                infrastructure needed for operations, compliance, and growth.
               </p>
             </motion.section>
 
@@ -74,8 +70,9 @@ export default function VirtualCFOPage() {
                 What&apos;s included
               </h2>
               <p className="mb-6 text-base leading-relaxed text-slate-700 sm:text-lg">
-                We partner with your leadership team to translate financial data
-                into clear decisions, tradeoffs, and action plans.
+                We guide you through the bank account setup process, helping you
+                choose the right banking partner and ensure all requirements are
+                met.
               </p>
               <ul className="space-y-3 text-base text-slate-700 sm:text-lg">
                 {items.map((item, i) => (

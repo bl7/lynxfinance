@@ -16,27 +16,23 @@ const cardFade = {
   },
 };
 
-export default function VirtualCFOPage() {
+export default function AnnualComplianceStateFilingsPage() {
   const items = [
-    "Forward-looking cash flow forecasting and runway analysis",
-    "Design and tracking of KPIs aligned to your operating model",
-    "Monthly and quarterly performance reviews with leadership",
-    "Board and investor-ready reporting and presentations",
-    "Budgeting, reforecasting, and scenario planning",
-    "Support for funding rounds, debt, and capital allocation",
+    "Ongoing annual compliance requirements",
+    "State filings and reporting obligations",
+    "Keep company in good standing",
+    "Avoid penalties and protect reputation",
   ];
 
   return (
     <div>
       <PageHero
-        eyebrow="Services · Virtual CFO"
-        title="Virtual CFO"
+        eyebrow="Services · Annual Compliance & State Filings"
+        title="Annual Compliance & State Filings"
         subtitle={
           <>
-            You may not be ready for a full-time CFO, but you still need clear
-            financial narratives for your board, investors, and team. Our
-            Virtual CFO engagements provide executive-level guidance on a
-            flexible schedule.
+            Lynx supports your business with ongoing annual compliance
+            requirements, including state filings and reporting obligations.
           </>
         }
       />
@@ -55,10 +51,10 @@ export default function VirtualCFOPage() {
                 Overview
               </h2>
               <p className="text-base leading-relaxed text-slate-700 sm:text-lg">
-                You may not be ready for a full-time CFO, but you still need
-                clear financial narratives for your board, investors, and team.
-                Our Virtual CFO engagements provide executive-level guidance on
-                a flexible schedule.
+                Lynx supports your business with ongoing annual compliance
+                requirements, including state filings and reporting obligations.
+                We ensure your company stays in good standing and avoids
+                penalties while protecting your reputation.
               </p>
             </motion.section>
 
@@ -74,8 +70,8 @@ export default function VirtualCFOPage() {
                 What&apos;s included
               </h2>
               <p className="mb-6 text-base leading-relaxed text-slate-700 sm:text-lg">
-                We partner with your leadership team to translate financial data
-                into clear decisions, tradeoffs, and action plans.
+                We handle all annual compliance and state filing requirements,
+                keeping your business compliant and protected.
               </p>
               <ul className="space-y-3 text-base text-slate-700 sm:text-lg">
                 {items.map((item, i) => (

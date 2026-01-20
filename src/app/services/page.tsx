@@ -4,7 +4,9 @@ import Link from "next/link";
 import {
   FileText,
   Receipt,
+  Table,
   LineChart,
+  TrendingUp,
   Building2,
   Shield,
   CreditCard,
@@ -69,6 +71,45 @@ const services = [
     ],
   },
   {
+    slug: "excel-google-sheet-modeling",
+    name: "Excel and Google sheet modeling",
+    icon: Table,
+    summary:
+      "Unlock the full potential of your data with dynamic, high-impact spreadsheet models that empower data-driven decision-making.",
+    bullets: [
+      "Advanced spreadsheet modeling with complex calculations",
+      "Interactive dashboards and data visualization",
+      "Formula optimization and automation",
+      "Collaborative solutions for real-time teamwork",
+    ],
+  },
+  {
+    slug: "financial-modeling",
+    name: "Financial modeling",
+    icon: LineChart,
+    summary:
+      "Precise, actionable insights through dynamic financial models that support scenario analysis, investment evaluation, and long-term planning.",
+    bullets: [
+      "Dynamic financial modeling for strategic decisions",
+      "Scenario planning and analysis",
+      "Investment and capital evaluation",
+      "Risk assessment and forecasting accuracy",
+    ],
+  },
+  {
+    slug: "budgeting-financial-services",
+    name: "Budgeting and Financial Services",
+    icon: TrendingUp,
+    summary:
+      "Elevate your financial management with comprehensive budgeting and financial services that align financial goals with your broader business objectives.",
+    bullets: [
+      "Strategic budget planning and forecasting",
+      "Cost management and performance tracking",
+      "Financial risk assessment and mitigation",
+      "Scenario planning and agile financial management",
+    ],
+  },
+  {
     slug: "virtual-cfo",
     name: "Virtual CFO",
     icon: LineChart,
@@ -95,19 +136,6 @@ const services = [
     ],
   },
   {
-    slug: "registered-agent-services",
-    name: "Registered Agent Services",
-    icon: Shield,
-    summary:
-      "Every US corporation or LLC is legally required to appoint a Registered Agent. Lynx provides reliable Registered Agent services across all states.",
-    bullets: [
-      "Registered Agent services in all US states",
-      "Secure digitization of official correspondence",
-      "Easy tracking and record-keeping",
-      "Legal, tax, and state correspondence management",
-    ],
-  },
-  {
     slug: "ein",
     name: "EIN (Employer Identification Number)",
     icon: CreditCard,
@@ -118,19 +146,6 @@ const services = [
       "Your company's financial identity",
       "Essential for banking and taxation",
       "Required for hiring and regulatory filings",
-    ],
-  },
-  {
-    slug: "itin",
-    name: "ITIN (Individual Taxpayer Identification Number)",
-    icon: UserCircle,
-    summary:
-      "For individuals required to file US taxes but not eligible for a Social Security Number, Lynx assists in obtaining an ITIN.",
-    bullets: [
-      "Complete documentation and filing process",
-      "Accuracy and timely issuance ensured",
-      "For individuals filing US taxes",
-      "Alternative to Social Security Number",
     ],
   },
   {
@@ -147,16 +162,29 @@ const services = [
     ],
   },
   {
-    slug: "annual-compliance-state-filings",
-    name: "Annual Compliance & State Filings",
-    icon: FileCheck,
+    slug: "registered-agent-services",
+    name: "Registered Agent Services",
+    icon: Shield,
     summary:
-      "Lynx supports your business with ongoing annual compliance requirements, including state filings and reporting obligations.",
+      "Every US corporation or LLC is legally required to appoint a Registered Agent. Lynx provides reliable Registered Agent services across all states.",
     bullets: [
-      "Ongoing annual compliance requirements",
-      "State filings and reporting obligations",
-      "Keep company in good standing",
-      "Avoid penalties and protect reputation",
+      "Registered Agent services in all US states",
+      "Secure digitization of official correspondence",
+      "Easy tracking and record-keeping",
+      "Legal, tax, and state correspondence management",
+    ],
+  },
+  {
+    slug: "itin",
+    name: "ITIN (Individual Taxpayer Identification Number)",
+    icon: UserCircle,
+    summary:
+      "For individuals required to file US taxes but not eligible for a Social Security Number, Lynx assists in obtaining an ITIN.",
+    bullets: [
+      "Complete documentation and filing process",
+      "Accuracy and timely issuance ensured",
+      "For individuals filing US taxes",
+      "Alternative to Social Security Number",
     ],
   },
   {
@@ -173,16 +201,16 @@ const services = [
     ],
   },
   {
-    slug: "boi-filing",
-    name: "BOI (Beneficial Ownership Information) Filing",
-    icon: Users,
+    slug: "annual-compliance-state-filings",
+    name: "Annual Compliance & State Filings",
+    icon: FileCheck,
     summary:
-      "Lynx simplifies BOI reporting to FinCEN by managing the disclosure of required ownership and control information.",
+      "Lynx supports your business with ongoing annual compliance requirements, including state filings and reporting obligations.",
     bullets: [
-      "BOI reporting to FinCEN",
-      "Ownership and control information disclosure",
-      "Timely and compliant filings",
-      "Meet regulatory obligations efficiently",
+      "Ongoing annual compliance requirements",
+      "State filings and reporting obligations",
+      "Keep company in good standing",
+      "Avoid penalties and protect reputation",
     ],
   },
   {

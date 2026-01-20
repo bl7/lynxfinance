@@ -16,27 +16,23 @@ const cardFade = {
   },
 };
 
-export default function VirtualCFOPage() {
+export default function ITINPage() {
   const items = [
-    "Forward-looking cash flow forecasting and runway analysis",
-    "Design and tracking of KPIs aligned to your operating model",
-    "Monthly and quarterly performance reviews with leadership",
-    "Board and investor-ready reporting and presentations",
-    "Budgeting, reforecasting, and scenario planning",
-    "Support for funding rounds, debt, and capital allocation",
+    "Complete documentation and filing process",
+    "Accuracy and timely issuance ensured",
+    "For individuals filing US taxes",
+    "Alternative to Social Security Number",
   ];
 
   return (
     <div>
       <PageHero
-        eyebrow="Services · Virtual CFO"
-        title="Virtual CFO"
+        eyebrow="Services · ITIN"
+        title="ITIN (Individual Taxpayer Identification Number)"
         subtitle={
           <>
-            You may not be ready for a full-time CFO, but you still need clear
-            financial narratives for your board, investors, and team. Our
-            Virtual CFO engagements provide executive-level guidance on a
-            flexible schedule.
+            For individuals required to file US taxes but not eligible for a
+            Social Security Number, Lynx assists in obtaining an ITIN.
           </>
         }
       />
@@ -55,10 +51,10 @@ export default function VirtualCFOPage() {
                 Overview
               </h2>
               <p className="text-base leading-relaxed text-slate-700 sm:text-lg">
-                You may not be ready for a full-time CFO, but you still need
-                clear financial narratives for your board, investors, and team.
-                Our Virtual CFO engagements provide executive-level guidance on
-                a flexible schedule.
+                For individuals required to file US taxes but not eligible for a
+                Social Security Number, Lynx assists in obtaining an ITIN. We
+                handle the complete documentation and filing process, ensuring
+                accuracy and timely issuance.
               </p>
             </motion.section>
 
@@ -74,8 +70,8 @@ export default function VirtualCFOPage() {
                 What&apos;s included
               </h2>
               <p className="mb-6 text-base leading-relaxed text-slate-700 sm:text-lg">
-                We partner with your leadership team to translate financial data
-                into clear decisions, tradeoffs, and action plans.
+                We guide you through the ITIN application process, ensuring all
+                requirements are met and documents are properly submitted.
               </p>
               <ul className="space-y-3 text-base text-slate-700 sm:text-lg">
                 {items.map((item, i) => (

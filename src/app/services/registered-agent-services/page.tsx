@@ -16,27 +16,24 @@ const cardFade = {
   },
 };
 
-export default function VirtualCFOPage() {
+export default function RegisteredAgentServicesPage() {
   const items = [
-    "Forward-looking cash flow forecasting and runway analysis",
-    "Design and tracking of KPIs aligned to your operating model",
-    "Monthly and quarterly performance reviews with leadership",
-    "Board and investor-ready reporting and presentations",
-    "Budgeting, reforecasting, and scenario planning",
-    "Support for funding rounds, debt, and capital allocation",
+    "Registered Agent services in all US states",
+    "Secure digitization of official correspondence",
+    "Easy tracking and record-keeping",
+    "Legal, tax, and state correspondence management",
   ];
 
   return (
     <div>
       <PageHero
-        eyebrow="Services · Virtual CFO"
-        title="Virtual CFO"
+        eyebrow="Services · Registered Agent Services"
+        title="Registered Agent Services"
         subtitle={
           <>
-            You may not be ready for a full-time CFO, but you still need clear
-            financial narratives for your board, investors, and team. Our
-            Virtual CFO engagements provide executive-level guidance on a
-            flexible schedule.
+            Every US corporation or LLC is legally required to appoint a
+            Registered Agent. Lynx provides reliable Registered Agent services
+            across all states.
           </>
         }
       />
@@ -55,10 +52,10 @@ export default function VirtualCFOPage() {
                 Overview
               </h2>
               <p className="text-base leading-relaxed text-slate-700 sm:text-lg">
-                You may not be ready for a full-time CFO, but you still need
-                clear financial narratives for your board, investors, and team.
-                Our Virtual CFO engagements provide executive-level guidance on
-                a flexible schedule.
+                Every US corporation or LLC is legally required to appoint a
+                Registered Agent. Lynx provides reliable Registered Agent
+                services across all states, ensuring you never miss important
+                legal, tax, or state correspondence.
               </p>
             </motion.section>
 
@@ -74,8 +71,8 @@ export default function VirtualCFOPage() {
                 What&apos;s included
               </h2>
               <p className="mb-6 text-base leading-relaxed text-slate-700 sm:text-lg">
-                We partner with your leadership team to translate financial data
-                into clear decisions, tradeoffs, and action plans.
+                We provide comprehensive Registered Agent services that keep
+                your business compliant and informed.
               </p>
               <ul className="space-y-3 text-base text-slate-700 sm:text-lg">
                 {items.map((item, i) => (

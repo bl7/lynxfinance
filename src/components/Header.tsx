@@ -2,12 +2,37 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, PhoneCall } from "lucide-react";
+import { Menu, X, PhoneCall, ChevronDown } from "lucide-react";
 import { useState } from "react";
+
+const services = [
+  { slug: "accounting-bookkeeping", name: "Accounting & Bookkeeping" },
+  { slug: "tax-compliance", name: "Tax Compliance" },
+  {
+    slug: "excel-google-sheet-modeling",
+    name: "Excel and Google sheet modeling",
+  },
+  { slug: "financial-modeling", name: "Financial modeling" },
+  {
+    slug: "budgeting-financial-services",
+    name: "Budgeting and Financial Services",
+  },
+  { slug: "virtual-cfo", name: "Virtual CFO" },
+  { slug: "us-company-formation", name: "US Company Formation" },
+  { slug: "ein", name: "EIN (Employer Identification Number)" },
+  { slug: "us-business-bank-account", name: "US Business Bank Account" },
+  { slug: "registered-agent-services", name: "Registered Agent Services" },
+  { slug: "itin", name: "ITIN (Individual Taxpayer Identification Number)" },
+  { slug: "bookkeeping-tax-services", name: "Bookkeeping & Tax Services" },
+  {
+    slug: "annual-compliance-state-filings",
+    name: "Annual Compliance & State Filings",
+  },
+  { slug: "migrate-company", name: "Migrate Your Company to Lynx" },
+];
 
 const navItems = [
   { href: "/about", label: "About Us" },
-  { href: "/services", label: "Services" },
   { href: "/industries", label: "Industries" },
   { href: "/pricing", label: "Pricing" },
   { href: "/faq", label: "FAQ" },
@@ -16,6 +41,8 @@ const navItems = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [servicesMobileOpen, setServicesMobileOpen] = useState(false);
 
   return (
     <header className="fixed inset-x-0 top-0 z-40 bg-slate-950/80 backdrop-blur-md border-b border-white/10">
@@ -35,6 +62,45 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-8 text-sm font-medium text-white lg:flex">
+          {/* Services Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+          >
+            <Link
+              href="/services"
+              className="group relative inline-flex items-center gap-1 transition-colors hover:text-white/80"
+            >
+              Services
+              <ChevronDown
+                className={`h-4 w-4 transition-transform duration-200 ${
+                  servicesOpen ? "rotate-180" : ""
+                }`}
+              />
+              <span className="absolute inset-x-0 -bottom-1 h-0.5 origin-left scale-x-0 bg-[#FFC72C] transition-transform duration-200 group-hover:scale-x-100" />
+            </Link>
+            {servicesOpen && (
+              <div className="absolute left-0 top-full z-50 mt-2 w-72 rounded-lg border border-white/20 bg-slate-950/95 backdrop-blur-md shadow-xl py-2">
+                {services.map((service) => (
+                  <Link
+                    key={service.slug}
+                    href={`/services/${service.slug}`}
+                    className="block px-4 py-2 text-sm text-white transition-colors hover:bg-white/10 hover:text-white"
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+                <Link
+                  href="/services"
+                  className="block border-t border-white/20 px-4 py-2 text-sm font-semibold text-[#FFC72C] transition-colors hover:bg-white/10"
+                >
+                  View All Services →
+                </Link>
+              </div>
+            )}
+          </div>
+          {/* Other nav items */}
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -70,6 +136,48 @@ export function Header() {
       {open && (
         <div className="border-t border-white/20 bg-slate-950/95 backdrop-blur-md px-4 pb-4 pt-2 shadow-xl lg:hidden">
           <nav className="flex flex-col gap-1 text-sm font-medium text-white">
+            {/* Services Dropdown for Mobile */}
+            <div>
+              <button
+                onClick={() => setServicesMobileOpen(!servicesMobileOpen)}
+                className="flex w-full items-center justify-between rounded-lg px-3 py-2 transition-colors hover:bg-white/10 hover:text-white"
+              >
+                Services
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform duration-200 ${
+                    servicesMobileOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {servicesMobileOpen && (
+                <div className="ml-4 mt-1 flex flex-col gap-1 border-l border-white/20 pl-4">
+                  {services.map((service) => (
+                    <Link
+                      key={service.slug}
+                      href={`/services/${service.slug}`}
+                      className="rounded-lg px-3 py-2 text-sm text-white/90 transition-colors hover:bg-white/10 hover:text-white"
+                      onClick={() => {
+                        setOpen(false);
+                        setServicesMobileOpen(false);
+                      }}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                  <Link
+                    href="/services"
+                    className="rounded-lg px-3 py-2 text-sm font-semibold text-[#FFC72C] transition-colors hover:bg-white/10"
+                    onClick={() => {
+                      setOpen(false);
+                      setServicesMobileOpen(false);
+                    }}
+                  >
+                    View All Services →
+                  </Link>
+                </div>
+              )}
+            </div>
+            {/* Other nav items */}
             {navItems.map((item) => (
               <Link
                 key={item.href}
