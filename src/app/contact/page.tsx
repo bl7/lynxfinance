@@ -4,6 +4,7 @@ import { useState } from "react";
 import { PageHero } from "@/components/PageHero";
 import { motion } from "framer-motion";
 import { submitEnquiry } from "@/lib/submitEnquiry";
+import { useToast } from "@/components/ToastProvider";
 
 const sectionFade = {
   hidden: { opacity: 0, y: 24 },
@@ -24,6 +25,7 @@ const cardFade = {
 };
 
 export default function ContactPage() {
+  const { showToast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -152,14 +154,22 @@ export default function ContactPage() {
       if (result.id && result.id !== "SPAM") {
         setReferenceId(result.id);
       }
+      showToast({
+        type: "success",
+        title: "Inquiry received",
+        message:
+          result.id && result.id !== "SPAM"
+            ? `Reference ID: ${result.id}`
+            : "Thanks, we’ve received your inquiry.",
+      });
 
       // Reset form fields
       formEl.reset();
       setCompanyWebsite("");
     } catch (error) {
-      setSubmitError(
-        error instanceof Error ? error.message : "An error occurred"
-      );
+      const msg = error instanceof Error ? error.message : "An error occurred";
+      showToast({ type: "error", title: "Submission failed", message: msg });
+      setSubmitError(msg);
     } finally {
       setIsSubmitting(false);
     }
@@ -303,27 +313,7 @@ export default function ContactPage() {
             className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden"
             aria-hidden="true"
           />
-          {submitError && (
-            <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-xs text-red-800">
-              {submitError}
-            </div>
-          )}
-          {isSuccess && (
-            <div className="rounded-lg border border-green-200 bg-green-50 p-4 text-xs">
-              <h3 className="mb-2 font-semibold text-green-900">
-                Inquiry received
-              </h3>
-              <p className="text-green-800">
-                Thanks, we've received your inquiry. Our team will reach out
-                shortly.
-              </p>
-              {referenceId && (
-                <p className="mt-2 font-medium text-green-900">
-                  Reference ID: {referenceId}
-                </p>
-              )}
-            </div>
-          )}
+          {/* Toast notifications handle success/error feedback */}
           <button
             type="submit"
             disabled={isSubmitting}

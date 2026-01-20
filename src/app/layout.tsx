@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { AssessmentModalProvider } from "@/components/AssessmentModalProvider";
+import { ToastProvider } from "@/components/ToastProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,16 +25,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body
-        className={`${inter.variable} bg-white text-slate-900 antialiased`}
-      >
-        <div className="flex min-h-screen flex-col bg-white">
-          <Header />
-          <main className="flex-1 pt-20 lg:pt-24">{children}</main>
-          <Footer />
-        </div>
+      <body className={`${inter.variable} bg-white text-slate-900 antialiased`}>
+        <ToastProvider>
+          <AssessmentModalProvider>
+            <div className="flex min-h-screen flex-col bg-white">
+              <Header />
+              <main className="flex-1 pt-20 lg:pt-24">{children}</main>
+              <Footer />
+            </div>
+          </AssessmentModalProvider>
+        </ToastProvider>
       </body>
     </html>
   );
 }
-

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useAssessmentModal } from "../AssessmentModalProvider";
 
 const sectionFade = {
   hidden: { opacity: 0, y: 24 },
@@ -13,6 +14,8 @@ const sectionFade = {
 };
 
 export function HomeFinalCTA() {
+  const { openAssessment } = useAssessmentModal();
+
   return (
     <section className="border-y border-slate-200 bg-[#002147] py-20">
       <div className="mx-auto max-w-4xl px-4 text-center lg:px-6">
@@ -30,12 +33,13 @@ export function HomeFinalCTA() {
             location.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/contact"
+            <button
+              type="button"
+              onClick={() => openAssessment()}
               className="inline-flex items-center justify-center rounded bg-[#FFC72C] px-7 py-3 text-sm font-semibold uppercase tracking-wide text-slate-900 transition hover:bg-[#FFD54F]"
             >
               Book a free assessment
-            </Link>
+            </button>
             <Link
               href="/services"
               className="inline-flex items-center justify-center rounded border border-white/30 bg-transparent px-6 py-3 text-sm font-medium text-white transition hover:border-white/50 hover:bg-white/10"

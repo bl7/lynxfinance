@@ -16,6 +16,7 @@ import {
   pricingFAQs,
 } from "@/data/pricing";
 import { useSearchParams, useRouter } from "next/navigation";
+import { useAssessmentModal } from "@/components/AssessmentModalProvider";
 
 const sectionFade = {
   hidden: { opacity: 0, y: 24 },
@@ -44,6 +45,13 @@ const tabs: { id: TabId; label: string }[] = [
   { id: "addons", label: "Add-ons & Other Fees" },
 ];
 
+const TAB_SERVICE_MAP: Record<TabId, string> = {
+  bookkeeping: "Bookkeeping & Tax Services",
+  formation: "US Company Formation",
+  tax: "Tax Compliance",
+  addons: "Process Automation Services",
+};
+
 export function PricingContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -52,6 +60,7 @@ export function PricingContent() {
   const [openCategory, setOpenCategory] = useState<string | null>(
     "Company Setup & Core Docs"
   );
+  const { openAssessment, openGetStarted } = useAssessmentModal();
 
   useEffect(() => {
     const tabParam = searchParams?.get?.("tab") as TabId | null;
@@ -106,13 +115,14 @@ export function PricingContent() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
-          <Link
-            href="/contact"
+          <button
+            type="button"
+            onClick={() => openAssessment(TAB_SERVICE_MAP[activeTab])}
             className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FFC72C] px-8 py-3 text-sm font-semibold text-slate-900 transition hover:bg-[#FFD54F]"
           >
             Book free assessment
             <ChevronRight className="h-4 w-4" />
-          </Link>
+          </button>
           <Link
             href="/contact"
             className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#002147] bg-transparent px-8 py-3 text-sm font-semibold text-slate-900 transition hover:bg-[#002147] hover:text-white"
@@ -205,12 +215,19 @@ export function PricingContent() {
                       </span>
                     </div>
                   </div>
-                  <Link
-                    href="/contact"
+                  <button
+                    type="button"
+                    onClick={() =>
+                      openGetStarted({
+                        service: TAB_SERVICE_MAP[activeTab],
+                        packageName: plan.name,
+                        source: `Pricing · ${activeTab}`,
+                      })
+                    }
                     className="mt-6 block w-full rounded-lg bg-[#002147] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#002147]/90"
                   >
                     Get started
-                  </Link>
+                  </button>
                 </motion.div>
               ))}
             </motion.div>
@@ -534,7 +551,7 @@ export function PricingContent() {
           <p className="mb-6 text-base text-slate-600">
             Answer 3 questions and we recommend a plan
           </p>
-          <PlanFinder />
+          <PlanFinder onOpenAssessment={openAssessment} />
         </motion.div>
       </div>
 
@@ -593,19 +610,20 @@ export function PricingContent() {
 
       {/* Sticky CTA Mobile */}
       <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-slate-200 bg-white p-4 shadow-lg lg:hidden">
-        <Link
-          href="/contact"
+        <button
+          type="button"
+          onClick={() => openAssessment(TAB_SERVICE_MAP[activeTab])}
           className="block w-full rounded-lg bg-[#FFC72C] px-4 py-3 text-center text-sm font-semibold text-slate-900 transition hover:bg-[#FFD54F]"
         >
           Book free assessment
-        </Link>
+        </button>
       </div>
     </>
   );
 }
 
 // Plan Finder Component
-function PlanFinder() {
+function PlanFinder({ onOpenAssessment }: { onOpenAssessment: () => void }) {
   const [stage, setStage] = useState("");
   const [need, setNeed] = useState("");
   const [volume, setVolume] = useState("");
@@ -697,12 +715,13 @@ function PlanFinder() {
           </p>
         </div>
       )}
-      <Link
-        href="/contact"
+      <button
+        type="button"
+        onClick={onOpenAssessment}
         className="mt-4 block w-full rounded-lg bg-[#FFC72C] px-4 py-2.5 text-center text-sm font-semibold text-slate-900 transition hover:bg-[#FFD54F]"
       >
         Book free assessment
-      </Link>
+      </button>
     </div>
   );
 }

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import { useAssessmentModal } from "./AssessmentModalProvider";
 
 const services = [
   { slug: "accounting-bookkeeping", name: "Accounting & Bookkeeping" },
@@ -33,6 +34,9 @@ const services = [
 export function ServiceSidebar() {
   const pathname = usePathname();
   const currentService = pathname?.split("/").pop() || "";
+  const { openAssessment } = useAssessmentModal();
+
+  const serviceDisplay = services.find((s) => s.slug === currentService)?.name;
 
   return (
     <aside className="sticky top-24 hidden lg:block">
@@ -59,13 +63,14 @@ export function ServiceSidebar() {
               <span>Dedicated and honest team</span>
             </div>
           </div>
-          <Link
-            href="/contact"
+          <button
+            type="button"
+            onClick={() => openAssessment(serviceDisplay)}
             className="inline-flex w-full items-center justify-center gap-2 rounded bg-[#002147] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#002147]/90"
           >
             Book a free assessment
             <ArrowRight className="h-4 w-4" />
-          </Link>
+          </button>
         </div>
 
         {/* Services */}

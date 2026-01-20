@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useAssessmentModal } from "../AssessmentModalProvider";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -15,6 +16,8 @@ const fadeIn = {
 };
 
 export function HomeHero() {
+  const { openAssessment } = useAssessmentModal();
+
   return (
     <section className="relative min-h-screen overflow-hidden">
       <video
@@ -67,12 +70,13 @@ export function HomeHero() {
               variants={fadeUp}
               className="flex flex-wrap items-center gap-4 pt-2"
             >
-              <Link
-                href="/contact"
+              <button
+                type="button"
+                onClick={() => openAssessment()}
                 className="inline-flex items-center justify-center rounded bg-[#FFC72C] px-6 py-3 text-sm font-semibold uppercase tracking-wide text-slate-900 transition hover:bg-[#FFD54F]"
               >
                 Book a free assessment
-              </Link>
+              </button>
               <Link
                 href="/services"
                 className="inline-flex items-center justify-center rounded border border-white/30 bg-transparent px-6 py-3 text-sm font-medium text-white transition hover:border-white/50 hover:bg-white/10"

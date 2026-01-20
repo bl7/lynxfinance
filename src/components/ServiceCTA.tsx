@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { useAssessmentModal } from "./AssessmentModalProvider";
 
 const cardFade = {
   hidden: { opacity: 0, y: 20 },
@@ -15,6 +16,8 @@ const cardFade = {
 };
 
 export function ServiceCTA() {
+  const { openGetStarted } = useAssessmentModal();
+
   return (
     <div className="mx-auto max-w-7xl px-4 lg:px-6">
       <motion.section
@@ -24,7 +27,7 @@ export function ServiceCTA() {
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#002147] to-[#003366]" />
+        <div className="absolute inset-0 bg-linear-to-r from-[#002147] to-[#003366]" />
         <div className="relative px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             <div>
@@ -45,13 +48,19 @@ export function ServiceCTA() {
                   <span>Start building your competitive advantage</span>
                 </li>
               </ul>
-              <Link
-                href="/contact"
+              <button
+                type="button"
+                onClick={() =>
+                  openGetStarted({
+                    service: "Multiple / Not sure yet",
+                    source: "Services CTA",
+                  })
+                }
                 className="inline-flex items-center gap-2 rounded bg-white px-6 py-3 text-base font-semibold text-[#002147] transition hover:bg-white/90"
               >
                 Get Started
                 <ArrowRight className="h-5 w-5" />
-              </Link>
+              </button>
             </div>
             <div className="relative hidden h-64 overflow-hidden rounded-lg lg:block lg:h-80">
               <Image
