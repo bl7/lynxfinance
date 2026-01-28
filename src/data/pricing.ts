@@ -8,6 +8,7 @@ export interface BookkeepingPlan {
   accounts: string;
   strategyReview: string;
   highlight?: boolean;
+  tag?: string;
 }
 
 export interface FormationPlan {
@@ -70,6 +71,7 @@ export const bookkeepingPlans: BookkeepingPlan[] = [
     transactions: "≤ 1000",
     accounts: "≤ 6",
     strategyReview: "Bi-weekly",
+    tag: "Free consultation & planning",
   },
   {
     name: "Enterprise",
@@ -78,6 +80,7 @@ export const bookkeepingPlans: BookkeepingPlan[] = [
     transactions: "1,000+",
     accounts: "Unlimited",
     strategyReview: "Daily",
+    tag: "Free consultation & planning",
   },
 ];
 

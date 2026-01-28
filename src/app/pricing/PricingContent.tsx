@@ -180,14 +180,23 @@ export function PricingContent() {
                   className={`rounded-2xl border-2 p-6 transition-all hover:shadow-lg ${
                     plan.highlight
                       ? "border-[#FFC72C] bg-slate-50"
+                      : plan.tag
+                      ? "border-[#FFC72C]/40 bg-gradient-to-br from-white to-[#FFC72C]/5 shadow-md"
                       : "border-slate-200 bg-white"
                   }`}
                 >
-                  <div className="mb-4">
-                    <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-                      {plan.name}
-                    </h3>
-                    <div className="mt-2">
+                  <div className="mb-4 space-y-3">
+                    <div className="flex items-center justify-between gap-4">
+                      <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+                        {plan.name}
+                      </h3>
+                      {plan.tag && (
+                        <span className="inline-flex items-center justify-center rounded-full border border-[#FFC72C] bg-[#002147] px-3 py-1.5 text-[9px] font-semibold uppercase leading-tight text-white shadow-sm text-center whitespace-pre-line">
+                          {plan.tag.replace(' & ', '\n& ')}
+                        </span>
+                      )}
+                    </div>
+                    <div>
                       <span className="text-2xl font-bold text-slate-900 sm:text-3xl">
                         {plan.price}
                       </span>
@@ -583,7 +592,7 @@ export function PricingContent() {
                     onClick={() => setOpenFaqIndex(isOpen ? null : i)}
                     className="flex w-full items-start justify-between gap-4 text-left"
                   >
-                    <h3 className="flex-1 text-xl font-semibold text-slate-900 sm:text-2xl">
+                    <h3 className="flex-1 text-base font-semibold text-slate-900 sm:text-lg">
                       {faq.q}
                     </h3>
                     <span className="shrink-0 text-slate-400">

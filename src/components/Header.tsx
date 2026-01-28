@@ -50,7 +50,7 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-40 bg-slate-950/80 backdrop-blur-md border-b border-white/10">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 lg:px-6 lg:py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-1 lg:px-6 lg:py-2">
         <Link
           href="/"
           className="flex items-center gap-2 text-sm font-semibold tracking-tight"
@@ -58,14 +58,14 @@ export function Header() {
           <Image
             src="/logo.png"
             alt="LYNX Finance Consulting logo"
-            width={280}
+            width={370}
             height={76}
-            className="h-16 w-auto object-contain sm:h-20"
+            className="h-16 w-auto -translate-y-px object-contain sm:h-20"
             priority
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 text-sm font-medium text-white lg:flex">
+        <nav className="hidden items-center gap-7 text-sm font-medium text-white lg:flex">
           {/* Services Dropdown */}
           <div
             className="relative"

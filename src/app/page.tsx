@@ -1,5 +1,4 @@
-"use client";
-
+import type { Metadata } from "next";
 import {
   HomeHero,
   HomeTrustedBy,
@@ -12,6 +11,29 @@ import {
   HomeOutcomes,
   HomeFinalCTA,
 } from "@/components/home";
+
+export const metadata: Metadata = {
+  title:
+    "LYNX Finance Consulting | Accounting, Tax, and CFO for modern businesses",
+  description:
+    "Full-stack finance partner for startups and global teams: bookkeeping, tax compliance, virtual CFO, and US formation. Get clarity, compliance, and investor-ready reporting.",
+  alternates: { canonical: "https://lynxfinance.vercel.app/" },
+  openGraph: {
+    title:
+      "LYNX Finance Consulting | Accounting, Tax, and CFO for modern businesses",
+    description:
+      "End-to-end finance: bookkeeping, tax compliance, virtual CFO, and US formation—built for modern businesses.",
+    url: "https://lynxfinance.vercel.app/",
+    siteName: "LYNX Finance Consulting",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LYNX Finance Consulting | Accounting, Tax, and CFO",
+    description:
+      "End-to-end finance: bookkeeping, tax compliance, virtual CFO, and US formation—built for modern businesses.",
+  },
+};
 
 export default function Home() {
   return (

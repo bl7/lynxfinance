@@ -1,169 +1,27 @@
-"use client";
+import type { Metadata } from "next";
+import IndustriesClient from "./IndustriesClient";
 
-import {
-  Briefcase,
-  ShoppingCart,
-  Wallet,
-  Home,
-  Heart,
-  Plane,
-  GraduationCap,
-  Zap,
-  Check,
-} from "lucide-react";
-import { PageHero } from "@/components/PageHero";
-import { motion } from "framer-motion";
-
-const industries = [
-  {
-    icon: Briefcase,
-    name: "Professional Services",
-    items: [
-      "Consulting Agencies",
-      "Legal Firms",
-      "Marketing & Creative Agencies",
-      "IT & Software Companies",
-      "Freelancers & Independent Contractors",
-    ],
+export const metadata: Metadata = {
+  title: "Industries | LYNX Finance Consulting",
+  description:
+    "Finance, accounting, and tax solutions for professional services, retail & e-commerce, fintech, construction, health, media, education, and energy.",
+  alternates: { canonical: "https://lynxfinance.vercel.app/industries" },
+  openGraph: {
+    title: "Industries | LYNX Finance Consulting",
+    description:
+      "Finance, accounting, and tax solutions for services, retail, fintech, construction, health, media, education, and energy.",
+    url: "https://lynxfinance.vercel.app/industries",
+    siteName: "LYNX Finance Consulting",
+    type: "website",
   },
-  {
-    icon: ShoppingCart,
-    name: "Retail & E-commerce",
-    items: [
-      "Online Stores",
-      "Wholesale Distributors",
-      "Cross-border E-commerce Sellers",
-    ],
+  twitter: {
+    card: "summary_large_image",
+    title: "Industries | LYNX Finance Consulting",
+    description:
+      "Finance, accounting, and tax solutions for services, retail, fintech, construction, health, media, education, and energy.",
   },
-  {
-    icon: Wallet,
-    name: "Financial Services",
-    items: [
-      "Digital Wallets / PSPs / PSOs",
-      "Remittance Companies",
-      "Investment & Wealth Management Firms",
-    ],
-  },
-  {
-    icon: Home,
-    name: "Construction & Real Estate",
-    items: ["Real Estate Developers", "Contractors & Builders"],
-  },
-  {
-    icon: Heart,
-    name: "Health & Wellness",
-    items: [
-      "Clinics & Diagnostic Labs",
-      "Pharmacies",
-      "Fitness Centers & Gyms",
-    ],
-  },
-  {
-    icon: Plane,
-    name: "Media, Tourism & Entertainment",
-    items: [
-      "Travel Agencies & Tour Operators",
-      "Hotels",
-      "Homestays, and Hospitality Chains",
-    ],
-  },
-  {
-    icon: GraduationCap,
-    name: "Education & Training",
-    items: [
-      "Educational Institutions",
-      "Training Centers",
-      "Professional Development Organizations",
-    ],
-  },
-  {
-    icon: Zap,
-    name: "Energy & Infrastructure",
-    items: [
-      "Energy Companies",
-      "Infrastructure Development",
-      "Utilities & Power Generation",
-    ],
-  },
-];
-
-const sectionFade = {
-  hidden: { opacity: 0, y: 24 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6 },
-  },
-};
-
-const cardFade = {
-  hidden: { opacity: 0, y: 20 },
-  show: (i: number = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.4, delay: i * 0.08 },
-  }),
 };
 
 export default function IndustriesPage() {
-  return (
-    <div className="pb-16">
-      <PageHero
-        eyebrow="Industries served"
-        title="Industries Served"
-        subtitle={
-          <>
-            LYNX Finance Consulting provides tailored financial and accounting
-            solutions across a wide range of industries. From professional
-            services to retail, healthcare to hospitality, we deliver expertise
-            that matches your sector&apos;s unique needs.
-          </>
-        }
-      />
-      <div className="mx-auto max-w-6xl px-4 pt-10 lg:px-6">
-        <motion.div
-          className="grid gap-6 md:grid-cols-3"
-          variants={sectionFade}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {industries.map((industry, i) => {
-            const Icon = industry.icon;
-            return (
-              <motion.div
-                key={industry.name}
-                className="glass-panel rounded-2xl border border-[#FFC72C]/20 bg-white p-5 transition-transform duration-300 hover:-translate-y-1 hover:border-[#FFC72C]/40"
-                variants={cardFade}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
-                custom={i}
-              >
-                <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFC72C]/10">
-                    <Icon className="h-5 w-5 text-[#FFC72C]" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-                    {industry.name}
-                  </h3>
-                </div>
-                <ul className="space-y-2">
-                  {industry.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-2 text-sm text-slate-600"
-                    >
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#FFC72C]" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-      </div>
-    </div>
-  );
+  return <IndustriesClient />;
 }
