@@ -57,6 +57,15 @@ export function AboutContent() {
       experienceBadge: null,
     },
     {
+      name: "Sandhya G.C.",
+      title: "CA | MBS, Audit Senior",
+      location: "Based in Virginia",
+      description:
+        "Sandya is an accomplished audit professional specializing in internal controls, governance, and financial integrity. With a decade of experience in statutory and internal audits, she rigorously evaluates financial systems and ensures regulatory compliance. Her work enhances transparency and accountability by identifying control weaknesses and recommending process improvements.",
+      image: "/staffs/sandhya.jpeg",
+      experienceBadge: null,
+    },
+    {
       name: "Shisir Pokharel",
       title:
         "CA | CPA Australia Associate | MA Economics | DipIFRS, Senior Finance Consultant",
@@ -82,15 +91,6 @@ export function AboutContent() {
       description:
         "Kriti brings a strategic mindset to risk management and operational scalability. With her strong foundation in accounting and business strategy, she helps organizations identify, assess, and mitigate risks while designing scalable operations that support sustainable growth and long-term success.",
       image: "/staffs/KritiDhakal.jpeg",
-      experienceBadge: null,
-    },
-    {
-      name: "Sandhya G.C.",
-      title: "CA | MBS, Audit Senior",
-      location: "Based in Virginia",
-      description:
-        "Sandhya is an accomplished audit professional specializing in internal controls, governance, and financial integrity. With a decade of experience in statutory and internal audits, she rigorously evaluates financial systems and ensures regulatory compliance. Her work enhances transparency and accountability by identifying control weaknesses and recommending process improvements.",
-      image: "/staffs/sandhya.jpeg",
       experienceBadge: null,
     },
   ];

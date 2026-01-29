@@ -46,7 +46,6 @@ const navItems = [
 export function Header() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [servicesMobileOpen, setServicesMobileOpen] = useState(false);
 
   return (
     <header className="fixed inset-x-0 top-0 z-40 bg-slate-950/80 backdrop-blur-md border-b border-white/10">
@@ -140,47 +139,14 @@ export function Header() {
       {open && (
         <div className="border-t border-white/20 bg-slate-950/95 backdrop-blur-md px-4 pb-4 pt-2 shadow-xl lg:hidden">
           <nav className="flex flex-col gap-1 text-sm font-medium text-white">
-            {/* Services Dropdown for Mobile */}
-            <div>
-              <button
-                onClick={() => setServicesMobileOpen(!servicesMobileOpen)}
-                className="flex w-full items-center justify-between rounded-lg px-3 py-2 transition-colors hover:bg-white/10 hover:text-white"
-              >
-                Services
-                <ChevronDown
-                  className={`h-4 w-4 transition-transform duration-200 ${
-                    servicesMobileOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-              {servicesMobileOpen && (
-                <div className="ml-4 mt-1 flex flex-col gap-1 border-l border-white/20 pl-4">
-                  {services.map((service) => (
-                    <Link
-                      key={service.slug}
-                      href={`/services/${service.slug}`}
-                      className="rounded-lg px-3 py-2 text-sm text-white/90 transition-colors hover:bg-white/10 hover:text-white"
-                      onClick={() => {
-                        setOpen(false);
-                        setServicesMobileOpen(false);
-                      }}
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
-                  <Link
-                    href="/services"
-                    className="rounded-lg px-3 py-2 text-sm font-semibold text-[#FFC72C] transition-colors hover:bg-white/10"
-                    onClick={() => {
-                      setOpen(false);
-                      setServicesMobileOpen(false);
-                    }}
-                  >
-                    View All Services →
-                  </Link>
-                </div>
-              )}
-            </div>
+            {/* Services as simple link on mobile */}
+            <Link
+              href="/services"
+              className="rounded-lg px-3 py-2 transition-colors hover:bg-white/10 hover:text-white"
+              onClick={() => setOpen(false)}
+            >
+              Services
+            </Link>
             {/* Other nav items */}
             {navItems.map((item) => (
               <Link
