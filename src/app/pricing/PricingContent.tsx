@@ -177,7 +177,7 @@ export function PricingContent() {
                   whileInView="show"
                   viewport={{ once: true }}
                   custom={i}
-                  className={`rounded-2xl border-2 p-6 transition-all hover:shadow-lg ${
+                  className={`flex flex-col rounded-2xl border-2 p-6 transition-all hover:shadow-lg ${
                     plan.highlight
                       ? "border-[#FFC72C] bg-slate-50"
                       : plan.tag
@@ -185,43 +185,45 @@ export function PricingContent() {
                       : "border-slate-200 bg-white"
                   }`}
                 >
-                  <div className="mb-4 space-y-3">
-                    <div className="flex items-center justify-between gap-4">
-                      <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-                        {plan.name}
-                      </h3>
-                      {plan.tag && (
-                        <span className="inline-flex items-center justify-center rounded-full border border-[#FFC72C] bg-[#002147] px-3 py-1.5 text-[9px] font-semibold uppercase leading-tight text-white shadow-sm text-center whitespace-pre-line">
-                          {plan.tag.replace(' & ', '\n& ')}
+                  <div className="flex-1">
+                    <div className="mb-4 space-y-3">
+                      <div className="flex items-start justify-between gap-3">
+                        <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl leading-tight">
+                          {plan.name}
+                        </h3>
+                        {plan.tag && (
+                          <span className="inline-flex items-center justify-center rounded-full border border-[#FFC72C] bg-[#002147] px-3 py-1.5 text-[9px] font-semibold uppercase leading-tight text-white shadow-sm text-center whitespace-pre-line shrink-0">
+                            {plan.tag.replace(' & ', '\n& ')}
+                          </span>
+                        )}
+                      </div>
+                      <div>
+                        <span className="text-2xl font-bold text-slate-900 sm:text-3xl">
+                          {plan.price}
                         </span>
-                      )}
+                        <span className="text-sm text-slate-600">/month</span>
+                      </div>
                     </div>
-                    <div>
-                      <span className="text-2xl font-bold text-slate-900 sm:text-3xl">
-                        {plan.price}
-                      </span>
-                      <span className="text-sm text-slate-600">/month</span>
-                    </div>
-                  </div>
-                  <p className="mb-6 text-sm text-slate-600">{plan.idealFor}</p>
-                  <div className="space-y-3 border-t border-slate-200 pt-4">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-slate-600">Transactions:</span>
-                      <span className="font-medium text-slate-900">
-                        {plan.transactions}
-                      </span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-slate-600">Accounts:</span>
-                      <span className="font-medium text-slate-900">
-                        {plan.accounts}
-                      </span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-slate-600">Strategy Review:</span>
-                      <span className="font-medium text-slate-900">
-                        {plan.strategyReview}
-                      </span>
+                    <p className="mb-6 min-h-[3rem] text-sm leading-relaxed text-slate-600">{plan.idealFor}</p>
+                    <div className="space-y-3 border-t border-slate-200 pt-4">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-slate-600">Transactions:</span>
+                        <span className="font-medium text-slate-900">
+                          {plan.transactions}
+                        </span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-slate-600">Accounts:</span>
+                        <span className="font-medium text-slate-900">
+                          {plan.accounts}
+                        </span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-slate-600">Strategy Review:</span>
+                        <span className="font-medium text-slate-900">
+                          {plan.strategyReview}
+                        </span>
+                      </div>
                     </div>
                   </div>
                   <button
@@ -233,7 +235,7 @@ export function PricingContent() {
                         source: `Pricing · ${activeTab}`,
                       })
                     }
-                    className="mt-6 block w-full rounded-lg bg-[#002147] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#002147]/90"
+                    className="mt-6 w-full rounded-lg bg-[#002147] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#002147]/90"
                   >
                     Get started
                   </button>
@@ -289,28 +291,30 @@ export function PricingContent() {
                     whileInView="show"
                     viewport={{ once: true }}
                     custom={i}
-                    className="rounded-2xl border-2 border-slate-200 bg-white p-6 transition-all hover:shadow-lg"
+                    className="flex flex-col rounded-2xl border-2 border-slate-200 bg-white p-6 transition-all hover:shadow-lg"
                   >
-                    <h3 className="mb-2 text-xl font-semibold text-slate-900 sm:text-2xl">
-                      {plan.name}
-                    </h3>
-                    <div className="mb-4">
-                      <span className="text-2xl font-bold text-slate-900">
-                        {plan.price}
-                      </span>
-                      <span className="ml-2 text-sm text-slate-600">
-                        + State Fees
-                      </span>
+                    <div className="flex-1">
+                      <h3 className="mb-2 text-xl font-semibold text-slate-900 sm:text-2xl leading-tight">
+                        {plan.name}
+                      </h3>
+                      <div className="mb-4">
+                        <span className="text-2xl font-bold text-slate-900">
+                          {plan.price}
+                        </span>
+                        <span className="ml-2 text-sm text-slate-600">
+                          + State Fees
+                        </span>
+                      </div>
+                      <p className="mb-2 text-sm font-semibold text-slate-700 leading-relaxed">
+                        {plan.whoItsFor}
+                      </p>
+                      <p className="mb-6 min-h-[3rem] text-sm leading-relaxed text-slate-600">
+                        {plan.whatYouGet}
+                      </p>
                     </div>
-                    <p className="mb-2 text-sm font-semibold text-slate-700">
-                      {plan.whoItsFor}
-                    </p>
-                    <p className="mb-6 text-sm text-slate-600">
-                      {plan.whatYouGet}
-                    </p>
                     <Link
                       href="/contact"
-                      className="block w-full rounded-lg bg-[#002147] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#002147]/90"
+                      className="w-full rounded-lg bg-[#002147] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#002147]/90"
                     >
                       Choose plan
                     </Link>
