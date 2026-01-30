@@ -1,11 +1,13 @@
 "use client";
 
 import { PageHero } from "@/components/PageHero";
-import { MessageCircle, Plus, X, ChevronRight } from "lucide-react";
+import { MessageCircle, Plus, Minus, ChevronRight, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import Script from "next/script";
 import Link from "next/link";
+import { Container } from "@/components/ui/Container";
+import { Card } from "@/components/ui/Card";
 
 const faqs = [
   {
@@ -95,14 +97,14 @@ export default function FaqClient() {
         title={
           <>
             Frequently Asked{" "}
-            <span className="bg-linear-to-r from-amber-200 via-amber-400 to-sky-300 bg-clip-text text-transparent">
+            <span className="bg-[#FFC72C]/20 px-2 py-1 rounded-md">
               Questions
             </span>
           </>
         }
         subtitle="Find answers to common questions about our services, processes, and how we can help your business."
       />
-      <div className="mx-auto max-w-6xl px-4 pt-10 lg:px-6">
+      <Container size="lg" className="pt-6">
         <motion.div
           className="grid gap-8 lg:grid-cols-[1fr,400px]"
           variants={sectionFade}
@@ -122,27 +124,28 @@ export default function FaqClient() {
                   viewport={{ once: true, amount: 0.25 }}
                   custom={i}
                 >
-                  <div
-                    className={`glass-panel group cursor-pointer rounded-xl border border-slate-200 bg-white p-5 transition-all duration-300 ${
+                  <Card
+                    className={`group cursor-pointer p-5 transition-all duration-300 ${
                       isOpen
                         ? "border-[#FFC72C]/40 bg-slate-50"
-                        : "hover:border-slate-300"
+                        : ""
                     }`}
                     onClick={() => setOpenIndex(isOpen ? null : i)}
+                    hover={false}
                   >
                     <div className="flex items-start justify-between gap-4">
                       <h3 className="flex-1 text-base font-semibold text-slate-900 sm:text-lg">
                         {item.q}
                       </h3>
                       <button
-                        className="mt-0.5 shrink-0 text-slate-400 transition-colors hover:text-[#FFC72C]"
+                        className="mt-0.5 shrink-0 text-slate-400 transition-all duration-300 hover:text-[#FFC72C]"
                         aria-label={isOpen ? "Collapse" : "Expand"}
                         type="button"
                       >
                         {isOpen ? (
-                          <X className="h-5 w-5" />
+                          <Minus className="h-5 w-5" />
                         ) : (
-                          <Plus className="h-5 w-5" />
+                          <ChevronDown className="h-5 w-5" />
                         )}
                       </button>
                     </div>
@@ -157,7 +160,7 @@ export default function FaqClient() {
                         {item.a}
                       </motion.p>
                     )}
-                  </div>
+                  </Card>
                 </motion.div>
               );
             })}
@@ -171,7 +174,7 @@ export default function FaqClient() {
             viewport={{ once: true, amount: 0.25 }}
             custom={faqs.length}
           >
-            <div className="glass-panel rounded-2xl border border-[#FFC72C]/20 bg-white p-6 text-center">
+            <Card className="border border-[#FFC72C]/20 p-6 text-center">
               <div className="mb-4 flex justify-center">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#FFC72C]/20 border border-[#FFC72C]/30">
                   <MessageCircle className="h-8 w-8 text-[#FFC72C]" />
@@ -191,10 +194,10 @@ export default function FaqClient() {
                 <span>Contact Us</span>
                 <ChevronRight className="h-4 w-4" />
               </Link>
-            </div>
+            </Card>
           </motion.div>
         </motion.div>
-      </div>
+      </Container>
     </div>
   );
 }

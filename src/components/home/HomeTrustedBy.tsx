@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -30,8 +32,8 @@ export function HomeTrustedBy() {
   const duplicatedCompanies = [...companies, ...companies, ...companies];
 
   return (
-    <section className="border-y border-slate-200 bg-white py-12 overflow-hidden">
-      <div className="mx-auto max-w-6xl px-4 lg:px-6">
+    <Section spacing="sm" className="border-y border-slate-200 bg-slate-50 overflow-hidden">
+      <Container size="lg">
         <motion.div
           variants={fadeIn}
           initial="hidden"
@@ -73,7 +75,7 @@ export function HomeTrustedBy() {
             </div>
           </div>
         </motion.div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

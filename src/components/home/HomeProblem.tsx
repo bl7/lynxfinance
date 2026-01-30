@@ -56,7 +56,7 @@ export function HomeProblem() {
               The real challenge isn&apos;t execution, it&apos;s clarity.
             </h3>
 
-            <ul className="mt-8 space-y-4">
+            <ul className="mt-8 space-y-5">
               {problems.map((problem, i) => (
                 <motion.li
                   key={problem}
@@ -68,7 +68,7 @@ export function HomeProblem() {
                   className="flex gap-4"
                 >
                   <AlertCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#FFC72C]" />
-                  <p className="text-base leading-relaxed text-white/90 sm:text-lg">
+                  <p className="text-base leading-7 text-white/90 sm:text-lg">
                     {problem}
                   </p>
                 </motion.li>

@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Building2, FileText, Receipt, Shield, Briefcase } from "lucide-react";
+import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
+import { Card } from "@/components/ui/Card";
 
 const sectionFade = {
   hidden: { opacity: 0, y: 24 },
@@ -28,28 +30,33 @@ export function HomeServicesOverview() {
     {
       title: "US company setup from anywhere",
       href: "/services/us-company-formation",
+      icon: Building2,
     },
     {
       title: "Bookkeeping & accounting",
       href: "/services/accounting-bookkeeping",
+      icon: FileText,
     },
     {
       title: "Tax filings",
       href: "/services/tax-compliance",
+      icon: Receipt,
     },
     {
       title: "Compliance oversight",
       href: "/services",
+      icon: Shield,
     },
     {
       title: "Advisory & Virtual CFO",
       href: "/services/virtual-cfo",
+      icon: Briefcase,
     },
   ];
 
   return (
-    <section className="border-y border-slate-200 bg-white py-16 sm:py-20">
-      <div className="mx-auto max-w-6xl px-4 lg:px-6">
+    <Section spacing="md" className="border-y border-slate-200">
+      <Container size="lg">
         <motion.div
           variants={sectionFade}
           initial="hidden"
@@ -60,52 +67,48 @@ export function HomeServicesOverview() {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900">
             SERVICES OVERVIEW
           </p>
-          <h3 className="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4">
             How we support your finance and compliance
-          </h3>
+          </h2>
         </motion.div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-          {services.map((service, i) => (
-            <motion.div
-              key={service.title}
-              variants={cardFade}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
-              custom={i}
-              className="group relative overflow-hidden rounded-2xl bg-[#002147] transition-transform duration-300 hover:-translate-y-1"
-            >
-              {/* Background Image */}
-              <div className="absolute inset-0">
-                <Image
-                  src="/bookkeeping.jpg"
-                  alt={service.title}
-                  fill
-                  className="object-cover opacity-20 blur-sm transition-opacity duration-300 group-hover:opacity-30"
-                />
-              </div>
-
-              {/* Content */}
-              <div className="relative flex h-full min-h-[280px] flex-col justify-between p-6">
-                <h3 className="text-xl font-semibold text-white sm:text-2xl">
-                  {service.title}
-                </h3>
-
-                <Link
-                  href={service.href}
-                  className="mt-6 inline-flex w-fit items-center gap-2 rounded-lg border border-white/30 bg-white px-4 py-2.5 text-sm font-medium text-slate-900 transition hover:border-white/50 hover:bg-white/90"
-                >
-                  Learn More
-                  <div className="flex h-6 w-6 items-center justify-center rounded-full border border-[#002147] bg-[#002147]">
-                    <ArrowRight className="h-3 w-3 text-white" />
+          {services.map((service, i) => {
+            const Icon = service.icon;
+            return (
+              <motion.div
+                key={service.title}
+                variants={cardFade}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.25 }}
+                custom={i}
+              >
+                <Card className="flex h-full min-h-[280px] flex-col justify-between p-6">
+                  <div>
+                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFC72C]/10">
+                      <Icon className="h-6 w-6 text-[#FFC72C]" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+                      {service.title}
+                    </h3>
                   </div>
-                </Link>
-              </div>
-            </motion.div>
-          ))}
+
+                  <Link
+                    href={service.href}
+                    className="mt-6 inline-flex w-fit items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-900 transition hover:border-[#FFC72C] hover:bg-[#FFC72C]/10"
+                  >
+                    Learn More
+                    <div className="flex h-6 w-6 items-center justify-center rounded-full border border-slate-300 bg-slate-50">
+                      <ArrowRight className="h-3 w-3 text-slate-900" />
+                    </div>
+                  </Link>
+                </Card>
+              </motion.div>
+            );
+          })}
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

@@ -11,6 +11,10 @@ import {
 import { PageHero } from "@/components/PageHero";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
+import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
+import { Card } from "@/components/ui/Card";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -36,6 +40,15 @@ const cardFade = {
 };
 
 export function AboutContent() {
+  const [expandedBios, setExpandedBios] = useState<Record<number, boolean>>({});
+  
+  const toggleBio = (index: number) => {
+    setExpandedBios((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
   const teamMembers = [
     {
       name: "Dilip Gyawali",
@@ -136,7 +149,7 @@ export function AboutContent() {
           </>
         }
       />
-      <div className="mx-auto max-w-5xl px-4 pt-10 lg:px-6">
+      <Container size="md" className="pt-10">
         <motion.div
           className="mt-8 grid gap-5 md:grid-cols-2"
           variants={sectionFade}
@@ -145,13 +158,13 @@ export function AboutContent() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.div
-            className="glass-panel rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
             variants={cardFade}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
             custom={0}
           >
+            <Card className="p-5">
             <div className="flex items-center gap-3">
               <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-[#FFC72C]/10">
                 <Users className="h-4 w-4 text-[#FFC72C]" />
@@ -167,16 +180,17 @@ export function AboutContent() {
                 </p>
               </div>
             </div>
+            </Card>
           </motion.div>
 
           <motion.div
-            className="glass-panel rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
             variants={cardFade}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
             custom={1}
           >
+            <Card className="p-5">
             <div className="flex items-center gap-3">
               <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-[#FFC72C]/10">
                 <Globe2 className="h-4 w-4 text-[#FFC72C]" />
@@ -193,6 +207,7 @@ export function AboutContent() {
                 </p>
               </div>
             </div>
+            </Card>
           </motion.div>
         </motion.div>
 
@@ -204,13 +219,13 @@ export function AboutContent() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.div
-            className="glass-panel rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
             variants={cardFade}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
             custom={0}
           >
+            <Card className="p-4">
             <ShieldCheck className="h-5 w-5 text-[#FFC72C]" />
             <h3 className="mt-3 text-lg font-semibold text-slate-900 sm:text-xl">
               Governance you can trust
@@ -220,15 +235,16 @@ export function AboutContent() {
               workflows, and repeatable close routines so that your finance
               function can scale without gaps.
             </p>
+            </Card>
           </motion.div>
           <motion.div
-            className="glass-panel rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
             variants={cardFade}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
             custom={1}
           >
+            <Card className="p-4">
             <Clock3 className="h-5 w-5 text-[#FFC72C]" />
             <h3 className="mt-3 text-lg font-semibold text-slate-900 sm:text-xl">
               Around-the-clock coverage
@@ -238,15 +254,16 @@ export function AboutContent() {
               turnarounds on time-sensitive projects, monthly close, and
               reporting cycles.
             </p>
+            </Card>
           </motion.div>
           <motion.div
-            className="glass-panel rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
             variants={cardFade}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
             custom={2}
           >
+            <Card className="p-4">
             <Users className="h-5 w-5 text-[#FFC72C]" />
             <h3 className="mt-3 text-lg font-semibold text-slate-900 sm:text-xl">
               Embedded with your team
@@ -256,19 +273,20 @@ export function AboutContent() {
               cadence, tooling, and communication with the way your business and
               leadership team already works.
             </p>
+            </Card>
           </motion.div>
         </motion.div>
-      </div>
+      </Container>
 
       {/* Mission and Vision Section */}
-      <section className="mt-16 border-t border-slate-200 bg-slate-50 py-16">
-        <motion.div
-          className="mx-auto max-w-5xl px-4 lg:px-6"
-          variants={sectionFade}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-        >
+      <Section spacing="md" className="mt-16 border-t border-slate-200 bg-slate-50">
+        <Container size="md">
+          <motion.div
+            variants={sectionFade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+          >
           <div className="grid gap-8 md:grid-cols-2">
             <motion.div
               className="transition-opacity hover:opacity-90"
@@ -310,18 +328,19 @@ export function AboutContent() {
               </p>
             </motion.div>
           </div>
-        </motion.div>
-      </section>
+          </motion.div>
+        </Container>
+      </Section>
 
       {/* Core Values Section */}
-      <section className="border-t border-slate-200 bg-white py-16">
-        <motion.div
-          className="mx-auto max-w-4xl px-4 lg:px-6"
-          variants={sectionFade}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-        >
+      <Section spacing="md" className="border-t border-slate-200">
+        <Container size="lg">
+          <motion.div
+            variants={sectionFade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+          >
           <div className="text-center">
             <h2 className="text-balance text-2xl font-semibold text-slate-900 sm:text-3xl">
               Our <span className="text-slate-900">Core Values</span>
@@ -362,18 +381,19 @@ export function AboutContent() {
               ))}
             </div>
           </div>
-        </motion.div>
-      </section>
+          </motion.div>
+        </Container>
+      </Section>
 
       {/* Expert Team Section */}
-      <section className="border-t border-slate-200 bg-slate-50 py-16">
-        <motion.div
-          className="mx-auto max-w-6xl px-4 lg:px-6"
-          variants={sectionFade}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-        >
+      <Section spacing="md" className="border-t border-slate-200 bg-slate-50">
+        <Container size="lg">
+          <motion.div
+            variants={sectionFade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+          >
           <div className="text-center">
             <h2 className="text-balance text-2xl font-semibold text-slate-900 sm:text-3xl">
               Check Our <span className="text-slate-900">Expert Team</span>
@@ -381,49 +401,69 @@ export function AboutContent() {
           </div>
 
           <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {teamMembers.map((member, i) => (
-              <motion.div
-                key={member.name}
-                className="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:border-[#FFC72C]/30 hover:shadow-lg"
-                variants={cardFade}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
-                custom={i}
-              >
-                <div className="relative mb-5 aspect-[3/4] w-full overflow-hidden rounded-2xl bg-slate-100 ring-1 ring-slate-200">
-                  <Image
-                    src={member.image || "/person.png"}
-                    alt={member.name}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                  {member.experienceBadge && (
-                    <div className="absolute bottom-4 right-4 rounded-full bg-[#FFC72C]/20 border border-[#FFC72C]/50 px-3.5 py-1.5 text-xs font-semibold text-slate-900 backdrop-blur-md shadow-lg shadow-[#FFC72C]/20">
-                      {member.experienceBadge}
+            {teamMembers.map((member, i) => {
+              const isExpanded = expandedBios[i] || false;
+              const maxLength = 150;
+              const shouldTruncate = member.description.length > maxLength;
+              const displayText = isExpanded
+                ? member.description
+                : member.description.slice(0, maxLength) + (shouldTruncate ? "..." : "");
+
+              return (
+                <motion.div
+                  key={member.name}
+                  variants={cardFade}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.25 }}
+                  custom={i}
+                >
+                  <Card className="flex h-full flex-col p-6">
+                    <div className="relative mb-5 aspect-square w-full overflow-hidden rounded-2xl bg-slate-100">
+                      <Image
+                        src={member.image || "/person.png"}
+                        alt={member.name}
+                        fill
+                        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      />
+                      {member.experienceBadge && (
+                        <div className="absolute bottom-4 right-4 rounded-full bg-[#FFC72C]/20 border border-[#FFC72C]/50 px-3.5 py-1.5 text-xs font-semibold text-slate-900 backdrop-blur-md shadow-lg shadow-[#FFC72C]/20">
+                          {member.experienceBadge}
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-slate-900 transition-colors duration-300 group-hover:text-slate-700 sm:text-2xl">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm font-medium text-slate-900">
-                    {member.title}
-                  </p>
-                  <p className="text-xs font-medium text-slate-600">
-                    {member.location}
-                  </p>
-                </div>
-                <p className="mt-5 text-sm leading-relaxed text-slate-600">
-                  {member.description}
-                </p>
-              </motion.div>
-            ))}
+                    <div className="space-y-2">
+                      <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+                        {member.name}
+                      </h3>
+                      <p className="text-sm font-medium text-slate-900">
+                        {member.title}
+                      </p>
+                      <p className="text-xs font-medium text-slate-600">
+                        {member.location}
+                      </p>
+                    </div>
+                    <div className="mt-5 flex-1">
+                      <p className="text-sm leading-relaxed text-slate-600">
+                        {displayText}
+                      </p>
+                      {shouldTruncate && (
+                        <button
+                          onClick={() => toggleBio(i)}
+                          className="mt-2 text-sm font-medium text-[#FFC72C] hover:text-[#FFD54F] transition-colors"
+                        >
+                          {isExpanded ? "Read less" : "Read more"}
+                        </button>
+                      )}
+                    </div>
+                  </Card>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
-      </section>
+        </Container>
+      </Section>
     </div>
   );
 }
