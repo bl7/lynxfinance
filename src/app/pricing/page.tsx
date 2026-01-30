@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Pricing | LYNX Finance Consulting",
   description:
     "Transparent pricing for bookkeeping, tax compliance, virtual CFO, and US company formation. Choose the right plan and get a tailored quote.",
-  alternates: { canonical: "https://lynxfinance.vercel.app/pricing" },
+  alternates: { canonical: "https://www.lynxfinanceconsulting.com/pricing" },
   openGraph: {
     title: "Pricing | LYNX Finance Consulting",
     description:
       "Transparent pricing for bookkeeping, tax compliance, virtual CFO, and US company formation.",
-    url: "https://lynxfinance.vercel.app/pricing",
+    url: "https://www.lynxfinanceconsulting.com/pricing",
     siteName: "LYNX Finance Consulting",
     type: "website",
   },

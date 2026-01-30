@@ -17,15 +17,23 @@ export const metadata: Metadata = {
     "LYNX Finance Consulting | Accounting, Tax, and CFO for modern businesses",
   description:
     "Full-stack finance partner for startups and global teams: bookkeeping, tax compliance, virtual CFO, and US formation. Get clarity, compliance, and investor-ready reporting.",
-  alternates: { canonical: "https://lynxfinance.vercel.app/" },
+  alternates: { canonical: "https://www.lynxfinanceconsulting.com/" },
   openGraph: {
     title:
       "LYNX Finance Consulting | Accounting, Tax, and CFO for modern businesses",
     description:
       "End-to-end finance: bookkeeping, tax compliance, virtual CFO, and US formation—built for modern businesses.",
-    url: "https://lynxfinance.vercel.app/",
+    url: "https://www.lynxfinanceconsulting.com/",
     siteName: "LYNX Finance Consulting",
     type: "website",
+    images: [
+      {
+        url: "https://www.lynxfinanceconsulting.com/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "LYNX Finance Consulting - Accounting, Tax, and CFO Services",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

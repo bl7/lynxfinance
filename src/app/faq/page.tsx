@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: "FAQ | LYNX Finance Consulting",
   description:
     "Frequently asked questions about accounting, tax compliance, virtual CFO, US formation, and automation with LYNX Finance Consulting.",
-  alternates: { canonical: "https://lynxfinance.vercel.app/faq" },
+  alternates: { canonical: "https://www.lynxfinanceconsulting.com/faq" },
   openGraph: {
     title: "FAQ | LYNX Finance Consulting",
     description:
       "Questions about accounting, tax, CFO, US formation, and automation with LYNX Finance Consulting.",
-    url: "https://lynxfinance.vercel.app/faq",
+    url: "https://www.lynxfinanceconsulting.com/faq",
     siteName: "LYNX Finance Consulting",
     type: "website",
   },
