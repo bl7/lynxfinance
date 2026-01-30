@@ -82,6 +82,10 @@ export const metadata: Metadata = {
   other: {
     "sitemap": "https://www.lynxfinanceconsulting.com/sitemap.xml",
   },
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

@@ -12,6 +12,35 @@ const nextConfig: NextConfig = {
   compress: true,
   // Enable strict mode for better development experience
   reactStrictMode: true,
+  // Redirects for SEO: enforce www and HTTPS
+  async redirects() {
+    return [
+      // Redirect non-www to www (canonical domain)
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "lynxfinanceconsulting.com",
+          },
+        ],
+        destination: "https://www.lynxfinanceconsulting.com/:path*",
+        permanent: true,
+      },
+      // Redirect old domain to new domain (if applicable)
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "lynxfinance.vercel.app",
+          },
+        ],
+        destination: "https://www.lynxfinanceconsulting.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
   // Headers for SEO and security
   async headers() {
     return [
