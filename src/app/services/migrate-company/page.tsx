@@ -1,13 +1,53 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { MigrateCompanyContent } from "./MigrateCompanyContent";
-import { createServiceMetadata, organizationSchema } from "@/lib/seo";
+import { organizationSchema } from "@/lib/seo";
 
-export const metadata: Metadata = createServiceMetadata(
-  "Migrate Your Company to Lynx",
-  "migrate-company",
-  "Seamlessly transition your accounting and finance operations to LYNX Finance Consulting. We handle data migration, process setup, and ensure continuity of your financial operations."
-);
+export const metadata: Metadata = {
+  title: "Migrate Your Company to LYNX Finance Consulting | Accounting Migration Services",
+  description:
+    "LYNX Finance Consulting helps you seamlessly transition your accounting and finance operations. We handle data migration, process setup, and ensure continuity of your financial operations.",
+  keywords: [
+    "accounting migration",
+    "migrate accounting",
+    "switch accounting firms",
+    "LYNX Finance Consulting migration",
+    "accounting transition",
+    "finance migration",
+    "accounting data migration",
+    "change accounting firm",
+    "accounting firm transition",
+    "bookkeeping migration",
+    "accounting services migration",
+    "transfer accounting",
+    "accounting setup",
+  ],
+  alternates: {
+    canonical: "https://www.lynxfinanceconsulting.com/services/migrate-company",
+  },
+  openGraph: {
+    title: "Migrate Your Company to LYNX Finance Consulting | Accounting Migration Services",
+    description:
+      "Seamlessly transition your accounting and finance operations to LYNX Finance Consulting. We handle data migration, process setup, and ensure continuity of your financial operations.",
+    url: "https://www.lynxfinanceconsulting.com/services/migrate-company",
+    siteName: "LYNX Finance Consulting",
+    type: "website",
+    images: [
+      {
+        url: "https://www.lynxfinanceconsulting.com/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Migrate Your Company to LYNX Finance Consulting",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Migrate Your Company to LYNX Finance Consulting",
+    description:
+      "Seamlessly transition your accounting and finance operations. We handle data migration, process setup, and ensure continuity of your financial operations.",
+  },
+};
 
 const serviceSchema = {
   "@context": "https://schema.org",

@@ -3,6 +3,22 @@ import type { Metadata } from "next";
 const BASE_URL = "https://www.lynxfinanceconsulting.com";
 const SITE_NAME = "LYNX Finance Consulting";
 
+/**
+ * Creates metadata for service pages
+ * 
+ * @param serviceName - Name of the service (e.g., "Accounting & Bookkeeping")
+ * @param slug - URL slug (e.g., "accounting-bookkeeping")
+ * @param description - Service description (should mention "LYNX Finance Consulting" for brand SEO)
+ * @returns Metadata object with proper brand name formatting
+ * 
+ * @example
+ * createServiceMetadata(
+ *   "Accounting & Bookkeeping",
+ *   "accounting-bookkeeping",
+ *   "LYNX Finance Consulting provides professional accounting..."
+ * )
+ * // Result: "Accounting & Bookkeeping | LYNX Finance Consulting"
+ */
 export function createServiceMetadata(
   serviceName: string,
   slug: string,
@@ -48,6 +64,22 @@ export function createServiceMetadata(
   };
 }
 
+/**
+ * Creates metadata for regular pages (About, Contact, Services, etc.)
+ * 
+ * @param title - Page title (will be formatted as "Title | LYNX Finance Consulting")
+ * @param description - Meta description (should mention "LYNX Finance Consulting" for brand SEO)
+ * @param path - URL path (e.g., "/about", "/contact")
+ * @returns Metadata object with proper brand name formatting
+ * 
+ * @example
+ * createPageMetadata(
+ *   "About",
+ *   "LYNX Finance Consulting provides...",
+ *   "/about"
+ * )
+ * // Result: "About | LYNX Finance Consulting"
+ */
 export function createPageMetadata(
   title: string,
   description: string,

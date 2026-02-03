@@ -61,7 +61,7 @@ export function HomeHero() {
               variants={fadeUp}
               className="max-w-xl text-base leading-relaxed text-white/90 sm:text-lg lg:text-xl"
             >
-              We help startups, growing companies, and global teams simplify
+              LYNX Finance Consulting helps startups, growing companies, and global teams simplify
               accounting, tax, and compliance, so you can scale with confidence.
             </motion.p>
 

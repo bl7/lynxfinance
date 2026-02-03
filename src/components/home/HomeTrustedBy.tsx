@@ -19,7 +19,6 @@ const companies = [
   { filename: "issr.PNG", name: "ISSR" },
   { filename: "janinifertilityclinic.JPG", name: "Janini Fertility Clinic" },
   { filename: "pavilionmediagroup.PNG", name: "Pavilion Media Group" },
-  { filename: "thamelbeergarden.PNG", name: "Thamel Beer Garden" },
   { filename: "hamropatro.png", name: "HamroPatro" },
 ];
 
