@@ -12,6 +12,9 @@ const nextConfig: NextConfig = {
   compress: true,
   // Enable strict mode for better development experience
   reactStrictMode: true,
+  // Trailing slash configuration to prevent duplicate URLs
+  // Set to false to ensure URLs don't have trailing slashes (consistent with sitemap)
+  trailingSlash: false,
   // Redirects for SEO: enforce www and HTTPS
   async redirects() {
     return [
@@ -37,6 +40,14 @@ const nextConfig: NextConfig = {
           },
         ],
         destination: "https://www.lynxfinanceconsulting.com/:path*",
+        permanent: true,
+      },
+      // Redirect trailing slashes to non-trailing slash URLs (prevents duplicate content)
+      // This ensures /about/ redirects to /about (consistent with sitemap)
+      // Note: Root path (/) is excluded as it doesn't match this pattern
+      {
+        source: "/:path+/",
+        destination: "/:path+",
         permanent: true,
       },
     ];

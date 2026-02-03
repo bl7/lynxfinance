@@ -16,6 +16,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.lynxfinanceconsulting.com"),
+  alternates: {
+    canonical: "https://www.lynxfinanceconsulting.com",
+  },
   title: {
     default: "LYNX Finance Consulting | Global Financial & Accounting Services",
     template: "%s | LYNX Finance Consulting",
