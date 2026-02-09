@@ -53,26 +53,48 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Col 3: US Office */}
-          <div className="space-y-2">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-900">
-              US Office
-            </h3>
-            <div className="flex items-start gap-2 text-xs text-slate-600">
-              <MapPin className="mt-0.5 h-3.5 w-3.5 text-slate-900" />
-              <p>Texas, USA</p>
+          {/* Col 3: Offices */}
+          <div className="space-y-4">
+            {/* US Offices */}
+            <div className="space-y-2">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-900">
+                🇺🇸 US Offices
+              </h3>
+              <div className="flex items-start gap-2 text-xs text-slate-600">
+                <MapPin className="mt-0.5 h-3.5 w-3.5 text-slate-900" />
+                <p>Texas, USA</p>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-slate-600">
+                <PhoneCall className="h-3.5 w-3.5 text-slate-900" />
+                <span>+1 (817) 966-0481</span>
+              </div>
+              <div className="mt-3 flex items-start gap-2 text-xs text-slate-600">
+                <MapPin className="mt-0.5 h-3.5 w-3.5 text-slate-900" />
+                <p>Virginia, USA</p>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-slate-600">
+                <PhoneCall className="h-3.5 w-3.5 text-slate-900" />
+                <span>+1 (757) 338-3452</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2 text-xs text-slate-600">
-              <PhoneCall className="h-3.5 w-3.5 text-slate-900" />
-              <span>+1 (817) 966-0481</span>
-            </div>
-            <div className="mt-3 flex items-start gap-2 text-xs text-slate-600">
-              <MapPin className="mt-0.5 h-3.5 w-3.5 text-slate-900" />
-              <p>Virginia, USA</p>
-            </div>
-            <div className="flex items-center gap-2 text-xs text-slate-600">
-              <PhoneCall className="h-3.5 w-3.5 text-slate-900" />
-              <span>+1 (757) 338-3452</span>
+            {/* Nepal Office */}
+            <div className="space-y-2 border-t border-slate-200 pt-4">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-900">
+                🇳🇵 Nepal Branch
+              </h3>
+              <div className="flex items-start gap-2 text-xs text-slate-600">
+                <MapPin className="mt-0.5 h-3.5 w-3.5 text-slate-900" />
+                <p>Kathmandu, Nepal</p>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-slate-600">
+                <PhoneCall className="h-3.5 w-3.5 text-slate-900" />
+                <a
+                  href="tel:+9779861888856"
+                  className="hover:text-slate-900"
+                >
+                  +977-9861888856
+                </a>
+              </div>
             </div>
           </div>
         </div>

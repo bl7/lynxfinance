@@ -20,6 +20,7 @@ const companies = [
   { filename: "janinifertilityclinic.JPG", name: "Janini Fertility Clinic" },
   { filename: "pavilionmediagroup.PNG", name: "Pavilion Media Group" },
   { filename: "hamropatro.png", name: "HamroPatro" },
+  { filename: "environmentsolutionstexas.png", name: "Environment Solutions Texas" },
 ];
 
 export function HomeTrustedBy() {
@@ -48,7 +49,7 @@ export function HomeTrustedBy() {
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            <div className="overflow-hidden">
+            <div className="overflow-hidden pb-8">
               <div 
                 className={`flex gap-12 items-center animate-scroll-horizontal ${isPaused ? 'animate-scroll-horizontal-paused' : ''}`}
                 style={{ width: 'max-content' }}
@@ -56,16 +57,19 @@ export function HomeTrustedBy() {
                 {duplicatedCompanies.map((company, i) => (
                   <div
                     key={`logo-${i}`}
-                    className="group relative flex items-center justify-center shrink-0"
+                    className="group relative flex flex-col items-center justify-center shrink-0"
                   >
                     <Image
                       src={`/companies/${company.filename}`}
                       alt={company.name}
                       width={180}
                       height={72}
-                      className="h-14 w-auto object-contain transition-transform duration-300 hover:scale-105 sm:h-16"
+                      className="h-14 w-auto object-contain transition-all duration-300 group-hover:scale-125 sm:h-16"
                       title={company.name}
                     />
+                    <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs font-medium text-slate-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
+                      {company.name}
+                    </span>
                   </div>
                 ))}
               </div>

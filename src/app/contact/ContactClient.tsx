@@ -323,12 +323,34 @@ export default function ContactClient() {
             custom={1}
           >
             <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-900">
-              US Office
+              🇺🇸 US Offices
             </h3>
             <p className="mt-2 text-slate-600">Texas, USA</p>
             <p className="mt-2 text-slate-600">Phone: +1 (817) 966-0481</p>
             <p className="mt-3 text-slate-600">Virginia, USA</p>
             <p className="mt-2 text-slate-600">Phone: +1 (757) 338-3452</p>
+          </motion.div>
+          <motion.div
+            className="rounded-2xl border border-slate-200 bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#FFC72C]/30"
+            variants={cardFade}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            custom={2}
+          >
+            <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-900">
+              🇳🇵 Nepal Branch
+            </h3>
+            <p className="mt-2 text-slate-600">Kathmandu, Nepal</p>
+            <p className="mt-2 text-slate-600">
+              Phone:{" "}
+              <a
+                href="tel:+9779861888856"
+                className="hover:text-slate-900"
+              >
+                +977-9861888856
+              </a>
+            </p>
           </motion.div>
         </motion.div>
       </div>
