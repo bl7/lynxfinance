@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { AssessmentModalProvider } from "@/components/AssessmentModalProvider";
 import { ToastProvider } from "@/components/ToastProvider";
+import { WhatsAppWidget } from "@/components/WhatsAppWidget";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
 
 const inter = Inter({
@@ -119,6 +120,7 @@ export default function RootLayout({
               <Header />
               <main className="flex-1 pt-20 lg:pt-24">{children}</main>
               <Footer />
+              <WhatsAppWidget />
             </div>
           </AssessmentModalProvider>
         </ToastProvider>
