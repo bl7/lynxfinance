@@ -71,7 +71,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="relative -mt-20 lg:-mt-24">
+    <div className="relative">
       {/* 1. Hero - broad positioning */}
       <HomeHero />
 
