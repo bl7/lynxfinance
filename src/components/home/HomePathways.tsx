@@ -70,7 +70,7 @@ export function HomePathways() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
           className="mb-16 max-w-3xl"
         >
           <div className="mb-4 flex items-center gap-2">
@@ -100,7 +100,7 @@ export function HomePathways() {
                 variants={cardFade}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
+                viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                 custom={i}
                 className="group rounded-2xl bg-white p-8 shadow-xl transition-transform duration-300 hover:-translate-y-1"
               >

@@ -142,14 +142,14 @@ export function AboutContent() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
         >
           <motion.div
             className="glass-panel rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
             variants={cardFade}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
+            viewport={{ once: true, amount: 0.05, margin: "-50px" }}
             custom={0}
           >
             <div className="flex items-center gap-3">
@@ -174,7 +174,7 @@ export function AboutContent() {
             variants={cardFade}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
+            viewport={{ once: true, amount: 0.05, margin: "-50px" }}
             custom={1}
           >
             <div className="flex items-center gap-3">
@@ -201,14 +201,14 @@ export function AboutContent() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
         >
           <motion.div
             className="glass-panel rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/30"
             variants={cardFade}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
+            viewport={{ once: true, amount: 0.05, margin: "-50px" }}
             custom={0}
           >
             <ShieldCheck className="h-5 w-5 text-[#FFC72C]" />
@@ -226,7 +226,7 @@ export function AboutContent() {
             variants={cardFade}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
+            viewport={{ once: true, amount: 0.05, margin: "-50px" }}
             custom={1}
           >
             <Clock3 className="h-5 w-5 text-[#FFC72C]" />
@@ -244,7 +244,7 @@ export function AboutContent() {
             variants={cardFade}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
+            viewport={{ once: true, amount: 0.05, margin: "-50px" }}
             custom={2}
           >
             <Users className="h-5 w-5 text-[#FFC72C]" />
@@ -267,7 +267,7 @@ export function AboutContent() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
         >
           <div className="grid gap-8 md:grid-cols-2">
             <motion.div
@@ -275,7 +275,7 @@ export function AboutContent() {
               variants={cardFade}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
+              viewport={{ once: true, amount: 0.05, margin: "-50px" }}
               custom={0}
             >
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFC72C]/10">
@@ -295,7 +295,7 @@ export function AboutContent() {
               variants={cardFade}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
+              viewport={{ once: true, amount: 0.05, margin: "-50px" }}
               custom={1}
             >
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFC72C]/10">
@@ -320,7 +320,7 @@ export function AboutContent() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
         >
           <div className="text-center">
             <h2 className="text-balance text-2xl font-semibold text-slate-900 sm:text-3xl">
@@ -340,7 +340,7 @@ export function AboutContent() {
                   variants={cardFade}
                   initial="hidden"
                   whileInView="show"
-                  viewport={{ once: true, amount: 0.25 }}
+                  viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                   custom={i}
                 >
                   <div className="relative z-10 shrink-0">
@@ -372,7 +372,7 @@ export function AboutContent() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
         >
           <div className="text-center">
             <h2 className="text-balance text-2xl font-semibold text-slate-900 sm:text-3xl">
@@ -388,7 +388,7 @@ export function AboutContent() {
                 variants={cardFade}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
+                viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                 custom={i}
               >
                 <div className="relative mb-5 aspect-[3/4] w-full overflow-hidden rounded-2xl bg-slate-100 ring-1 ring-slate-200">

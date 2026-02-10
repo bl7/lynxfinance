@@ -103,7 +103,7 @@ export default function IndustriesClient() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
         >
           {industries.map((industry, i) => {
             const Icon = industry.icon;
@@ -114,7 +114,7 @@ export default function IndustriesClient() {
                 variants={cardFade}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
+                viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                 custom={i}
               >
                 <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFC72C]/10">

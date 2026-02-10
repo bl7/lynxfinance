@@ -61,7 +61,7 @@ export function HomeHowItWorks() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
           className="text-center"
         >
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900">
@@ -81,7 +81,7 @@ export function HomeHowItWorks() {
                 variants={cardFade}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
+                viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                 custom={i}
                 className="relative"
               >
@@ -110,7 +110,7 @@ export function HomeHowItWorks() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
           className="mt-8 text-center text-sm text-slate-600"
         >
           Need US setup?{" "}

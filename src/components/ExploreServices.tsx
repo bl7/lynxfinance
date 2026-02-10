@@ -37,7 +37,7 @@ export function ExploreServices() {
       variants={cardFade}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.25 }}
+      viewport={{ once: true, amount: 0.05, margin: "-50px" }}
     >
       <div className="mb-8 flex items-center justify-between">
         <div>

@@ -36,7 +36,7 @@ export function HomeTrustedBy() {
           variants={fadeIn}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
           className="flex flex-col items-center gap-8"
         >
           <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900">

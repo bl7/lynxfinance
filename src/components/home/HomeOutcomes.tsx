@@ -52,7 +52,7 @@ export function HomeOutcomes() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
           className="text-center"
         >
           <h3 className="text-3xl font-semibold text-slate-900 sm:text-4xl">
@@ -74,7 +74,7 @@ export function HomeOutcomes() {
                 variants={cardFade}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
+                viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                 custom={i}
                 className="glass-panel rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#FFC72C]/30 hover:shadow-xl"
               >

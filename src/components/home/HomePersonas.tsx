@@ -88,7 +88,7 @@ export function HomePersonas() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
           className="text-center"
         >
           <h3 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
@@ -107,7 +107,7 @@ export function HomePersonas() {
               variants={cardFade}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
+              viewport={{ once: true, amount: 0.05, margin: "-50px" }}
               custom={i}
               className="flex flex-col rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm"
             >

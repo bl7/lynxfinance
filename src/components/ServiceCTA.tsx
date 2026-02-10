@@ -25,7 +25,7 @@ export function ServiceCTA() {
         variants={cardFade}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
+        viewport={{ once: true, amount: 0.05, margin: "-50px" }}
       >
         <div className="absolute inset-0 bg-linear-to-r from-[#002147] to-[#003366]" />
         <div className="relative px-6 lg:px-8">

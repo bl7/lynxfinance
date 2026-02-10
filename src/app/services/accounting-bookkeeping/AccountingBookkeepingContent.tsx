@@ -49,7 +49,7 @@ export function AccountingBookkeepingContent() {
               variants={cardFade}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
+              viewport={{ once: true, amount: 0.05, margin: "-50px" }}
             >
               <h2 className="mb-4 text-2xl font-bold text-slate-900 sm:text-3xl">
                 Overview
@@ -68,7 +68,7 @@ export function AccountingBookkeepingContent() {
               variants={cardFade}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
+              viewport={{ once: true, amount: 0.05, margin: "-50px" }}
             >
               <h2 className="mb-4 text-2xl font-bold text-slate-900 sm:text-3xl">
                 What&apos;s included
@@ -85,7 +85,7 @@ export function AccountingBookkeepingContent() {
                     className="flex items-start gap-3"
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                     transition={{ duration: 0.3, delay: i * 0.05 }}
                   >
                     <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-[#FFC72C]" />

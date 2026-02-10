@@ -108,7 +108,7 @@ export default function FaqClient() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
         >
           <div className="space-y-3">
             {faqs.map((item, i) => {
@@ -119,7 +119,7 @@ export default function FaqClient() {
                   variants={cardFade}
                   initial="hidden"
                   whileInView="show"
-                  viewport={{ once: true, amount: 0.25 }}
+                  viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                   custom={i}
                 >
                   <div
@@ -168,7 +168,7 @@ export default function FaqClient() {
             variants={cardFade}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
+            viewport={{ once: true, amount: 0.05, margin: "-50px" }}
             custom={faqs.length}
           >
             <div className="glass-panel rounded-2xl border border-[#FFC72C]/20 bg-white p-6 text-center">

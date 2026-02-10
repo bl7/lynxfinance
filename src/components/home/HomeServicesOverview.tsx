@@ -54,7 +54,7 @@ export function HomeServicesOverview() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
           className="mb-12"
         >
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900">
@@ -72,7 +72,7 @@ export function HomeServicesOverview() {
               variants={cardFade}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
+              viewport={{ once: true, amount: 0.05, margin: "-50px" }}
               custom={i}
               className="group relative overflow-hidden rounded-2xl bg-[#002147] transition-transform duration-300 hover:-translate-y-1"
             >

@@ -48,7 +48,7 @@ export function HomeProblem() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
         >
           {/* Left Column - Content */}
           <div>
@@ -63,7 +63,7 @@ export function HomeProblem() {
                   variants={itemFade}
                   initial="hidden"
                   whileInView="show"
-                  viewport={{ once: true, amount: 0.2 }}
+                  viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                   custom={i}
                   className="flex gap-4"
                 >
@@ -79,7 +79,7 @@ export function HomeProblem() {
               variants={itemFade}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.05, margin: "-50px" }}
               custom={3}
               className="mt-8 flex gap-4"
             >

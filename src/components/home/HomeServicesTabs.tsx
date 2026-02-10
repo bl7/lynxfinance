@@ -98,7 +98,7 @@ export function HomeServicesTabs() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
           className="text-center"
         >
           <h3 className="text-2xl font-semibold text-slate-900 sm:text-3xl">

@@ -126,7 +126,7 @@ export function HomeWhyLynx() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
           className="mb-16 text-center"
         >
           <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
@@ -149,7 +149,7 @@ export function HomeWhyLynx() {
             variants={sectionFade}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.05, margin: "-50px" }}
             className="space-y-6"
           >
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -161,7 +161,7 @@ export function HomeWhyLynx() {
                     variants={cardFade}
                     initial="hidden"
                     whileInView="show"
-                    viewport={{ once: true, amount: 0.25 }}
+                    viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                     custom={i}
                     className="group rounded-xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:border-[#FFC72C]/40 hover:shadow-md"
                   >
@@ -188,7 +188,7 @@ export function HomeWhyLynx() {
             variants={sectionFade}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.05, margin: "-50px" }}
             className="flex flex-col"
           >
             {/* Tabs */}
@@ -252,7 +252,7 @@ export function HomeWhyLynx() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
           className="border-t border-slate-200 pt-12"
         >
           {/* Stats Grid */}
@@ -263,7 +263,7 @@ export function HomeWhyLynx() {
                 variants={cardFade}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
+                viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                 custom={i}
                 className="text-center"
               >
@@ -282,7 +282,7 @@ export function HomeWhyLynx() {
             variants={cardFade}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
+            viewport={{ once: true, amount: 0.05, margin: "-50px" }}
             custom={4}
             className="rounded-xl border border-slate-200 bg-slate-50/50 p-8"
           >

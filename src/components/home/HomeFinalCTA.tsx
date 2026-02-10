@@ -23,7 +23,7 @@ export function HomeFinalCTA() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
         >
           <h3 className="text-2xl font-semibold text-white sm:text-3xl">
             Ready to get your finance and compliance sorted?

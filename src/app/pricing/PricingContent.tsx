@@ -112,7 +112,7 @@ export function PricingContent() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
           className="flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <button
@@ -138,7 +138,7 @@ export function PricingContent() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
           className="border-b border-slate-200"
         >
           <div className="flex flex-wrap gap-2 overflow-x-auto">
@@ -166,7 +166,7 @@ export function PricingContent() {
               variants={sectionFade}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.05, margin: "-50px" }}
               className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
             >
               {bookkeepingPlans.map((plan, i) => (
@@ -175,7 +175,7 @@ export function PricingContent() {
                   variants={cardFade}
                   initial="hidden"
                   whileInView="show"
-                  viewport={{ once: true }}
+                  viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                   custom={i}
                   className={`rounded-2xl border-2 p-6 transition-all hover:shadow-lg ${
                     plan.highlight
@@ -248,7 +248,7 @@ export function PricingContent() {
               variants={sectionFade}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.05, margin: "-50px" }}
             >
               {/* Header */}
               <h2 className="mb-8 text-2xl font-semibold text-slate-900 sm:text-3xl">
@@ -260,7 +260,7 @@ export function PricingContent() {
                 variants={cardFade}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                 custom={0}
                 className="mb-8 rounded-2xl border-2 border-[#FFC72C] bg-[#FFC72C]/10 p-6"
               >
@@ -287,7 +287,7 @@ export function PricingContent() {
                     variants={cardFade}
                     initial="hidden"
                     whileInView="show"
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                     custom={i}
                     className="rounded-2xl border-2 border-slate-200 bg-white p-6 transition-all hover:shadow-lg"
                   >
@@ -401,7 +401,7 @@ export function PricingContent() {
               variants={sectionFade}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.05, margin: "-50px" }}
               className="space-y-6"
             >
               {taxServices.map((service, i) => (
@@ -410,7 +410,7 @@ export function PricingContent() {
                   variants={cardFade}
                   initial="hidden"
                   whileInView="show"
-                  viewport={{ once: true }}
+                  viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                   custom={i}
                   className="rounded-2xl border border-slate-200 bg-white p-6"
                 >
@@ -458,7 +458,7 @@ export function PricingContent() {
               variants={sectionFade}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.05, margin: "-50px" }}
             >
               {/* Add-on Services */}
               <div className="mb-12">
@@ -523,7 +523,7 @@ export function PricingContent() {
                       variants={cardFade}
                       initial="hidden"
                       whileInView="show"
-                      viewport={{ once: true }}
+                      viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                       custom={i}
                       className="rounded-xl border border-slate-200 bg-white p-5"
                     >
@@ -551,7 +551,7 @@ export function PricingContent() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
           className="rounded-2xl border-2 border-[#FFC72C] bg-slate-50 p-8"
         >
           <h2 className="mb-4 text-2xl font-semibold text-slate-900 sm:text-3xl">
@@ -570,7 +570,7 @@ export function PricingContent() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
         >
           <h2 className="mb-8 text-2xl font-semibold text-slate-900 sm:text-3xl">
             Frequently Asked Questions
@@ -584,7 +584,7 @@ export function PricingContent() {
                   variants={cardFade}
                   initial="hidden"
                   whileInView="show"
-                  viewport={{ once: true }}
+                  viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                   custom={i}
                   className="rounded-xl border border-slate-200 bg-white p-5 transition-all hover:shadow-md"
                 >

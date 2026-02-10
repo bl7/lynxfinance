@@ -169,7 +169,7 @@ export default function ContactClient() {
           variants={cardFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
           custom={0}
           onSubmit={handleSubmit}
         >
@@ -312,14 +312,14 @@ export default function ContactClient() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
         >
           <motion.div
             className="rounded-2xl border border-slate-200 bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#FFC72C]/30"
             variants={cardFade}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
+            viewport={{ once: true, amount: 0.05, margin: "-50px" }}
             custom={1}
           >
             <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-900">
@@ -335,7 +335,7 @@ export default function ContactClient() {
             variants={cardFade}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
+            viewport={{ once: true, amount: 0.05, margin: "-50px" }}
             custom={2}
           >
             <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-900">

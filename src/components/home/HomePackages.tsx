@@ -78,7 +78,7 @@ export function HomePackages() {
           variants={sectionFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
           className="text-center"
         >
           <h3 className="text-2xl font-semibold text-slate-900 sm:text-3xl">
@@ -98,7 +98,7 @@ export function HomePackages() {
                 variants={cardFade}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
+                viewport={{ once: true, amount: 0.05, margin: "-50px" }}
                 custom={i}
                 className={`glass-panel flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#FFC72C]/30 hover:shadow-xl ${
                   pkg.highlight ? "border-[#FFC72C]/50" : ""
@@ -144,7 +144,7 @@ export function HomePackages() {
           variants={cardFade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
+          viewport={{ once: true, amount: 0.05, margin: "-50px" }}
           custom={3}
           className="mt-8"
         >
