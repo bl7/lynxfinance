@@ -31,7 +31,7 @@ export function HomeHero() {
       </video>
       <div className="absolute inset-0 bg-slate-950/75" />
 
-      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-4 pt-20 lg:px-6 lg:pt-24">
+      <div className="relative mx-auto flex min-h-screen max-w-6xl flex-col px-4 pt-20 lg:px-6 lg:pt-24">
         {/* Recognised By Section - Top Left */}
         <motion.div
           className="relative z-10 mb-auto pt-[10vh]"
@@ -53,7 +53,7 @@ export function HomeHero() {
               variants={fadeUp}
               className="text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
             >
-              Finance, tax, and compliance support for modern businesses
+              <span className="relative inline-block border-b-2 border-[#FFC72C] pb-0.5">Finance</span>, tax, and compliance support for modern businesses
             </motion.h1>
 
             {/* Supporting Paragraph */}

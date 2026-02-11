@@ -9,7 +9,7 @@ type PageHeroProps = {
 export function PageHero({ eyebrow, title, subtitle }: PageHeroProps) {
   return (
     <section className="relative overflow-hidden bg-white pb-10 pt-16 sm:pb-12 sm:pt-20">
-      <div className="relative mx-auto flex max-w-5xl flex-col gap-4 px-4 lg:px-6">
+      <div className="relative mx-auto flex max-w-6xl flex-col gap-4 px-4 lg:px-6">
         {eyebrow ? (
           <p className="inline-flex w-fit items-center gap-2 rounded-full border border-[#002147]/20 bg-slate-50 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.22em] text-[#002147]">
             {eyebrow}

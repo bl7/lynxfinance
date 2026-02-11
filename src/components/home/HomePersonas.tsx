@@ -83,7 +83,7 @@ export function HomePersonas() {
 
   return (
     <section className="bg-black py-20">
-      <div className="mx-auto max-w-7xl px-4 lg:px-6">
+      <div className="mx-auto max-w-6xl px-4 lg:px-6">
         <motion.div
           variants={sectionFade}
           initial="hidden"

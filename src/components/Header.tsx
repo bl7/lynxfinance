@@ -86,7 +86,7 @@ export function Header() {
             alt="LYNX Finance Consulting logo"
             width={370}
             height={76}
-            className="h-16 w-auto -translate-y-px object-contain sm:h-20"
+            className="h-16 w-auto object-contain sm:h-20"
             priority
           />
         </Link>

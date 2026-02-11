@@ -107,7 +107,7 @@ export function PricingContent() {
       />
 
       {/* Hero CTAs */}
-      <div className="mx-auto max-w-5xl px-4 pt-8 lg:px-6">
+      <div className="mx-auto max-w-6xl px-4 pt-8 lg:px-6">
         <motion.div
           variants={sectionFade}
           initial="hidden"
@@ -133,7 +133,7 @@ export function PricingContent() {
       </div>
 
       {/* Tabs */}
-      <div className="mx-auto mt-12 max-w-7xl px-4 lg:px-6">
+      <div className="mx-auto mt-12 max-w-6xl px-4 lg:px-6">
         <motion.div
           variants={sectionFade}
           initial="hidden"

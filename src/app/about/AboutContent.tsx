@@ -136,7 +136,7 @@ export function AboutContent() {
           </>
         }
       />
-      <div className="mx-auto max-w-5xl px-4 pt-10 lg:px-6">
+      <div className="mx-auto max-w-6xl px-4 pt-10 lg:px-6">
         <motion.div
           className="mt-8 grid gap-5 md:grid-cols-2"
           variants={sectionFade}
@@ -263,7 +263,7 @@ export function AboutContent() {
       {/* Mission and Vision Section */}
       <section className="mt-16 border-t border-slate-200 bg-slate-50 py-16">
         <motion.div
-          className="mx-auto max-w-5xl px-4 lg:px-6"
+          className="mx-auto max-w-6xl px-4 lg:px-6"
           variants={sectionFade}
           initial="hidden"
           whileInView="show"

@@ -163,7 +163,7 @@ export default function ContactClient() {
         title="Schedule time with LYNX Finance Consulting."
         subtitle="Share a few details about your organization and the type of support you are looking for, and we’ll follow up with available times for an initial conversation."
       />
-      <div className="mx-auto grid max-w-5xl gap-10 px-4 pt-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:px-6">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 pt-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:px-6">
         <motion.form
           className="relative space-y-4 rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-900 shadow-lg transition-all duration-300 hover:border-[#FFC72C]/30"
           variants={cardFade}

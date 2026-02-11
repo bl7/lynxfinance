@@ -33,7 +33,7 @@ const services = [
 export function ExploreServices() {
   return (
     <motion.section
-      className="mx-auto max-w-7xl px-4 py-16 lg:px-6"
+      className="mx-auto max-w-6xl px-4 py-16 lg:px-6"
       variants={cardFade}
       initial="hidden"
       whileInView="show"

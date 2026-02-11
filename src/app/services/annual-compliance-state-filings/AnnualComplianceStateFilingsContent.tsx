@@ -36,7 +36,7 @@ export function AnnualComplianceStateFilingsContent() {
           </>
         }
       />
-      <div className="mx-auto max-w-7xl px-4 pt-16 lg:px-6">
+      <div className="mx-auto max-w-6xl px-4 pt-16 lg:px-6">
         <div className="grid gap-8 lg:grid-cols-[1fr_16rem]">
           <div>
             {/* Overview Section */}

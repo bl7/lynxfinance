@@ -19,7 +19,7 @@ export function ServiceCTA() {
   const { openGetStarted } = useAssessmentModal();
 
   return (
-    <div className="mx-auto max-w-7xl px-4 lg:px-6">
+    <div className="mx-auto max-w-6xl px-4 lg:px-6">
       <motion.section
         className="relative overflow-hidden rounded-lg bg-[#002147] py-16"
         variants={cardFade}

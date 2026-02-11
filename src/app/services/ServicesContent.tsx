@@ -257,7 +257,7 @@ export function ServicesContent() {
           </>
         }
       />
-      <div className="mx-auto max-w-7xl px-4 pt-10 lg:px-6">
+      <div className="mx-auto max-w-6xl px-4 pt-10 lg:px-6">
         <motion.div
           className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
           variants={sectionFade}
